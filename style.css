@@ -1173,3 +1173,23 @@ footer {
 .edu-details span i {
   color: #e86600;
 }
+
+/* ── Exp card image ── */
+.exp-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.exp-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.exp-card:hover .exp-img img {
+  transform: scale(1.03);
+}
