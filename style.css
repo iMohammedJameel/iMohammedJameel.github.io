@@ -1109,3 +1109,67 @@ footer {
 .cert-modal-close:hover {
   background: #ff3d02;
 }
+
+/* ── Education ── */
+.edu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.edu-card:hover {
+  border-color: #e86600;
+  transform: translateY(-4px);
+}
+
+.edu-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  background: #e86600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.edu-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #dfdcdc;
+  margin-bottom: 5px;
+}
+
+.edu-degree {
+  color: #e86600;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.edu-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.edu-details span {
+  color: #8a8989;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edu-details span i {
+  color: #e86600;
+}
