@@ -1276,3 +1276,80 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+/* ── Universal Card Hover Animations ── */
+
+/* Stat boxes */
+.stat-box {
+  transition: all 0.3s ease;
+}
+.stat-box:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(232, 102, 0, 0.2);
+  border-color: #e86600;
+}
+
+/* Experience cards */
+.exp-card {
+  transition: all 0.35s ease;
+}
+.exp-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 10px 30px rgba(232, 102, 0, 0.15);
+}
+
+/* Project cards */
+.project-card {
+  transition: all 0.35s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(232, 102, 0, 0.2);
+}
+
+/* Skill categories */
+.skill-category {
+  transition: all 0.35s ease;
+}
+.skill-category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(232, 102, 0, 0.15);
+}
+
+/* Cert items */
+.cert-item {
+  transition: all 0.35s ease;
+}
+.cert-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(232, 102, 0, 0.2);
+}
+
+/* Education card */
+.edu-card {
+  transition: all 0.35s ease;
+}
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(232, 102, 0, 0.2);
+}
+
+/* Social icons in hero */
+.social-icons span {
+  transition: all 0.3s ease;
+}
+.social-icons span:hover {
+  transform: translateY(-4px) scale(1.15);
+  box-shadow: 0 8px 20px rgba(232, 102, 0, 0.3);
+}
+
+/* Project tech tags */
+.project-tech span {
+  transition: all 0.3s ease;
+}
+.project-tech span:hover {
+  background: rgba(232, 102, 0, 0.15);
+  border-color: #e86600;
+  color: #e86600;
+  transform: translateY(-2px);
+}
