@@ -1353,3 +1353,29 @@ footer {
   color: #e86600;
   transform: translateY(-2px);
 }
+
+/* ── Project Meta (Problem / Solution / Outcome) ── */
+.project-meta {
+  padding: 0 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-meta-item {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.project-meta-label {
+  color: #e86600;
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 75px;
+}
+
+.project-meta-value {
+  color: #8a8989;
+}
