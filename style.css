@@ -1194,3 +1194,72 @@ footer {
 .exp-card:hover .exp-img img {
   transform: scale(1.03);
 }
+
+/* ── Animated Background Shapes ── */
+.shapes-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.07;
+  filter: blur(80px);
+  animation: float-shape 20s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 500px;
+  height: 500px;
+  background: #e86600;
+  top: -150px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background: #ff3d02;
+  bottom: 10%;
+  left: -100px;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 300px;
+  height: 300px;
+  background: #e86600;
+  top: 40%;
+  right: 20%;
+  animation-delay: -10s;
+}
+
+.shape-4 {
+  width: 450px;
+  height: 450px;
+  background: #ff3d02;
+  bottom: -100px;
+  right: 30%;
+  animation-delay: -15s;
+}
+
+@keyframes float-shape {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.1); }
+  50% { transform: translate(-20px, 20px) scale(0.9); }
+  75% { transform: translate(20px, 30px) scale(1.05); }
+}
+
+/* make sure all sections appear above shapes */
+.container, .section-wrapper, .contact-section, footer {
+  position: relative;
+  z-index: 1;
+}
