@@ -364,6 +364,16 @@ a {
   background-color: #1b1b1b;
   border-radius: 50%;
   position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-image-box:hover {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px 5px rgba(232, 102, 0, 0.4); }
+  50% { box-shadow: 0 0 45px 15px rgba(232, 102, 0, 0.7); }
 }
 
 .hero-image .hero-image-box img {
