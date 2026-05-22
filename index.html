@@ -9,9 +9,14 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="light-theme.css" />
+    <link rel="stylesheet" href="chatbot-style.css" />
   </head>
   <body>
     <!-- Animated Background Shapes -->
@@ -488,6 +493,39 @@
       <p>Made with <i class="bx bxs-heart" style="color:#e74c3c"></i> by Mohammed Jameel &copy; 2026</p>
     </footer>
 
+    <!-- Chatbot -->
+    <button id="chatbotToggle" class="chatbot-toggle">
+      <i class="fa-solid fa-headset"></i>
+    </button>
+
+    <div id="chatbotWindow" class="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <img src="https://avatars.githubusercontent.com/u/107625539?v=4" alt="Mohammed Jameel">
+          <div>
+            <h4 data-key="chatbotTitle">Ask About Me</h4>
+            <p data-key="chatbotStatus">Online</p>
+          </div>
+        </div>
+        <button id="chatbotClose" class="chatbot-close">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+      <div id="chatbotMessages" class="chatbot-messages">
+        <div class="chatbot-message bot">
+          <div class="message-content">
+            <p data-key="chatbotWelcome">Hi! I'm Mohammed's AI assistant. Ask me anything about his experience, skills, or projects!</p>
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Ask me anything..." data-key-placeholder="chatbotPlaceholder">
+        <button id="chatbotSend">
+          <i class="bx bx-send"></i>
+        </button>
+      </div>
+    </div>
+
     <script>
       const overlay = document.getElementById("overlay");
       const sidebar = document.getElementById("sidebar");
@@ -661,7 +699,11 @@
           vol2Li2: 'Handled live broadcasting using StreamYard',
           vol2Li3: 'Developed strategic plans to boost chapter presence',
           contactTag: 'Contact', contactTitle: "Let's Build Something Amazing",
-          contactDesc: "Want to discuss a project? I'm always excited to hear new ideas!"
+          contactDesc: "Want to discuss a project? I'm always excited to hear new ideas!",
+          chatbotTitle: 'Ask About Me',
+          chatbotStatus: 'Online',
+          chatbotWelcome: "Hi! I'm Mohammed's AI assistant. Ask me anything about his experience, skills, or projects!",
+          chatbotPlaceholder: 'Ask me anything...'
         },
         ar: {
           navHome: 'الرئيسية', navAbout: 'عني', navEducation: 'التعليم',
@@ -765,7 +807,11 @@
           vol2Li2: 'إدارة البث المباشر باستخدام StreamYard',
           vol2Li3: 'تطوير خطط استراتيجية لتعزيز حضور الفرع',
           contactTag: 'تواصل', contactTitle: 'لنبني شيئاً رائعاً معاً',
-          contactDesc: 'هل تريد مناقشة مشروع؟ يسعدني دائماً سماع أفكار جديدة!'
+          contactDesc: 'هل تريد مناقشة مشروع؟ يسعدني دائماً سماع أفكار جديدة!',
+          chatbotTitle: 'اسألني عني',
+          chatbotStatus: 'متصل',
+          chatbotWelcome: 'مرحباً! أنا المساعد الذكي لمحمد. اسألني أي شيء عن خبرته أو مهاراته أو مشاريعه!',
+          chatbotPlaceholder: 'اسألني أي شيء...'
         }
       };
 
@@ -816,6 +862,151 @@
           themeIcon.classList.remove('bx-moon');
           themeIcon.classList.add('bx-sun');
           localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      // Chatbot
+      const chatbotToggle = document.getElementById('chatbotToggle');
+      const chatbotWindow = document.getElementById('chatbotWindow');
+      const chatbotClose = document.getElementById('chatbotClose');
+      const chatbotInput = document.getElementById('chatbotInput');
+      const chatbotSend = document.getElementById('chatbotSend');
+      const chatbotMessages = document.getElementById('chatbotMessages');
+
+      const chatbotKnowledge = {
+        en: {
+          greeting: ['hi', 'hello', 'hey', 'good morning', 'good evening', 'greetings', 'howdy'],
+          name: ['name', 'who are you', 'your name', 'who is mohammed', 'tell me about yourself'],
+          experience: ['experience', 'work', 'job', 'career', 'worked', 'working', 'employment'],
+          skills: ['skills', 'technologies', 'tech stack', 'programming', 'languages', 'tools', 'what can you do'],
+          education: ['education', 'degree', 'university', 'study', 'studied', 'college', 'school'],
+          projects: ['projects', 'work', 'portfolio', 'built', 'created', 'developed'],
+          contact: ['contact', 'email', 'phone', 'reach', 'call', 'message', 'linkedin', 'github'],
+          location: ['location', 'where', 'live', 'based', 'from', 'city'],
+          devops: ['devops', 'ci/cd', 'docker', 'kubernetes', 'terraform', 'helm', 'pipeline'],
+          aws: ['aws', 'cloud', 'amazon', 'ec2', 's3', 'lambda'],
+          
+          responses: {
+            greeting: "Hello! I'm Mohammed Jameel's AI assistant. How can I help you learn more about him?",
+            name: "I'm Mohammed Jameel Fouad, a Junior DevOps Engineer based in Cairo, Egypt. I specialize in cloud infrastructure, automation, and full-stack development.",
+            experience: "Mohammed has 3+ years of experience including:\n\n• Software Engineering Trainee at Digilians (Dec 2025 - Present)\n• IT Specialist at Linah Group (Sep 2025 - Nov 2025)\n• Technical Support Specialist at Fujitsu (Jan 2025 - Sep 2025)\n\nHe has expertise in AWS, CI/CD pipelines, Docker, Kubernetes, and infrastructure automation.",
+            skills: "Mohammed's tech stack includes:\n\n☁️ Cloud & DevOps: AWS, GCP, Docker, Kubernetes, Terraform, Helm, GitLab CI, Jenkins\n💻 Programming: Python, Bash, JavaScript, C++, Dart/Flutter\n🖥️ Systems: Linux Administration, Active Directory, MCSA, Networking (TCP/IP, DNS, Firewalls)",
+            education: "Mohammed holds a Bachelor's Degree in Computer Science from Thebes Academy (Sep 2019 - May 2023) with a GPA of 3.04.",
+            projects: "Key projects include:\n\n1. IT Helpdesk System - Ticket management with REST API\n2. Student Course Management - C++ based academic system\n3. Little Lemon Booking App - React-based restaurant reservation\n\nAll projects focus on solving real-world problems with modern technologies.",
+            contact: "You can reach Mohammed at:\n\n📧 Email: mo.jameel.official@gmail.com\n💼 LinkedIn: linkedin.com/in/imohammedjameel\n🐙 GitHub: github.com/iMohammedJameel\n📱 Phone: +201146863395",
+            location: "Mohammed is based in Cairo, Egypt (Maadi area).",
+            devops: "Mohammed has strong DevOps skills including:\n\n• Designed CI/CD pipelines using GitLab CI and TeamCity\n• Provisioned cloud infrastructure with Terraform and Helm\n• Deployed containerized apps using Docker and Kubernetes\n• Automated maintenance tasks with Bash scripts\n• Reduced release time by 40% and downtime by 20%",
+            aws: "Mohammed is an AWS Academy Graduate with certifications in:\n\n• Cloud Operations\n• Cloud Developing\n• Cloud Foundations\n\nHe has hands-on experience with EC2, S3, VPC, Lambda, API Gateway, DynamoDB, CloudWatch, and more.",
+            default: "I'm not sure about that. You can ask me about Mohammed's:\n\n• Experience & Career\n• Skills & Technologies\n• Education\n• Projects\n• Contact Information\n• DevOps & Cloud Expertise"
+          }
+        },
+        ar: {
+          greeting: ['مرحبا', 'السلام عليكم', 'أهلا', 'هاي', 'صباح الخير', 'مساء الخير', 'اهلين', 'هلا'],
+          name: ['اسم', 'من أنت', 'اسمك', 'مين', 'من', 'عرفني', 'قول لي عنك'],
+          experience: ['خبرة', 'شغل', 'وظيفة', 'عمل', 'شغلت', 'اشتغل', 'وظائف'],
+          skills: ['مهارات', 'تقنيات', 'برمجة', 'لغات', 'ادوات', 'تعرف', 'بتعرف ايه'],
+          education: ['تعليم', 'دراسة', 'جامعة', 'شهادة', 'درس', 'كلية', 'مدرسة'],
+          projects: ['مشاريع', 'أعمال', 'بورتفوليو', 'عمل', 'بنى', 'طور'],
+          contact: ['تواصل', 'ايميل', 'تليفون', 'رقم', 'اتصل', 'رسالة', 'لينكد ان', 'جيت هاب'],
+          location: ['مكان', 'فين', 'موقع', 'عنوان', 'ساكن', 'مدينة'],
+          devops: ['ديف اوبس', 'devops', 'دوكر', 'كوبرنيتس'],
+          aws: ['aws', 'سحابة', 'كلاود', 'امازون'],
+          
+          responses: {
+            greeting: "مرحباً! أنا المساعد الذكي لمحمد جميل. كيف يمكنني مساعدتك لمعرفة المزيد عنه؟",
+            name: "أنا محمد جميل فؤاد، مهندس DevOps مبتدئ مقيم في القاهرة، مصر. متخصص في البنية التحتية السحابية والأتمتة وتطوير Full Stack.",
+            experience: "محمد لديه أكثر من 3 سنوات خبرة تشمل:\n\n• متدرب هندسة برمجيات في Digilians (ديسمبر 2025 - حتى الآن)\n• أخصائي تكنولوجيا معلومات في Linah Group (سبتمبر 2025 - نوفمبر 2025)\n• أخصائي دعم فني في Fujitsu (يناير 2025 - سبتمبر 2025)\n\nلديه خبرة في AWS وCI/CD وDocker وKubernetes وأتمتة البنية التحتية.",
+            skills: "التقنيات التي يتقنها محمد:\n\n☁️ السحابة و DevOps: AWS, GCP, Docker, Kubernetes, Terraform, Helm, GitLab CI, Jenkins\n💻 البرمجة: Python, Bash, JavaScript, C++, Dart/Flutter\n🖥️ الأنظمة: إدارة Linux, Active Directory, MCSA, الشبكات",
+            education: "محمد حاصل على بكالوريوس في علوم الحاسب من أكاديمية طيبة (سبتمبر 2019 - مايو 2023) بمعدل 3.04.",
+            projects: "المشاريع الرئيسية تشمل:\n\n1. نظام مكتب المساعدة - إدارة التذاكر مع REST API\n2. نظام إدارة الطلاب - نظام أكاديمي بـ C++\n3. تطبيق حجز Little Lemon - حجز مطاعم بـ React\n\nجميع المشاريع تركز على حل مشاكل حقيقية بتقنيات حديثة.",
+            contact: "يمكنك التواصل مع محمد عبر:\n\n📧 البريد: mo.jameel.official@gmail.com\n💼 LinkedIn: linkedin.com/in/imohammedjameel\n🐙 GitHub: github.com/iMohammedJameel\n📱 الهاتف: +201146863395",
+            location: "محمد مقيم في القاهرة، مصر (منطقة المعادي).",
+            devops: "محمد لديه مهارات قوية في DevOps تشمل:\n\n• تصميم خطوط CI/CD باستخدام GitLab CI و TeamCity\n• توفير البنية التحتية السحابية بـ Terraform و Helm\n• نشر التطبيقات الحاوية بـ Docker و Kubernetes\n• أتمتة مهام الصيانة بـ Bash\n• تقليل وقت الإصدار بنسبة 40% ووقت التعطل بنسبة 20%",
+            aws: "محمد خريج AWS Academy مع شهادات في:\n\n• عمليات السحابة\n• تطوير السحابة\n• أساسيات السحابة\n\nلديه خبرة عملية مع EC2, S3, VPC, Lambda, API Gateway, DynamoDB, CloudWatch وغيرها.",
+            default: "لست متأكداً من ذلك. يمكنك سؤالي عن:\n\n• الخبرة والمسيرة المهنية\n• المهارات والتقنيات\n• التعليم\n• المشاريع\n• معلومات التواصل\n• خبرة DevOps والسحابة"
+          }
+        }
+      };
+
+      function findBestMatch(message, lang) {
+        message = message.toLowerCase();
+        const knowledge = chatbotKnowledge[lang];
+        
+        for (let category in knowledge) {
+          if (category === 'responses') continue;
+          
+          const keywords = knowledge[category];
+          for (let keyword of keywords) {
+            if (message.includes(keyword)) {
+              return knowledge.responses[category];
+            }
+          }
+        }
+        
+        return knowledge.responses.default;
+      }
+
+      function addMessage(text, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${isUser ? 'user' : 'bot'}`;
+        messageDiv.innerHTML = `
+          <div class="message-content">
+            <p>${text.replace(/\n/g, '<br>')}</p>
+          </div>
+        `;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+
+      function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chatbot-message bot';
+        typingDiv.id = 'typing-indicator';
+        typingDiv.innerHTML = `
+          <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        `;
+        chatbotMessages.appendChild(typingDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const typing = document.getElementById('typing-indicator');
+        if (typing) typing.remove();
+      }
+
+      function handleChatbotMessage() {
+        const message = chatbotInput.value.trim();
+        if (!message) return;
+        
+        addMessage(message, true);
+        chatbotInput.value = '';
+        
+        showTypingIndicator();
+        
+        setTimeout(() => {
+          removeTypingIndicator();
+          const response = findBestMatch(message, currentLang);
+          addMessage(response);
+        }, 1000);
+      }
+
+      chatbotToggle.addEventListener('click', () => {
+        chatbotWindow.classList.add('active');
+      });
+
+      chatbotClose.addEventListener('click', () => {
+        chatbotWindow.classList.remove('active');
+      });
+
+      chatbotSend.addEventListener('click', handleChatbotMessage);
+
+      chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          handleChatbotMessage();
         }
       });
 
