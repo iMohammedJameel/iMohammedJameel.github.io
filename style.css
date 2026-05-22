@@ -996,7 +996,7 @@ body {
 
 .cert-img {
   width: 100%;
-  height: 220px;
+  height: 260px;
   overflow: hidden;
 }
 
@@ -1149,6 +1149,16 @@ footer {
 }
 
 /* ── Responsive sections ── */
+@media (max-width: 1140px) {
+  .nav-links {
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 1000px) {
   .section-wrapper,
   .contact-section {
