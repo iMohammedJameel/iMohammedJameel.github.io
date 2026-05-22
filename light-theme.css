@@ -1,0 +1,150 @@
+/* Light Theme Overrides */
+body.light-theme {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(at 20% 30%, rgba(232, 102, 0, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 70%, rgba(255, 61, 2, 0.08) 0px, transparent 50%),
+    radial-gradient(at 40% 80%, rgba(232, 102, 0, 0.06) 0px, transparent 50%);
+}
+
+body.light-theme .sidebar {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .sidebar .sidebar-links a {
+  color: var(--text-secondary);
+}
+
+body.light-theme .sidebar .sidebar-links a:hover {
+  color: var(--text-primary);
+}
+
+body.light-theme .close-btn,
+body.light-theme .btn-sidebar {
+  color: var(--text-primary);
+}
+
+body.light-theme .hero-text p,
+body.light-theme .hero-text h2,
+body.light-theme .hero-text h1 {
+  color: var(--text-secondary);
+}
+
+body.light-theme .stats,
+body.light-theme .stat-box,
+body.light-theme .exp-card,
+body.light-theme .project-card,
+body.light-theme .skill-category,
+body.light-theme .cert-item,
+body.light-theme .edu-card {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .contact-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+  border-color: var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+body.light-theme .section-wrapper h2,
+body.light-theme .exp-title,
+body.light-theme .project-title,
+body.light-theme .skill-category h3,
+body.light-theme .cert-item h4,
+body.light-theme .edu-info h3,
+body.light-theme .stats h6,
+body.light-theme .about-text p strong,
+body.light-theme .edu-details span {
+  color: var(--text-primary);
+}
+
+body.light-theme .hero-text p,
+body.light-theme .section-desc,
+body.light-theme .about-text p,
+body.light-theme .exp-card ul li,
+body.light-theme .project-desc,
+body.light-theme .skill-item,
+body.light-theme .cert-item p,
+body.light-theme .cert-desc,
+body.light-theme .project-meta-value,
+body.light-theme .stat-box h6,
+body.light-theme footer,
+body.light-theme .contact-social a,
+body.light-theme .project-head a,
+body.light-theme .project-tech span {
+  color: var(--text-secondary);
+}
+
+body.light-theme .exp-date,
+body.light-theme .project-tech span,
+body.light-theme .cert-item .cert-icon,
+body.light-theme .contact-social a {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+body.light-theme .hero-image-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+body.light-theme .social-icons span {
+  background-color: rgba(232, 102, 0, 0.1);
+  border: 1px solid rgba(232, 102, 0, 0.2);
+}
+
+body.light-theme .social-icons span:hover {
+  background-color: rgba(232, 102, 0, 0.9);
+}
+
+body.light-theme .social-icons span i,
+body.light-theme .social-icons span a {
+  color: #495057;
+}
+
+body.light-theme .social-icons span:hover i,
+body.light-theme .social-icons span:hover a {
+  color: #ffffff;
+}
+
+body.light-theme .btn-outline {
+  border: 2px solid #495057;
+  color: #495057;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .btn-outline:hover {
+  background: #e86600;
+  border-color: #e86600;
+  color: white;
+}
+
+body.light-theme .shapes-container {
+  opacity: 0.4;
+}
+
+body.light-theme .shape {
+  opacity: 0.12;
+  filter: blur(60px);
+}
+
+body.light-theme .stat-box:hover,
+body.light-theme .exp-card:hover,
+body.light-theme .project-card:hover,
+body.light-theme .skill-category:hover,
+body.light-theme .cert-item:hover,
+body.light-theme .edu-card:hover {
+  box-shadow: 0 8px 25px rgba(232, 102, 0, 0.15);
+}
+
+body.light-theme footer {
+  border-top-color: var(--border-color);
+}
+
+body.light-theme .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}

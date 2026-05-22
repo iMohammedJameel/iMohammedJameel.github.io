@@ -4,11 +4,36 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1b1b1b;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #dfdcdc;
+  --text-secondary: #8a8989;
+  --text-tertiary: #6a6a6a;
+  --border-color: #2a2a2a;
+  --accent-color: #e86600;
+  --accent-secondary: #ff3d02;
+}
+
+body.light-theme {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #1a1a1a;
+  --text-secondary: #495057;
+  --text-tertiary: #6c757d;
+  --border-color: #dee2e6;
+  --accent-color: #e86600;
+  --accent-secondary: #ff3d02;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  background: #121212;
+  background: var(--bg-primary);
   overflow-y: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -29,10 +54,10 @@ a {
 }
 
 .logo {
-  color: #e86600;
+  color: var(--accent-color);
   font-weight: 900;
   font-size: 20px;
-  background: linear-gradient(to right, #e86600 50%, #ff3d02 50%);
+  background: linear-gradient(to right, var(--accent-color) 50%, var(--accent-secondary) 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -45,18 +70,18 @@ a {
 }
 
 .nav-links a {
-  color: #8a8989;
+  color: var(--text-secondary);
   font-weight: 500;
   font-size: 15px;
 }
 
 .nav-links a.active {
-  color: #e86600;
+  color: var(--accent-color);
   font-weight: 600;
 }
 
 .nav-links a:hover {
-  color: #e86600;
+  color: var(--accent-color);
 }
 
 .btn-box {
@@ -81,6 +106,26 @@ a {
 .btn-lang:hover {
   background: #e86600;
   color: white;
+}
+
+.btn-theme {
+  background: transparent;
+  color: #e86600;
+  border: 1px solid #e86600;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-theme:hover {
+  background: #e86600;
+  color: white;
+  transform: rotate(20deg);
 }
 
 .btn-orange {
@@ -1149,6 +1194,20 @@ footer {
 }
 
 /* ── Responsive sections ── */
+@media (max-width: 1230px) {
+  .nav-links {
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+  }
+  
+  .btn-box {
+    gap: 8px;
+  }
+}
+
 @media (max-width: 1140px) {
   .nav-links {
     gap: 30px;
@@ -1156,6 +1215,31 @@ footer {
   
   .nav-links a {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    font-size: 13px;
+  }
+  
+  .btn-box {
+    gap: 8px;
+  }
+  
+  .btn-theme,
+  .btn-lang {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+  
+  .btn-lang {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
 
@@ -1623,4 +1707,89 @@ footer {
 
 .project-meta-value {
   color: #8a8989;
+}
+
+
+/* Light Theme Overrides */
+body.light-theme .sidebar {
+  background-color: var(--bg-secondary);
+}
+
+body.light-theme .sidebar .sidebar-links a {
+  color: var(--text-secondary);
+}
+
+body.light-theme .sidebar .sidebar-links a:hover {
+  color: var(--text-primary);
+}
+
+body.light-theme .close-btn {
+  color: var(--text-primary);
+}
+
+body.light-theme .btn-sidebar {
+  color: var(--text-primary);
+}
+
+body.light-theme .hero-text p,
+body.light-theme .hero-text h2,
+body.light-theme .hero-text h1 {
+  color: var(--text-secondary);
+}
+
+body.light-theme .stats,
+body.light-theme .stat-box,
+body.light-theme .exp-card,
+body.light-theme .project-card,
+body.light-theme .skill-category,
+body.light-theme .cert-item,
+body.light-theme .edu-card,
+body.light-theme .contact-section {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+body.light-theme .section-wrapper h2,
+body.light-theme .exp-title,
+body.light-theme .project-title,
+body.light-theme .skill-category h3,
+body.light-theme .cert-item h4,
+body.light-theme .edu-info h3,
+body.light-theme .stats h6,
+body.light-theme .about-text p strong,
+body.light-theme .edu-details span {
+  color: var(--text-primary);
+}
+
+body.light-theme .hero-text p,
+body.light-theme .section-desc,
+body.light-theme .about-text p,
+body.light-theme .exp-card ul li,
+body.light-theme .project-desc,
+body.light-theme .skill-item,
+body.light-theme .cert-item p,
+body.light-theme .cert-desc,
+body.light-theme .project-meta-value,
+body.light-theme .stat-box h6,
+body.light-theme footer,
+body.light-theme .contact-social a,
+body.light-theme .project-head a,
+body.light-theme .project-tech span {
+  color: var(--text-secondary);
+}
+
+body.light-theme .exp-date,
+body.light-theme .project-tech span,
+body.light-theme .cert-item .cert-icon,
+body.light-theme .contact-social a {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+body.light-theme .hero-image-box {
+  background-color: var(--bg-secondary);
+}
+
+body.light-theme .shapes-container {
+  opacity: 0.3;
 }

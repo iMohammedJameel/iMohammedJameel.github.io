@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="light-theme.css" />
   </head>
   <body>
     <!-- Animated Background Shapes -->
@@ -35,6 +36,9 @@
           <a href="#contact" data-key="navContact">Contact</a>
         </nav>
         <div class="btn-box">
+          <button id="themeToggle" class="btn-theme" title="Toggle Theme">
+            <i class="bx bx-sun"></i>
+          </button>
           <button id="langToggle" class="btn-lang">AR</button>
           <a href="#contact" class="btn-orange btn-top" data-key="hireMe">Hire Me</a>
           <button id="openSidebar" class="btn-sidebar">
@@ -787,6 +791,32 @@
             el.setAttribute('data-text', t[key]);
           }
         });
+      });
+
+      // Theme Toggle
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = themeToggle.querySelector('i');
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        
+        if (isLight) {
+          themeIcon.classList.remove('bx-sun');
+          themeIcon.classList.add('bx-moon');
+          localStorage.setItem('theme', 'light');
+        } else {
+          themeIcon.classList.remove('bx-moon');
+          themeIcon.classList.add('bx-sun');
+          localStorage.setItem('theme', 'dark');
+        }
       });
 
     </script>
