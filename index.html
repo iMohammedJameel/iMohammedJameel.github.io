@@ -26,16 +26,17 @@
       <header class="navbar">
         <a class="logo" href="#">M.Jameel</a>
         <nav class="nav-links">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About me</a>
-          <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" class="active" data-key="navHome">Home</a>
+          <a href="#about" data-key="navAbout">About me</a>
+          <a href="#education" data-key="navEducation">Education</a>
+          <a href="#experience" data-key="navExperience">Experience</a>
+          <a href="#projects" data-key="navProjects">Projects</a>
+          <a href="#skills" data-key="navSkills">Skills</a>
+          <a href="#contact" data-key="navContact">Contact</a>
         </nav>
         <div class="btn-box">
-          <a href="#contact" class="btn-orange btn-top">Hire Me</a>
+          <button id="langToggle" class="btn-lang">AR</button>
+          <a href="#contact" class="btn-orange btn-top" data-key="hireMe">Hire Me</a>
           <button id="openSidebar" class="btn-sidebar">
             <i class="bx bx-menu-alt-right"></i>
           </button>
@@ -49,16 +50,16 @@
             <i class="bx bx-x"></i>
           </button>
           <div class="sidebar-links">
-            <a href="#home">Home</a>
-            <a href="#about">About me</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" data-key="navHome">Home</a>
+            <a href="#about" data-key="navAbout">About me</a>
+            <a href="#education" data-key="navEducation">Education</a>
+            <a href="#experience" data-key="navExperience">Experience</a>
+            <a href="#projects" data-key="navProjects">Projects</a>
+            <a href="#skills" data-key="navSkills">Skills</a>
+            <a href="#contact" data-key="navContact">Contact</a>
           </div>
           <div class="sidebar-button">
-            <a href="#contact" class="btn-orange" style="display:block;text-align:center;">Hire Me</a>
+            <a href="#contact" class="btn-orange" style="display:block;text-align:center;" data-key="hireMe">Hire Me</a>
           </div>
         </div>
       </div>
@@ -68,12 +69,11 @@
         <div class="hero-background">
           <div class="smoke-background"></div>
           <div class="hero-text">
-            <p>Hi, I am</p>
-            <h2>Mohammed Jameel</h2>
+            <p data-key="heroGreeting">Hi, I am</p>
+            <h2 data-key="heroName">Mohammed Jameel</h2>
             <h1>
-              I'm a
-              <span style="--i: 2" data-text="Full Stack Developer">Full Stack Developer</span>
-              <span style="--i: 1" data-text="DevOps Engineer">DevOps Engineer</span>
+              <span style="--i: 2" data-text="Full Stack Developer" data-key-text="heroRole1">Full Stack Developer</span>
+              <span style="--i: 1" data-text="DevOps Engineer" data-key-text="heroRole2">DevOps Engineer</span>
             </h1>
 
             <div class="social-icons">
@@ -84,22 +84,22 @@
             </div>
 
             <div class="hero-buttons">
-              <a href="#contact" class="btn-orange">Hire Me</a>
-              <a href="assets/Mohammed_Jameel-cv.pdf" target="_blank" class="btn-outline">View My CV</a>
+              <a href="#contact" class="btn-orange" data-key="hireMe">Hire Me</a>
+              <a href="assets/Mohammed_Jameel-cv.pdf" target="_blank" class="btn-outline" data-key="viewCV">View My CV</a>
             </div>
           </div>
           <div class="stats">
             <div>
               <p class="count" data-target="3">0</p>
-              <h6>Years Experience</h6>
+              <h6 data-key="statYears">Years Experience</h6>
             </div>
             <div>
               <p class="count" data-target="6">0</p>
-              <h6>Finished Projects</h6>
+              <h6 data-key="statProjects">Finished Projects</h6>
             </div>
             <div>
               <p class="count" data-target="5000">0</p>
-              <h6>Community Members</h6>
+              <h6 data-key="statCommunity">Community Members</h6>
             </div>
           </div>
         </div>
@@ -114,21 +114,21 @@
     <!-- About Section -->
     <section class="section-wrapper" id="about">
       <div class="section-header">
-        <span class="section-tag">About Me</span>
-        <h2>Building the future with code & cloud</h2>
+        <span class="section-tag" data-key="aboutTag">About Me</span>
+        <h2 data-key="aboutTitle">Building the future with code & cloud</h2>
       </div>
       <div class="about-grid">
         <div class="about-stats">
-          <div class="stat-box"><p>3+</p><h6>Years Experience</h6></div>
-          <div class="stat-box"><p>6+</p><h6>Projects Built</h6></div>
-          <div class="stat-box"><p>3+</p><h6>Certifications</h6></div>
-          <div class="stat-box"><p>5000+</p><h6>Community Members</h6></div>
+          <div class="stat-box"><p>3+</p><h6 data-key="statYears">Years Experience</h6></div>
+          <div class="stat-box"><p>6+</p><h6 data-key="statProjects2">Projects Built</h6></div>
+          <div class="stat-box"><p>3+</p><h6 data-key="statCerts">Certifications</h6></div>
+          <div class="stat-box"><p>5000+</p><h6 data-key="statCommunity">Community Members</h6></div>
         </div>
         <div class="about-text">
-          <p>I'm <strong>Mohammed Jameel Fouad</strong>, a Junior DevOps Engineer based in Cairo, Egypt. I hold a Bachelor's degree in Computer Science from Thebes Academy with a GPA of 3.04.</p>
-          <p>With a strong foundation in IT Infrastructure and System Administration, I bring deep understanding of networking, security, and system integrity. I'm eager to leverage my automation skills to streamline deployment processes and ensure high availability.</p>
-          <p>I led the <strong>GDG on Campus</strong> chapter at Thebes Academy, organizing events and hackathons that engaged <strong>5000+ participants</strong>.</p>
-          <p>My career objective is to grow as a <strong>DevOps & Full Stack Engineer</strong>, building scalable cloud infrastructure and contributing to high-impact software projects that bridge the gap between development and operations.</p>
+          <p data-key="aboutP1">I'm <strong>Mohammed Jameel Fouad</strong>, a Junior DevOps Engineer based in Cairo, Egypt. I hold a Bachelor's degree in Computer Science from Thebes Academy with a GPA of 3.04.</p>
+          <p data-key="aboutP2">With a strong foundation in IT Infrastructure and System Administration, I bring deep understanding of networking, security, and system integrity. I'm eager to leverage my automation skills to streamline deployment processes and ensure high availability.</p>
+          <p data-key="aboutP3">I led the <strong>GDG on Campus</strong> chapter at Thebes Academy, organizing events and hackathons that engaged <strong>5000+ participants</strong>.</p>
+          <p data-key="aboutP4">My career objective is to grow as a <strong>DevOps & Full Stack Engineer</strong>, building scalable cloud infrastructure and contributing to high-impact software projects that bridge the gap between development and operations.</p>
         </div>
       </div>
     </section>
@@ -136,17 +136,17 @@
     <!-- Education Section -->
     <section class="section-wrapper" id="education">
       <div class="section-header">
-        <span class="section-tag">Education</span>
-        <h2>Academic Background</h2>
+        <span class="section-tag" data-key="eduTag">Education</span>
+        <h2 data-key="eduTitle">Academic Background</h2>
       </div>
       <div class="edu-card fade-in">
         <div class="edu-icon"><i class="bx bxs-graduation"></i></div>
         <div class="edu-info">
-          <h3>Thebes Academy</h3>
-          <div class="edu-degree">Bachelor's Degree in Computer Science</div>
+          <h3 data-key="eduName">Thebes Academy</h3>
+          <div class="edu-degree" data-key="eduDegree">Bachelor's Degree in Computer Science</div>
           <div class="edu-details">
-            <span><i class="bx bx-calendar"></i> Sep 2019 — May 2023</span>
-            <span><i class="bx bx-map"></i> Maadi, Cairo, Egypt</span>
+            <span><i class="bx bx-calendar"></i> <span data-key="eduDate">Sep 2019 — May 2023</span></span>
+            <span><i class="bx bx-map"></i> <span data-key="eduLocation">Maadi, Cairo, Egypt</span></span>
             <span><i class="bx bx-star"></i> GPA: 3.04</span>
           </div>
         </div>
@@ -156,54 +156,54 @@
     <!-- Experience Section -->
     <section class="section-wrapper" id="experience">
       <div class="section-header">
-        <span class="section-tag">Experience</span>
-        <h2>My Professional Journey</h2>
+        <span class="section-tag" data-key="expTag">Experience</span>
+        <h2 data-key="expTitle">My Professional Journey</h2>
       </div>
       <div class="exp-list">
         <div class="exp-card fade-in">
           <div class="exp-head">
             <div>
-              <div class="exp-title">Software Engineering Trainee & Internship</div>
+              <div class="exp-title" data-key="exp1Title">Software Engineering Trainee & Internship</div>
               <div class="exp-company">Digilians</div>
             </div>
-            <div class="exp-date">Dec 2025 — Present</div>
+            <div class="exp-date" data-key="exp1Date">Dec 2025 — Present</div>
           </div>
           <ul>
-            <li>Managed cloud infrastructure resources using AWS and analytical tools</li>
-            <li>Designed CI/CD pipelines using GitLab CI and TeamCity, reducing release time by 40%</li>
-            <li>Provisioned cloud infrastructure using Terraform and Helm Charts</li>
-            <li>Deployed containerized applications using Docker and Kubernetes</li>
+            <li data-key="exp1Li1">Managed cloud infrastructure resources using AWS and analytical tools</li>
+            <li data-key="exp1Li2">Designed CI/CD pipelines using GitLab CI and TeamCity, reducing release time by 40%</li>
+            <li data-key="exp1Li3">Provisioned cloud infrastructure using Terraform and Helm Charts</li>
+            <li data-key="exp1Li4">Deployed containerized applications using Docker and Kubernetes</li>
           </ul>
         </div>
         <div class="exp-card fade-in">
           <div class="exp-head">
             <div>
-              <div class="exp-title">IT Specialist</div>
+              <div class="exp-title" data-key="exp2Title">IT Specialist</div>
               <div class="exp-company">Linah Group</div>
             </div>
-            <div class="exp-date">Sep 2025 — Nov 2025</div>
+            <div class="exp-date" data-key="exp2Date">Sep 2025 — Nov 2025</div>
           </div>
           <ul>
-            <li>Installed, troubleshot, and configured computers, printers, and network equipment</li>
-            <li>Managed and maintained LAN and Wi-Fi networks</li>
-            <li>Provided technical support and resolved daily IT issues for staff</li>
-            <li>Applied security updates and ensured system protection</li>
+            <li data-key="exp2Li1">Installed, troubleshot, and configured computers, printers, and network equipment</li>
+            <li data-key="exp2Li2">Managed and maintained LAN and Wi-Fi networks</li>
+            <li data-key="exp2Li3">Provided technical support and resolved daily IT issues for staff</li>
+            <li data-key="exp2Li4">Applied security updates and ensured system protection</li>
           </ul>
         </div>
         <div class="exp-card fade-in">
           <div class="exp-head">
             <div>
-              <div class="exp-title">Technical Support Specialist</div>
+              <div class="exp-title" data-key="exp3Title">Technical Support Specialist</div>
               <div class="exp-company">Fujitsu — FSIT Services</div>
             </div>
-            <div class="exp-date">Jan 2025 — Sep 2025</div>
+            <div class="exp-date" data-key="exp3Date">Jan 2025 — Sep 2025</div>
           </div>
           <ul>
-            <li>Provided technical support for desktops, laptops, printers, and Qmatic systems</li>
-            <li>Troubleshot complex networking issues including TCP/IP, DNS, and firewalls</li>
-            <li>Managed user accounts via Active Directory and Microsoft 365</li>
-            <li>Automated maintenance tasks using Bash scripts, reducing downtime by 20%</li>
-            <li>Handled 100+ technical tickets daily, maintaining 99% system uptime</li>
+            <li data-key="exp3Li1">Provided technical support for desktops, laptops, printers, and Qmatic systems</li>
+            <li data-key="exp3Li2">Troubleshot complex networking issues including TCP/IP, DNS, and firewalls</li>
+            <li data-key="exp3Li3">Managed user accounts via Active Directory and Microsoft 365</li>
+            <li data-key="exp3Li4">Automated maintenance tasks using Bash scripts, reducing downtime by 20%</li>
+            <li data-key="exp3Li5">Handled 100+ technical tickets daily, maintaining 99% system uptime</li>
           </ul>
         </div>
       </div>
@@ -212,86 +212,56 @@
     <!-- Projects Section -->
     <section class="section-wrapper" id="projects">
       <div class="section-header">
-        <span class="section-tag">Projects</span>
-        <h2>Featured Work</h2>
+        <span class="section-tag" data-key="projTag">Projects</span>
+        <h2 data-key="projTitle">Featured Work</h2>
       </div>
       <div class="projects-grid">
         <div class="project-card featured fade-in">
-          <div class="project-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="IT Helpdesk"></div>
+          <div class="project-img"><img src="assets/helpdesk-system.png" alt="IT Helpdesk"></div>
           <div class="project-icon"><i class="bx bx-support"></i></div>
           <div class="project-head">
-            <div class="project-title">IT Helpdesk System</div>
-            <a href="https://github.com/iMohammedJameel/-IT-Helpdesk-System" target="_blank"><i class="bx bxl-github"></i> View Code</a>
+            <div class="project-title" data-key="proj1Title">IT Helpdesk System</div>
+            <a href="https://github.com/iMohammedJameel/-IT-Helpdesk-System" target="_blank"><i class="bx bxl-github"></i> <span data-key="viewCode">View Code</span></a>
           </div>
-          <p class="project-desc">A comprehensive IT ticket management system to streamline support request handling across organizations.</p>
+          <p class="project-desc" data-key="proj1Desc">A comprehensive IT ticket management system to streamline support request handling across organizations.</p>
           <div class="project-meta">
-            <div class="project-meta-item"><span class="project-meta-label">Problem:</span><span class="project-meta-value">Organizations struggle with tracking and managing IT support requests efficiently</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Solution:</span><span class="project-meta-value">Built a centralized ticketing system with REST API for automated request handling</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Outcome:</span><span class="project-meta-value">Reduced response time by 50% and improved ticket tracking transparency</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="proj1Problem">Organizations struggle with tracking and managing IT support requests efficiently</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="proj1Solution">Built a centralized ticketing system with REST API for automated request handling</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="proj1Outcome">Reduced response time by 50% and improved ticket tracking transparency</span></div>
           </div>
           <div class="project-tech">
             <span>JavaScript</span><span>Node.js</span><span>Express</span><span>REST API</span>
           </div>
         </div>
         <div class="project-card fade-in">
-          <div class="project-img"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80" alt="Student Course"></div>
+          <div class="project-img"><img src="assets/Student Course Management.png" alt="Student Course"></div>
           <div class="project-icon"><i class="bx bx-book"></i></div>
           <div class="project-head">
-            <div class="project-title">Student Course Management</div>
-            <a href="https://github.com/iMohammedJameel/Student-Course-Management-System" target="_blank"><i class="bx bxl-github"></i> Code</a>
+            <div class="project-title" data-key="proj2Title">Student Course Management</div>
+            <a href="https://github.com/iMohammedJameel/Student-Course-Management-System" target="_blank"><i class="bx bxl-github"></i> <span data-key="code">Code</span></a>
           </div>
-          <p class="project-desc">A C++ based system for managing students and courses with an intuitive interface.</p>
+          <p class="project-desc" data-key="proj2Desc">A C++ based system for managing students and courses with an intuitive interface.</p>
           <div class="project-meta">
-            <div class="project-meta-item"><span class="project-meta-label">Problem:</span><span class="project-meta-value">Manual student and course data management is time-consuming and error-prone</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Solution:</span><span class="project-meta-value">Developed an OOP-based system with automated enrollment and grade tracking</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Outcome:</span><span class="project-meta-value">Streamlined academic administration and reduced data entry errors by 70%</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="proj2Problem">Manual student and course data management is time-consuming and error-prone</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="proj2Solution">Developed an OOP-based system with automated enrollment and grade tracking</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="proj2Outcome">Streamlined academic administration and reduced data entry errors by 70%</span></div>
           </div>
           <div class="project-tech"><span>C++</span><span>OOP</span></div>
         </div>
         <div class="project-card fade-in">
-          <div class="project-img"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Little Lemon"></div>
+          <div class="project-img"><img src="assets/Little Lemon Booking App.png" alt="Little Lemon"></div>
           <div class="project-icon"><i class="bx bx-restaurant"></i></div>
           <div class="project-head">
-            <div class="project-title">Little Lemon Booking App</div>
-            <a href="https://github.com/iMohammedJameel/Little-Lemon-booking-app" target="_blank"><i class="bx bxl-github"></i> Code</a>
+            <div class="project-title" data-key="proj3Title">Little Lemon Booking App</div>
+            <a href="https://github.com/iMohammedJameel/Little-Lemon-booking-app" target="_blank"><i class="bx bxl-github"></i> <span data-key="code">Code</span></a>
           </div>
-          <p class="project-desc">An interactive table reservation app for Little Lemon restaurant with a modern UI.</p>
+          <p class="project-desc" data-key="proj3Desc">An interactive table reservation app for Little Lemon restaurant with a modern UI.</p>
           <div class="project-meta">
-            <div class="project-meta-item"><span class="project-meta-label">Problem:</span><span class="project-meta-value">Restaurant needed a digital solution for table reservations to reduce phone calls</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Solution:</span><span class="project-meta-value">Created a React-based booking interface with real-time availability checking</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Outcome:</span><span class="project-meta-value">Increased booking efficiency by 60% and improved customer experience</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="proj3Problem">Restaurant needed a digital solution for table reservations to reduce phone calls</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="proj3Solution">Created a React-based booking interface with real-time availability checking</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="proj3Outcome">Increased booking efficiency by 60% and improved customer experience</span></div>
           </div>
           <div class="project-tech"><span>JavaScript</span><span>React</span></div>
-        </div>
-        <div class="project-card fade-in">
-          <div class="project-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="IT Ticketing"></div>
-          <div class="project-icon"><i class="bx bx-headphone"></i></div>
-          <div class="project-head">
-            <div class="project-title">IT Ticketing System</div>
-            <a href="https://github.com/iMohammedJameel/IT-Ticketing-System" target="_blank"><i class="bx bxl-github"></i> Code</a>
-          </div>
-          <p class="project-desc">A complete IT ticketing system for managing support requests and tracking their status.</p>
-          <div class="project-meta">
-            <div class="project-meta-item"><span class="project-meta-label">Problem:</span><span class="project-meta-value">IT teams lacked visibility into ticket status and priority management</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Solution:</span><span class="project-meta-value">Built a full-stack ticketing platform with status tracking and priority queues</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Outcome:</span><span class="project-meta-value">Improved ticket resolution time by 40% and enhanced team collaboration</span></div>
-          </div>
-          <div class="project-tech"><span>JavaScript</span><span>Express</span></div>
-        </div>
-        <div class="project-card fade-in">
-          <div class="project-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Carer"></div>
-          <div class="project-icon"><i class="bx bx-heart"></i></div>
-          <div class="project-head">
-            <div class="project-title">Carer</div>
-            <a href="https://github.com/iMohammedJameel/Carer" target="_blank"><i class="bx bxl-github"></i> Code</a>
-          </div>
-          <p class="project-desc">A beautifully designed interactive web application with elegant UI/UX.</p>
-          <div class="project-meta">
-            <div class="project-meta-item"><span class="project-meta-label">Problem:</span><span class="project-meta-value">Users needed an accessible and visually appealing care management interface</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Solution:</span><span class="project-meta-value">Designed a responsive web app with focus on user experience and accessibility</span></div>
-            <div class="project-meta-item"><span class="project-meta-label">Outcome:</span><span class="project-meta-value">Achieved 95% user satisfaction score and improved engagement by 80%</span></div>
-          </div>
-          <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         </div>
       </div>
     </section>
@@ -299,12 +269,12 @@
     <!-- Skills Section -->
     <section class="section-wrapper" id="skills">
       <div class="section-header">
-        <span class="section-tag">Skills</span>
-        <h2>Tech Stack</h2>
+        <span class="section-tag" data-key="skillsTag">Skills</span>
+        <h2 data-key="skillsTitle">Tech Stack</h2>
       </div>
       <div class="skills-grid">
         <div class="skill-category fade-in">
-          <h3><i class="bx bx-cloud"></i> Cloud & DevOps</h3>
+          <h3><i class="bx bx-cloud"></i> <span data-key="skillCloud">Cloud & DevOps</span></h3>
           <div class="skill-list">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS">AWS (EC2, S3, VPC)</div>
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP">Google Cloud (GCP)</div>
@@ -316,7 +286,7 @@
           </div>
         </div>
         <div class="skill-category fade-in">
-          <h3><i class="bx bx-code-alt"></i> Programming</h3>
+          <h3><i class="bx bx-code-alt"></i> <span data-key="skillProg">Programming</span></h3>
           <div class="skill-list">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</div>
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash">Bash Scripting</div>
@@ -326,7 +296,7 @@
           </div>
         </div>
         <div class="skill-category fade-in">
-          <h3><i class="bx bx-server"></i> Systems & Networking</h3>
+          <h3><i class="bx bx-server"></i> <span data-key="skillSys">Systems & Networking</span></h3>
           <div class="skill-list">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">Linux Administration</div>
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="AD">Active Directory</div>
@@ -343,38 +313,38 @@
     <!-- Certificates Section -->
     <section class="section-wrapper" id="certificates">
       <div class="section-header">
-        <span class="section-tag">Certificates</span>
-        <h2>Certifications</h2>
+        <span class="section-tag" data-key="certsTag">Certificates</span>
+        <h2 data-key="certsTitle">Certifications</h2>
       </div>
       <div class="cert-list">
         <div class="cert-item fade-in" onclick="openModal('assets/Cloud Operations.png')" style="cursor:pointer">
           <div class="cert-img"><img src="assets/Cloud Operations.png" alt="AWS Cloud Operations"></div>
           <div class="cert-icon"><i class="bx bxl-aws"></i></div>
           <div>
-            <h4>AWS Academy Graduate — Cloud Operations</h4>
-            <p>Amazon Web Services — 2026</p>
-            <p class="cert-desc">Focused on monitoring, managing, and automating AWS workloads using CloudWatch, CloudTrail, Systems Manager, and Auto Scaling. Learned how to ensure high availability, cost optimization, and operational excellence.</p>
-            <a class="cert-link" href="https://www.credly.com/badges/5983989b-407d-4850-9d09-1e5910f1ed1d/public_url" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> View Certificate</a>
+            <h4 data-key="cert1Title">AWS Academy Graduate — Cloud Operations</h4>
+            <p data-key="cert1Org">Amazon Web Services — 2026</p>
+            <p class="cert-desc" data-key="cert1Desc">Focused on monitoring, managing, and automating AWS workloads using CloudWatch, CloudTrail, Systems Manager, and Auto Scaling. Learned how to ensure high availability, cost optimization, and operational excellence.</p>
+            <a class="cert-link" href="https://www.credly.com/badges/5983989b-407d-4850-9d09-1e5910f1ed1d/public_url" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> <span data-key="viewCert">View Certificate</span></a>
           </div>
         </div>
         <div class="cert-item fade-in" onclick="openModal('assets/Cloud Developing.png')" style="cursor:pointer">
           <div class="cert-img"><img src="assets/Cloud Developing.png" alt="AWS Cloud Developing"></div>
           <div class="cert-icon"><i class="bx bxl-aws"></i></div>
           <div>
-            <h4>AWS Academy Graduate — Cloud Developing</h4>
-            <p>Amazon Web Services — April 2026</p>
-            <p class="cert-desc">Learned how to build cloud-native applications using AWS services like Lambda, API Gateway, DynamoDB, S3, and Cognito. Covered serverless architecture, event-driven design, and deploying scalable apps on AWS.</p>
-            <a class="cert-link" href="https://www.credly.com/badges/fbfdf6e2-2669-46ef-9a2a-3ee6c3b57e03/public_url" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> View Certificate</a>
+            <h4 data-key="cert2Title">AWS Academy Graduate — Cloud Developing</h4>
+            <p data-key="cert2Org">Amazon Web Services — April 2026</p>
+            <p class="cert-desc" data-key="cert2Desc">Learned how to build cloud-native applications using AWS services like Lambda, API Gateway, DynamoDB, S3, and Cognito. Covered serverless architecture, event-driven design, and deploying scalable apps on AWS.</p>
+            <a class="cert-link" href="https://www.credly.com/badges/fbfdf6e2-2669-46ef-9a2a-3ee6c3b57e03/public_url" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> <span data-key="viewCert">View Certificate</span></a>
           </div>
         </div>
         <div class="cert-item fade-in" onclick="openModal('assets/Cloud Foundations.png')" style="cursor:pointer">
           <div class="cert-img"><img src="assets/Cloud Foundations.png" alt="AWS Cloud Foundations"></div>
           <div class="cert-icon"><i class="bx bxl-aws"></i></div>
           <div>
-            <h4>AWS Academy Graduate — Cloud Foundations</h4>
-            <p>Amazon Web Services — 2026</p>
-            <p class="cert-desc">Covered the fundamentals of cloud computing and core AWS services including EC2, S3, VPC, IAM, and RDS. Gained understanding of AWS global infrastructure, pricing models, and security best practices.</p>
-            <a class="cert-link" href="https://www.credly.com/badges/156217da-9b3e-4acd-9880-fcb120684592/public_url" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> View Certificate</a>
+            <h4 data-key="cert3Title">AWS Academy Graduate — Cloud Foundations</h4>
+            <p data-key="cert3Org">Amazon Web Services — 2026</p>
+            <p class="cert-desc" data-key="cert3Desc">Covered the fundamentals of cloud computing and core AWS services including EC2, S3, VPC, IAM, and RDS. Gained understanding of AWS global infrastructure, pricing models, and security best practices.</p>
+            <a class="cert-link" href="https://www.credly.com/badges/156217da-9b3e-4acd-9880-fcb120684592/public_url" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> <span data-key="viewCert">View Certificate</span></a>
           </div>
         </div>
 
@@ -382,20 +352,20 @@
           <div class="cert-img"><img src="assets/Developer Professional.png" alt="Meta Front-End"></div>
           <div class="cert-icon"><i class="bx bxl-meta"></i></div>
           <div>
-            <h4>Meta Front-End Developer Professional</h4>
-            <p>Meta — April 2026</p>
-            <p class="cert-desc">A 9-course professional certificate covering HTML, CSS, JavaScript, React, UI/UX design principles, version control with Git, and building accessible, responsive web applications ready for production.</p>
-            <a class="cert-link" href="https://coursera.org/share/2512d2cddc91bf0b3189c9e0c8b8ba36" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> View Certificate</a>
+            <h4 data-key="cert4Title">Meta Front-End Developer Professional</h4>
+            <p data-key="cert4Org">Meta — April 2026</p>
+            <p class="cert-desc" data-key="cert4Desc">A 9-course professional certificate covering HTML, CSS, JavaScript, React, UI/UX design principles, version control with Git, and building accessible, responsive web applications ready for production.</p>
+            <a class="cert-link" href="https://coursera.org/share/2512d2cddc91bf0b3189c9e0c8b8ba36" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> <span data-key="viewCert">View Certificate</span></a>
           </div>
         </div>
         <div class="cert-item fade-in" onclick="openModal('assets/Quality Work with Agility.png')" style="cursor:pointer">
           <div class="cert-img"><img src="assets/Quality Work with Agility.png" alt="IBM Agility"></div>
           <div class="cert-icon"><i class="bx bx-award"></i></div>
           <div>
-            <h4>Delivering Quality Work with Agility</h4>
-            <p>IBM — April 2026</p>
-            <p class="cert-desc">Learned Agile and Scrum methodologies for delivering high-quality software iteratively. Covered sprint planning, retrospectives, continuous improvement, and how to collaborate effectively in fast-paced development teams.</p>
-            <a class="cert-link" href="https://coursera.org/share/6fb6e2e7d41a4707a01132a7b4a1f8fa" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> View Certificate</a>
+            <h4 data-key="cert5Title">Delivering Quality Work with Agility</h4>
+            <p data-key="cert5Org">IBM — April 2026</p>
+            <p class="cert-desc" data-key="cert5Desc">Learned Agile and Scrum methodologies for delivering high-quality software iteratively. Covered sprint planning, retrospectives, continuous improvement, and how to collaborate effectively in fast-paced development teams.</p>
+            <a class="cert-link" href="https://coursera.org/share/6fb6e2e7d41a4707a01132a7b4a1f8fa" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> <span data-key="viewCert">View Certificate</span></a>
           </div>
         </div>
 
@@ -403,19 +373,19 @@
           <div class="cert-img"><img src="assets/Flutter & Dart Development Course.png" alt="Flutter"></div>
           <div class="cert-icon"><i class="bx bx-mobile-alt"></i></div>
           <div>
-            <h4>Flutter & Dart Development</h4>
-            <p>Udemy — Cross-platform Mobile</p>
-            <p class="cert-desc">Built cross-platform mobile applications for iOS and Android using Flutter and Dart. Covered widgets, state management, navigation, REST API integration, and publishing apps to app stores.</p>
-            <a class="cert-link" href="https://www.udemy.com/certificate/UC-c28ec3ca-541e-4b54-940d-9b137d4892dd/" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> View Certificate</a>
+            <h4 data-key="cert6Title">Flutter & Dart Development</h4>
+            <p data-key="cert6Org">Udemy — Cross-platform Mobile</p>
+            <p class="cert-desc" data-key="cert6Desc">Built cross-platform mobile applications for iOS and Android using Flutter and Dart. Covered widgets, state management, navigation, REST API integration, and publishing apps to app stores.</p>
+            <a class="cert-link" href="https://www.udemy.com/certificate/UC-c28ec3ca-541e-4b54-940d-9b137d4892dd/" target="_blank" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> <span data-key="viewCert">View Certificate</span></a>
           </div>
         </div>
         <div class="cert-item fade-in" onclick="openModal('assets/icpc.png')" style="cursor:pointer">
           <div class="cert-img"><img src="assets/icpc.png" alt="ECPC Certificate"></div>
           <div class="cert-icon"><i class="bx bx-trophy"></i></div>
           <div>
-            <h4>ECPC — Egyptian Collegiate Programming Contest</h4>
-            <p>Contestant — Aug 2021</p>
-            <p class="cert-desc">Competed as a contestant in Egypt's top collegiate programming contest. Solved algorithmic and data structure problems under time pressure using C++, competing against teams from universities across Egypt.</p>
+            <h4 data-key="cert7Title">ECPC — Egyptian Collegiate Programming Contest</h4>
+            <p data-key="cert7Org">Contestant — Aug 2021</p>
+            <p class="cert-desc" data-key="cert7Desc">Competed as a contestant in Egypt's top collegiate programming contest. Solved algorithmic and data structure problems under time pressure using C++, competing against teams from universities across Egypt.</p>
           </div>
         </div>
       </div>
@@ -424,39 +394,39 @@
     <!-- Volunteering Section -->
     <section class="section-wrapper" id="volunteering">
       <div class="section-header">
-        <span class="section-tag">Volunteering</span>
-        <h2>Community & Leadership</h2>
+        <span class="section-tag" data-key="volTag">Volunteering</span>
+        <h2 data-key="volTitle">Community & Leadership</h2>
       </div>
       <div class="exp-list">
         <div class="exp-card fade-in" onclick="openModal('assets/Chapter Leader.jpg')" style="cursor:pointer">
           <div class="exp-img"><img src="assets/Chapter Leader.jpg" alt="Chapter Leader"></div>
           <div class="exp-head">
             <div>
-              <div class="exp-title">Chapter Leader</div>
-              <div class="exp-company">GDG on Campus (formerly GDSC) — Thebes Academy</div>
+              <div class="exp-title" data-key="vol1Title">Chapter Leader</div>
+              <div class="exp-company" data-key="vol1Org">GDG on Campus (formerly GDSC) — Thebes Academy</div>
             </div>
-            <div class="exp-date">Jul 2022 — Jul 2023</div>
+            <div class="exp-date" data-key="vol1Date">Jul 2022 — Jul 2023</div>
           </div>
           <ul>
-            <li>Led a chapter of 500+ members and organized events for 5000+ attendees</li>
-            <li>Organized workshops, hackathons, and tech events</li>
-            <li>Built partnerships with tech industry companies</li>
-            <li>Promoted knowledge sharing through technical workshops</li>
+            <li data-key="vol1Li1">Led a chapter of 500+ members and organized events for 5000+ attendees</li>
+            <li data-key="vol1Li2">Organized workshops, hackathons, and tech events</li>
+            <li data-key="vol1Li3">Built partnerships with tech industry companies</li>
+            <li data-key="vol1Li4">Promoted knowledge sharing through technical workshops</li>
           </ul>
         </div>
         <div class="exp-card fade-in" onclick="openModal('assets/certificate.png')" style="cursor:pointer">
           <div class="exp-img"><img src="assets/certificate.png" alt="Technical Team Leader"></div>
           <div class="exp-head">
             <div>
-              <div class="exp-title">Core Team Member</div>
-              <div class="exp-company">GDG on Campus (formerly GDSC) — Thebes Academy</div>
+              <div class="exp-title" data-key="vol2Title">Core Team Member</div>
+              <div class="exp-company" data-key="vol2Org">GDG on Campus (formerly GDSC) — Thebes Academy</div>
             </div>
-            <div class="exp-date">Jul 2021 — Jul 2022</div>
+            <div class="exp-date" data-key="vol2Date">Jul 2021 — Jul 2022</div>
           </div>
           <ul>
-            <li>Managed all technical aspects of online and offline events as a Core Team Member</li>
-            <li>Handled live broadcasting using StreamYard</li>
-            <li>Developed strategic plans to boost chapter presence</li>
+            <li data-key="vol2Li1">Managed all technical aspects of online and offline events as a Core Team Member</li>
+            <li data-key="vol2Li2">Handled live broadcasting using StreamYard</li>
+            <li data-key="vol2Li3">Developed strategic plans to boost chapter presence</li>
           </ul>
         </div>
       </div>
@@ -465,9 +435,9 @@
     <!-- Contact Section -->
     <section class="section-wrapper contact-section" id="contact">
       <div class="section-header">
-        <span class="section-tag">Contact</span>
-        <h2>Let's Build Something Amazing</h2>
-        <p class="section-desc">Want to discuss a project? I'm always excited to hear new ideas!</p>
+        <span class="section-tag" data-key="contactTag">Contact</span>
+        <h2 data-key="contactTitle">Let's Build Something Amazing</h2>
+        <p class="section-desc" data-key="contactDesc">Want to discuss a project? I'm always excited to hear new ideas!</p>
       </div>
       <a href="mailto:mo.jameel.official@gmail.com" class="contact-email">
         <i class="bx bx-envelope"></i> mo.jameel.official@gmail.com
@@ -563,6 +533,230 @@
           }
         }, 16);
       });
+      // Language Toggle
+      const translations = {
+        en: {
+          navHome: 'Home', navAbout: 'About me', navEducation: 'Education',
+          navExperience: 'Experience', navProjects: 'Projects', navSkills: 'Skills',
+          navContact: 'Contact', hireMe: 'Hire Me', viewCV: 'View My CV',
+          heroGreeting: 'Hi, I am', heroName: 'Mohammed Jameel', heroIma: "I'm a", heroRole1: 'Full Stack Developer', heroRole2: 'DevOps Engineer',
+          statYears: 'Years Experience', statProjects: 'Finished Projects', statCommunity: 'Community Members',
+          statProjects2: 'Projects Built', statCerts: 'Certifications',
+          aboutTag: 'About Me', aboutTitle: 'Building the future with code & cloud',
+          aboutP1: "I'm Mohammed Jameel Fouad, a Junior DevOps Engineer based in Cairo, Egypt. I hold a Bachelor's degree in Computer Science from Thebes Academy with a GPA of 3.04.",
+          aboutP2: "With a strong foundation in IT Infrastructure and System Administration, I bring deep understanding of networking, security, and system integrity. I'm eager to leverage my automation skills to streamline deployment processes and ensure high availability.",
+          aboutP3: "I led the GDG on Campus chapter at Thebes Academy, organizing events and hackathons that engaged 5000+ participants.",
+          aboutP4: "My career objective is to grow as a DevOps & Full Stack Engineer, building scalable cloud infrastructure and contributing to high-impact software projects that bridge the gap between development and operations.",
+          eduTag: 'Education', eduTitle: 'Academic Background',
+          eduName: 'Thebes Academy', eduDegree: "Bachelor's Degree in Computer Science",
+          eduDate: 'Sep 2019 — May 2023', eduLocation: 'Maadi, Cairo, Egypt',
+          expTag: 'Experience', expTitle: 'My Professional Journey',
+          exp1Title: 'Software Engineering Trainee & Internship', exp1Date: 'Dec 2025 — Present',
+          exp1Li1: 'Managed cloud infrastructure resources using AWS and analytical tools',
+          exp1Li2: 'Designed CI/CD pipelines using GitLab CI and TeamCity, reducing release time by 40%',
+          exp1Li3: 'Provisioned cloud infrastructure using Terraform and Helm Charts',
+          exp1Li4: 'Deployed containerized applications using Docker and Kubernetes',
+          exp2Title: 'IT Specialist', exp2Date: 'Sep 2025 — Nov 2025',
+          exp2Li1: 'Installed, troubleshot, and configured computers, printers, and network equipment',
+          exp2Li2: 'Managed and maintained LAN and Wi-Fi networks',
+          exp2Li3: 'Provided technical support and resolved daily IT issues for staff',
+          exp2Li4: 'Applied security updates and ensured system protection',
+          exp3Title: 'Technical Support Specialist', exp3Date: 'Jan 2025 — Sep 2025',
+          exp3Li1: 'Provided technical support for desktops, laptops, printers, and Qmatic systems',
+          exp3Li2: 'Troubleshot complex networking issues including TCP/IP, DNS, and firewalls',
+          exp3Li3: 'Managed user accounts via Active Directory and Microsoft 365',
+          exp3Li4: 'Automated maintenance tasks using Bash scripts, reducing downtime by 20%',
+          exp3Li5: 'Handled 100+ technical tickets daily, maintaining 99% system uptime',
+          projTag: 'Projects', projTitle: 'Featured Work',
+          viewCode: 'View Code', code: 'Code',
+          problem: 'Problem:', solution: 'Solution:', outcome: 'Outcome:',
+          proj1Title: 'IT Helpdesk System',
+          proj1Desc: 'A comprehensive IT ticket management system to streamline support request handling across organizations.',
+          proj1Problem: 'Organizations struggle with tracking and managing IT support requests efficiently',
+          proj1Solution: 'Built a centralized ticketing system with REST API for automated request handling',
+          proj1Outcome: 'Reduced response time by 50% and improved ticket tracking transparency',
+          proj2Title: 'Student Course Management',
+          proj2Desc: 'A C++ based system for managing students and courses with an intuitive interface.',
+          proj2Problem: 'Manual student and course data management is time-consuming and error-prone',
+          proj2Solution: 'Developed an OOP-based system with automated enrollment and grade tracking',
+          proj2Outcome: 'Streamlined academic administration and reduced data entry errors by 70%',
+          proj3Title: 'Little Lemon Booking App',
+          proj3Desc: 'An interactive table reservation app for Little Lemon restaurant with a modern UI.',
+          proj3Problem: 'Restaurant needed a digital solution for table reservations to reduce phone calls',
+          proj3Solution: 'Created a React-based booking interface with real-time availability checking',
+          proj3Outcome: 'Increased booking efficiency by 60% and improved customer experience',
+          proj4Title: 'IT Ticketing System',
+          proj4Desc: 'A complete IT ticketing system for managing support requests and tracking their status.',
+          proj4Problem: 'IT teams lacked visibility into ticket status and priority management',
+          proj4Solution: 'Built a full-stack ticketing platform with status tracking and priority queues',
+          proj4Outcome: 'Improved ticket resolution time by 40% and enhanced team collaboration',
+          proj5Title: 'Carer',
+          proj5Desc: 'A beautifully designed interactive web application with elegant UI/UX.',
+          proj5Problem: 'Users needed an accessible and visually appealing care management interface',
+          proj5Solution: 'Designed a responsive web app with focus on user experience and accessibility',
+          proj5Outcome: 'Achieved 95% user satisfaction score and improved engagement by 80%',
+          skillsTag: 'Skills', skillsTitle: 'Tech Stack',
+          skillCloud: 'Cloud & DevOps', skillProg: 'Programming', skillSys: 'Systems & Networking',
+          certsTag: 'Certificates', certsTitle: 'Certifications',
+          viewCert: 'View Certificate',
+          cert1Title: 'AWS Academy Graduate — Cloud Operations',
+          cert1Org: 'Amazon Web Services — 2026',
+          cert1Desc: 'Focused on monitoring, managing, and automating AWS workloads using CloudWatch, CloudTrail, Systems Manager, and Auto Scaling. Learned how to ensure high availability, cost optimization, and operational excellence.',
+          cert2Title: 'AWS Academy Graduate — Cloud Developing',
+          cert2Org: 'Amazon Web Services — April 2026',
+          cert2Desc: 'Learned how to build cloud-native applications using AWS services like Lambda, API Gateway, DynamoDB, S3, and Cognito. Covered serverless architecture, event-driven design, and deploying scalable apps on AWS.',
+          cert3Title: 'AWS Academy Graduate — Cloud Foundations',
+          cert3Org: 'Amazon Web Services — 2026',
+          cert3Desc: 'Covered the fundamentals of cloud computing and core AWS services including EC2, S3, VPC, IAM, and RDS. Gained understanding of AWS global infrastructure, pricing models, and security best practices.',
+          cert4Title: 'Meta Front-End Developer Professional',
+          cert4Org: 'Meta — April 2026',
+          cert4Desc: 'A 9-course professional certificate covering HTML, CSS, JavaScript, React, UI/UX design principles, version control with Git, and building accessible, responsive web applications ready for production.',
+          cert5Title: 'Delivering Quality Work with Agility',
+          cert5Org: 'IBM — April 2026',
+          cert5Desc: 'Learned Agile and Scrum methodologies for delivering high-quality software iteratively. Covered sprint planning, retrospectives, continuous improvement, and how to collaborate effectively in fast-paced development teams.',
+          cert6Title: 'Flutter & Dart Development',
+          cert6Org: 'Udemy — Cross-platform Mobile',
+          cert6Desc: 'Built cross-platform mobile applications for iOS and Android using Flutter and Dart. Covered widgets, state management, navigation, REST API integration, and publishing apps to app stores.',
+          cert7Title: 'ECPC — Egyptian Collegiate Programming Contest',
+          cert7Org: 'Contestant — Aug 2021',
+          cert7Desc: 'Competed as a contestant in Egypt\'s top collegiate programming contest. Solved algorithmic and data structure problems under time pressure using C++, competing against teams from universities across Egypt.',
+          volTag: 'Volunteering', volTitle: 'Community & Leadership',
+          vol1Title: 'Chapter Leader', vol1Org: 'GDG on Campus (formerly GDSC) — Thebes Academy', vol1Date: 'Jul 2022 — Jul 2023',
+          vol1Li1: 'Led a chapter of 500+ members and organized events for 5000+ attendees',
+          vol1Li2: 'Organized workshops, hackathons, and tech events',
+          vol1Li3: 'Built partnerships with tech industry companies',
+          vol1Li4: 'Promoted knowledge sharing through technical workshops',
+          vol2Title: 'Core Team Member', vol2Org: 'GDG on Campus (formerly GDSC) — Thebes Academy', vol2Date: 'Jul 2021 — Jul 2022',
+          vol2Li1: 'Managed all technical aspects of online and offline events as a Core Team Member',
+          vol2Li2: 'Handled live broadcasting using StreamYard',
+          vol2Li3: 'Developed strategic plans to boost chapter presence',
+          contactTag: 'Contact', contactTitle: "Let's Build Something Amazing",
+          contactDesc: "Want to discuss a project? I'm always excited to hear new ideas!"
+        },
+        ar: {
+          navHome: 'الرئيسية', navAbout: 'عني', navEducation: 'التعليم',
+          navExperience: 'الخبرة', navProjects: 'المشاريع', navSkills: 'المهارات',
+          navContact: 'تواصل', hireMe: 'وظفني', viewCV: 'عرض السيرة الذاتية',
+          heroGreeting: 'مرحباً، أنا', heroName: 'محمد جميل', heroIma: 'أنا', heroRole1: 'مطور Full Stack', heroRole2: 'مهندس DevOps',
+          statYears: 'سنوات خبرة', statProjects: 'مشاريع منجزة', statCommunity: 'عضو في المجتمع',
+          statProjects2: 'مشاريع منجزة', statCerts: 'شهادات',
+          aboutTag: 'عني', aboutTitle: 'نبني المستقبل بالكود والسحابة',
+          aboutP1: 'أنا محمد جميل فؤاد، مهندس DevOps مبتدئ مقيم في القاهرة، مصر. حاصل على درجة البكالوريوس في علوم الحاسب من أكاديمية طيبة بمعدل 3.04.',
+          aboutP2: 'مع أساس قوي في البنية التحتية لتكنولوجيا المعلومات وإدارة الأنظمة، أقدم فهماً عميقاً للشبكات والأمان وسلامة الأنظمة. أتطلع لاستخدام مهاراتي في الأتمتة لتبسيط عمليات النشر وضمان التوافر العالي.',
+          aboutP3: 'قدت فرع GDG on Campus في أكاديمية طيبة، ونظمت فعاليات وهاكاثونات شارك فيها أكثر من 5000 مشارك.',
+          aboutP4: 'هدفي المهني هو النمو كمهندس DevOps و Full Stack، وبناء بنية تحتية سحابية قابلة للتوسع والمساهمة في مشاريع برمجية عالية التأثير تربط بين التطوير والعمليات.',
+          eduTag: 'التعليم', eduTitle: 'الخلفية الأكاديمية',
+          eduName: 'أكاديمية طيبة', eduDegree: 'بكالوريوس في علوم الحاسب',
+          eduDate: 'سبتمبر 2019 — مايو 2023', eduLocation: 'المعادي، القاهرة، مصر',
+          expTag: 'الخبرة', expTitle: 'مسيرتي المهنية',
+          exp1Title: 'متدرب هندسة برمجيات', exp1Date: 'ديسمبر 2025 — حتى الآن',
+          exp1Li1: 'إدارة موارد البنية التحتية السحابية باستخدام AWS وأدوات التحليل',
+          exp1Li2: 'تصميم خطوط CI/CD باستخدام GitLab CI و TeamCity، مما قلل وقت الإصدار بنسبة 40%',
+          exp1Li3: 'توفير البنية التحتية السحابية باستخدام Terraform و Helm Charts',
+          exp1Li4: 'نشر التطبيقات الحاوية باستخدام Docker و Kubernetes',
+          exp2Title: 'أخصائي تكنولوجيا معلومات', exp2Date: 'سبتمبر 2025 — نوفمبر 2025',
+          exp2Li1: 'تثبيت وإصلاح وتكوين أجهزة الكمبيوتر والطابعات ومعدات الشبكة',
+          exp2Li2: 'إدارة وصيانة شبكات LAN و Wi-Fi',
+          exp2Li3: 'تقديم الدعم الفني وحل مشاكل تكنولوجيا المعلومات اليومية للموظفين',
+          exp2Li4: 'تطبيق تحديثات الأمان وضمان حماية النظام',
+          exp3Title: 'أخصائي دعم فني', exp3Date: 'يناير 2025 — سبتمبر 2025',
+          exp3Li1: 'تقديم الدعم الفني لأجهزة سطح المكتب واللابتوب والطابعات وأنظمة Qmatic',
+          exp3Li2: 'إصلاح مشاكل الشبكات المعقدة بما في ذلك TCP/IP و DNS وجدران الحماية',
+          exp3Li3: 'إدارة حسابات المستخدمين عبر Active Directory و Microsoft 365',
+          exp3Li4: 'أتمتة مهام الصيانة باستخدام سكريبتات Bash، مما قلل وقت التعطل بنسبة 20%',
+          exp3Li5: 'معالجة أكثر من 100 تذكرة فنية يومياً، مع الحفاظ على وقت تشغيل النظام بنسبة 99%',
+          projTag: 'المشاريع', projTitle: 'أبرز الأعمال',
+          viewCode: 'عرض الكود', code: 'الكود',
+          problem: 'المشكلة:', solution: 'الحل:', outcome: 'النتيجة:',
+          proj1Title: 'نظام مكتب المساعدة',
+          proj1Desc: 'نظام شامل لإدارة تذاكر الدعم الفني لتبسيط معالجة طلبات الدعم عبر المؤسسات.',
+          proj1Problem: 'تواجه المؤسسات صعوبة في تتبع وإدارة طلبات الدعم الفني بكفاءة',
+          proj1Solution: 'بناء نظام تذاكر مركزي مع REST API للمعالجة التلقائية للطلبات',
+          proj1Outcome: 'تقليل وقت الاستجابة بنسبة 50% وتحسين شفافية تتبع التذاكر',
+          proj2Title: 'نظام إدارة الطلاب والمقررات',
+          proj2Desc: 'نظام مبني على C++ لإدارة الطلاب والمقررات بواجهة سهلة.',
+          proj2Problem: 'إدارة بيانات الطلاب والمقررات يدوياً تستغرق وقتاً وعرضة للأخطاء',
+          proj2Solution: 'تطوير نظام قائم على OOP مع تسجيل تلقائي وتتبع الدرجات',
+          proj2Outcome: 'تبسيط الإدارة الأكاديمية وتقليل أخطاء إدخال البيانات بنسبة 70%',
+          proj3Title: 'تطبيق حجز Little Lemon',
+          proj3Desc: 'تطبيق تفاعلي لحجز الطاولات لمطعم Little Lemon بواجهة عصرية.',
+          proj3Problem: 'احتاج المطعم لحل رقمي لحجز الطاولات لتقليل المكالمات الهاتفية',
+          proj3Solution: 'إنشاء واجهة حجز قائمة على React مع فحص التوفر في الوقت الفعلي',
+          proj3Outcome: 'زيادة كفاءة الحجز بنسبة 60% وتحسين تجربة العملاء',
+          proj4Title: 'نظام التذاكر الفنية',
+          proj4Desc: 'نظام كامل للتذاكر الفنية لإدارة طلبات الدعم وتتبع حالتها.',
+          proj4Problem: 'افتقرت فرق تكنولوجيا المعلومات للرؤية في حالة التذاكر وإدارة الأولويات',
+          proj4Solution: 'بناء منصة تذاكر متكاملة مع تتبع الحالة وقوائم الأولويات',
+          proj4Outcome: 'تحسين وقت حل التذاكر بنسبة 40% وتعزيز التعاون بين الفريق',
+          proj5Title: 'Carer',
+          proj5Desc: 'تطبيق ويب تفاعلي مصمم بشكل جميل مع واجهة مستخدم أنيقة.',
+          proj5Problem: 'احتاج المستخدمون لواجهة إدارة رعاية سهلة الوصول وجذابة بصرياً',
+          proj5Solution: 'تصميم تطبيق ويب متجاوب مع التركيز على تجربة المستخدم وسهولة الوصول',
+          proj5Outcome: 'تحقيق درجة رضا مستخدم 95% وتحسين التفاعل بنسبة 80%',
+          skillsTag: 'المهارات', skillsTitle: 'التقنيات المستخدمة',
+          skillCloud: 'السحابة و DevOps', skillProg: 'البرمجة', skillSys: 'الأنظمة والشبكات',
+          certsTag: 'الشهادات', certsTitle: 'الشهادات والاعتمادات',
+          viewCert: 'عرض الشهادة',
+          cert1Title: 'خريج AWS Academy — عمليات السحابة',
+          cert1Org: 'Amazon Web Services — 2026',
+          cert1Desc: 'التركيز على مراقبة وإدارة وأتمتة أحمال عمل AWS باستخدام CloudWatch و CloudTrail و Systems Manager و Auto Scaling. تعلمت ضمان التوفر العالي وتحسين التكلفة والتميز التشغيلي.',
+          cert2Title: 'خريج AWS Academy — تطوير السحابة',
+          cert2Org: 'Amazon Web Services — أبريل 2026',
+          cert2Desc: 'تعلمت بناء تطبيقات سحابية أصلية باستخدام خدمات AWS مثل Lambda و API Gateway و DynamoDB و S3 و Cognito. تغطية البنية بدون خادم والتصميم الموجه بالأحداث ونشر التطبيقات القابلة للتوسع.',
+          cert3Title: 'خريج AWS Academy — أساسيات السحابة',
+          cert3Org: 'Amazon Web Services — 2026',
+          cert3Desc: 'تغطية أساسيات الحوسبة السحابية وخدمات AWS الأساسية بما في ذلك EC2 و S3 و VPC و IAM و RDS. اكتساب فهم للبنية التحتية العالمية لـ AWS ونماذج التسعير وأفضل ممارسات الأمان.',
+          cert4Title: 'محترف تطوير واجهات أمامية من Meta',
+          cert4Org: 'Meta — أبريل 2026',
+          cert4Desc: 'شهادة مهنية من 9 دورات تغطي HTML و CSS و JavaScript و React ومبادئ تصميم UI/UX والتحكم في الإصدار بـ Git وبناء تطبيقات ويب متجاوبة وسهلة الوصول جاهزة للإنتاج.',
+          cert5Title: 'تقديم عمل عالي الجودة بمرونة',
+          cert5Org: 'IBM — أبريل 2026',
+          cert5Desc: 'تعلمت منهجيات Agile و Scrum لتقديم برمجيات عالية الجودة بشكل تكراري. تغطية تخطيط السبرنت والمراجعات والتحسين المستمر وكيفية التعاون بفعالية في فرق التطوير السريعة.',
+          cert6Title: 'تطوير Flutter و Dart',
+          cert6Org: 'Udemy — تطبيقات متعددة المنصات',
+          cert6Desc: 'بناء تطبيقات محمولة متعددة المنصات لـ iOS و Android باستخدام Flutter و Dart. تغطية الويدجتات وإدارة الحالة والتنقل وتكامل REST API ونشر التطبيقات في متاجر التطبيقات.',
+          cert7Title: 'ECPC — مسابقة البرمجة الجامعية المصرية',
+          cert7Org: 'متسابق — أغسطس 2021',
+          cert7Desc: 'تنافست كمتسابق في أهم مسابقة برمجة جامعية في مصر. حل مشاكل الخوارزميات وهياكل البيانات تحت ضغط الوقت باستخدام C++، متنافساً مع فرق من جامعات في جميع أنحاء مصر.',
+          volTag: 'التطوع', volTitle: 'المجتمع والقيادة',
+          vol1Title: 'قائد الفرع', vol1Org: 'GDG on Campus (سابقاً GDSC) — أكاديمية طيبة', vol1Date: 'يوليو 2022 — يوليو 2023',
+          vol1Li1: 'قُدت فرعاً من 500+ عضو ونظمت فعاليات لـ 5000+ حضور',
+          vol1Li2: 'تنظيم ورش عمل وهاكاثونات وفعاليات تقنية',
+          vol1Li3: 'بناء شراكات مع شركات صناعة التكنولوجيا',
+          vol1Li4: 'تعزيز تبادل المعرفة من خلال ورش عمل تقنية',
+          vol2Title: 'عضو فريق أساسي', vol2Org: 'GDG on Campus (سابقاً GDSC) — أكاديمية طيبة', vol2Date: 'يوليو 2021 — يوليو 2022',
+          vol2Li1: 'إدارة جميع الجوانب التقنية للفعاليات عبر الإنترنت والحضورية كعضو فريق أساسي',
+          vol2Li2: 'إدارة البث المباشر باستخدام StreamYard',
+          vol2Li3: 'تطوير خطط استراتيجية لتعزيز حضور الفرع',
+          contactTag: 'تواصل', contactTitle: 'لنبني شيئاً رائعاً معاً',
+          contactDesc: 'هل تريد مناقشة مشروع؟ يسعدني دائماً سماع أفكار جديدة!'
+        }
+      };
+
+      let currentLang = 'en';
+      document.getElementById('langToggle').addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        const t = translations[currentLang];
+        const isAr = currentLang === 'ar';
+
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+        document.getElementById('langToggle').textContent = isAr ? 'EN' : 'AR';
+
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (t[key]) el.textContent = t[key];
+        });
+
+        document.querySelectorAll('[data-key-text]').forEach(el => {
+          const key = el.getAttribute('data-key-text');
+          if (t[key]) {
+            el.textContent = t[key];
+            el.setAttribute('data-text', t[key]);
+          }
+        });
+      });
+
     </script>
   </body>
 </html>
