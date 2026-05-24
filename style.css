@@ -843,7 +843,8 @@ body {
 
 .project-img {
   width: 100%;
-  height: 180px;
+  height: auto;
+  aspect-ratio: 2 / 1;
   overflow: hidden;
   position: relative;
 }
@@ -883,7 +884,8 @@ body {
 }
 
 .project-card.featured .project-img {
-  height: 350px;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 
   width: 45px;
@@ -1041,7 +1043,8 @@ body {
 
 .cert-img {
   width: 100%;
-  height: 260px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
@@ -1050,6 +1053,10 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+}
+
+.cert-img-wide {
+  aspect-ratio: 16 / 9;
 }
 
 .cert-item:hover .cert-img img {
@@ -1518,18 +1525,18 @@ footer {
 
 /* ── Exp card image ── */
 .exp-img {
-  width: 100%;
+  width: calc(100% + 50px);
   height: 240px;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
   margin: -25px -25px 15px -25px;
-  width: calc(100% + 50px);
+  background: #121212;
 }
 
 .exp-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.4s ease;
 }
 
