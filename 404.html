@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Page Not Found | Mohammed Jameel</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#e86600" />
+  <script>
+    /* Follow the site's saved theme (default dark) instead of the OS color-scheme,
+       so the 404 page always matches the theme the visitor chose on the portfolio. */
+    try {
+      if ((localStorage.getItem('theme') || 'dark') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) { /* storage unavailable */ }
+  </script>
+  <style>
+    /* Self-contained brand styles — works from any URL path depth */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lato', 'Cairo', -apple-system, 'Segoe UI', Arial, sans-serif;
+      background: #121212;
+      color: #dfdcdc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+    .glow { position: fixed; border-radius: 50%; filter: blur(90px); pointer-events: none; }
+    .g1 { width: 420px; height: 420px; background: rgba(232, 102, 0, 0.14); top: -130px; left: -110px; }
+    .g2 { width: 360px; height: 360px; background: rgba(255, 61, 2, 0.10); bottom: -130px; right: -90px; }
+    .wrap { position: relative; z-index: 1; }
+    .code {
+      font-size: 130px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -4px;
+      background: linear-gradient(135deg, #e86600, #ff3d02);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h1 { font-size: 27px; margin: 20px 0 12px; color: #ffffff; }
+    p { color: #9c9b9b; max-width: 440px; margin: 0 auto 32px; line-height: 1.65; font-size: 15.5px; }
+    a.btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #e86600, #ff3d02);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 50px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    a.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232, 102, 0, 0.4); }
+    a.btn:focus-visible { outline: 3px solid #e86600; outline-offset: 3px; }
+    a.link { display: block; margin-top: 20px; color: #9c9b9b; font-size: 14px; text-decoration: none; }
+    a.link:hover { color: #e86600; }
+    @media (max-width: 600px) { .code { font-size: 92px; } h1 { font-size: 21px; } }
+    html.light body { background: #f8f9fa; }
+    html.light h1 { color: #1a1a1a; }
+    html.light p, html.light a.link { color: #495057; }
+    @media (prefers-reduced-motion: reduce) { a.btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <div class="glow g1" aria-hidden="true"></div>
+  <div class="glow g2" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <a class="btn" href="/">Back to Home</a>
+    <a class="link" href="mailto:mo.jameel.official@gmail.com">mo.jameel.official@gmail.com</a>
+  </div>
+</body>
+</html>

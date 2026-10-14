@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Primary Meta Tags -->
+    <title>Mohammed Jameel — Full Stack Developer | AWS Certified Developer</title>
+    <meta name="title" content="Mohammed Jameel — Full Stack Developer | AWS Certified Developer" />
+    <meta name="description" content="Full Stack Developer based in Cairo, Egypt. React, TypeScript, Node.js, FastAPI, MongoDB, AWS, and Docker. AWS Certified Developer – Associate. Software Engineering Intern at MCIT." />
+    <meta name="author" content="Mohammed Jameel Fouad" />
+    <meta name="keywords" content="Mohammed Jameel, Full Stack Developer, React, TypeScript, Node.js, FastAPI, MongoDB, AWS Certified Developer Associate, Docker, Cairo, Egypt" />
+    <link rel="canonical" href="https://imohammedjameel.github.io/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://imohammedjameel.github.io/" />
+    <meta property="og:title" content="Mohammed Jameel — Full Stack Developer | AWS Certified Developer" />
+    <meta property="og:description" content="Full Stack Developer based in Cairo, Egypt. React, TypeScript, Node.js, FastAPI, MongoDB, AWS, and Docker. AWS Certified Developer – Associate. Software Engineering Intern at MCIT." />
+    <meta property="og:image" content="https://imohammedjameel.github.io/assets/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Mohammed Jameel — Full Stack Developer, AWS Certified Developer, React, TypeScript, Node.js, FastAPI, MongoDB, AWS, Docker" />
+    <meta property="og:site_name" content="Mohammed Jameel — Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_EG" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://imohammedjameel.github.io/" />
+    <meta property="twitter:title" content="Mohammed Jameel — Full Stack Developer | AWS Certified Developer" />
+    <meta property="twitter:description" content="Full Stack Developer based in Cairo, Egypt. React, TypeScript, Node.js, FastAPI, MongoDB, AWS, and Docker. AWS Certified Developer – Associate. Software Engineering Intern at MCIT." />
+    <meta property="twitter:image" content="https://imohammedjameel.github.io/assets/og-card.png" />
+    <meta property="twitter:image:alt" content="Mohammed Jameel — Full Stack Developer, AWS Certified Developer" />
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Icons (SRI-pinned: integrity + crossorigin per QA-21) -->
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" integrity="sha384-42kyIPf7HDYLkGffmxDhSx/3Z/53wGBs3nD6wEFxsbeDc7rMO6mkYbkAcpRsnMU2" crossorigin="anonymous" />
+
+    <!-- Fonts: self-hosted woff2 subsets (Cairo / Lato / JetBrains Mono) —
+         removes the third-party CSS request entirely (no SRI needed for
+         same-origin assets) and the render-blocking font chain (QA-21) -->
+    <link href="assets/fonts/fonts.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="light-theme.css" />
+    <link rel="stylesheet" href="chatbot-style.css" />
+
+    <!-- Analytics (GoatCounter — privacy-friendly, free).
+         1) Create your site at https://www.goatcounter.com
+         2) Replace YOUR-SITE below with your code, 3) uncomment. -->
+    <!--
+    <script data-goatcounter="https://YOUR-SITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    -->
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammed Jameel Fouad",
+      "jobTitle": "Full Stack Developer",
+      "url": "https://imohammedjameel.github.io/",
+      "email": "mailto:mo.jameel.official@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cairo",
+        "addressCountry": "Egypt"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Thebes Academy"
+      },
+      "knowsLanguage": ["en", "ar"],
+      "knowsAbout": ["React.js", "TypeScript", "Node.js", "FastAPI", "MongoDB", "AWS", "Docker", "Terraform", "Kubernetes", "Flutter", "CI/CD", "Cloud Computing"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified Developer – Associate",
+          "url": "https://www.credly.com/badges/d9181a17-c9f7-47de-9d0f-feba859c1673",
+          "credentialCategory": "certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified Cloud Practitioner",
+          "url": "https://www.credly.com/badges/1b1dca11-a4d7-40ca-8a35-309b90e6fed6/public_url",
+          "credentialCategory": "certification"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/iMohammedJameel",
+        "https://linkedin.com/in/imohammedjameel",
+        "https://www.credly.com/users/imohammedjameel/",
+        "https://x.com/iMohammedJameel"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <!-- Prevent theme/language flash (FOUC): apply saved preferences before first paint -->
+    <script>
+      (function () {
+        try {
+          var isLight = localStorage.getItem('theme') === 'light';
+          if (isLight) document.body.classList.add('light-theme');
+          var lang = localStorage.getItem('lang') || 'en';
+          document.documentElement.lang = lang;
+          document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+          // Keep the browser UI bar color in sync with the active theme (QA-22)
+          var tc = document.querySelector('meta[name="theme-color"]');
+          if (tc) tc.setAttribute('content', isLight ? '#f8f9fa' : '#121212');
+        } catch (e) { /* storage unavailable */ }
+      })();
+    </script>
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#home" class="skip-link">Skip to content</a>
+
+    <!-- Animated Background Shapes -->
+    <div class="shapes-container" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+
+    <section class="container">
+      <!-- Navigation Bar -->
+      <header class="navbar" role="banner">
+        <a class="logo" href="#home" aria-label="Mohammed Jameel — Home">M.Jameel</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#home" class="active" data-key="navHome">Home</a>
+          <a href="#about" data-key="navAbout">About me</a>
+          <a href="#education" data-key="navEducation">Education</a>
+          <a href="#experience" data-key="navExperience">Experience</a>
+          <a href="#projects" data-key="navProjects">Projects</a>
+          <a href="#skills" data-key="navSkills">Skills</a>
+          <a href="#contact" data-key="navContact">Contact</a>
+        </nav>
+        <div class="btn-box">
+          <button id="themeToggle" class="btn-theme" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <i class="bx bx-sun" aria-hidden="true"></i>
+          </button>
+          <button id="langToggle" class="btn-lang" aria-label="Switch language">AR</button>
+          <a href="#contact" class="btn-orange btn-top" data-key="hireMe">Hire Me</a>
+          <button id="openSidebar" class="btn-sidebar" aria-label="Open navigation menu">
+            <i class="bx bx-menu-alt-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Navigation Mobile -->
+      <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div class="sidebar" id="sidebar">
+          <button class="close-btn" id="closeBtn" aria-label="Close navigation menu">
+            <i class="bx bx-x" aria-hidden="true"></i>
+          </button>
+          <div class="sidebar-links">
+            <a href="#home" data-key="navHome">Home</a>
+            <a href="#about" data-key="navAbout">About me</a>
+            <a href="#education" data-key="navEducation">Education</a>
+            <a href="#experience" data-key="navExperience">Experience</a>
+            <a href="#projects" data-key="navProjects">Projects</a>
+            <a href="#skills" data-key="navSkills">Skills</a>
+            <a href="#contact" data-key="navContact">Contact</a>
+          </div>
+          <div class="sidebar-button">
+            <a href="#contact" class="btn-orange" style="display:block;text-align:center;" data-key="hireMe">Hire Me</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-background">
+          <div class="smoke-background"></div>
+          <div class="hero-text">
+            <p class="availability-badge"><span class="availability-dot" aria-hidden="true"></span><span data-key="openToWork">Open to Opportunities</span></p>
+            <p data-key="heroGreeting">Hi, I am</p>
+            <h1 data-key="heroName">Mohammed Jameel</h1>
+            <h2 class="typewriter" aria-label="Full Stack Developer and AWS Certified Developer" data-key-aria="heroRolesAria">
+              <span class="role role-1" data-text="Full Stack Developer" data-key-text="heroRole1">Full Stack Developer</span>
+              <span class="role role-2" data-text="AWS Certified Developer" data-key-text="heroRole2">AWS Certified Developer</span>
+            </h1>
+
+            <div class="social-icons" aria-label="Social media links">
+              <span><a href="https://github.com/iMohammedJameel" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github" aria-hidden="true"></i></a></span>
+              <span><a href="https://linkedin.com/in/imohammedjameel" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin" aria-hidden="true"></i></a></span>
+              <span><a href="https://www.credly.com/users/imohammedjameel/" target="_blank" rel="noopener" aria-label="Credly badges"><i class="bx bx-badge-check" aria-hidden="true"></i></a></span>
+              <span><a href="https://x.com/iMohammedJameel" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bx bxl-twitter" aria-hidden="true"></i></a></span>
+              <span><a href="mailto:mo.jameel.official@gmail.com" aria-label="Email"><i class="bx bx-envelope" aria-hidden="true"></i></a></span>
+            </div>
+
+            <div class="hero-buttons">
+              <a href="#contact" class="btn-orange" data-key="hireMe">Hire Me</a>
+              <a href="assets/Mohammed_Jameel_Fouad_CV.pdf" target="_blank" rel="noopener" class="btn-outline" data-key="viewCV">View My CV</a>
+            </div>
+          </div>
+          <div class="stats" role="list" aria-label="Quick statistics">
+            <div role="listitem">
+              <p class="count" data-target="1">0</p>
+              <span class="stat-label" data-key="statYears">Years Experience</span>
+            </div>
+            <div role="listitem">
+              <p class="count" data-target="5">0</p>
+              <span class="stat-label" data-key="statProjects">Finished Projects</span>
+            </div>
+            <div role="listitem">
+              <p class="count" data-target="11" data-plus="no">0</p>
+              <span class="stat-label" data-key="statCerts">Certifications</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-box">
+            <img src="assets/avatar.webp" alt="Mohammed Jameel portrait" width="400" height="400" fetchpriority="high" />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <main>
+    <!-- About Section -->
+    <section class="section-wrapper" id="about" aria-labelledby="about-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="aboutTag">About Me</span>
+        <h2 id="about-title" data-key="aboutTitle">Building the future with code &amp; cloud</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-stats">
+          <div class="stat-box"><p>150+</p><span class="stat-label" data-key="statEndpoints">REST Endpoints Built</span></div>
+          <div class="stat-box"><p>500+</p><span class="stat-label" data-key="statTests">Automated Tests</span></div>
+          <div class="stat-box"><p>11</p><span class="stat-label" data-key="statCerts">Certifications</span></div>
+          <div class="stat-box"><p>2</p><span class="stat-label" data-key="statGdg">Years in GDG on Campus</span></div>
+        </div>
+        <div class="about-text">
+          <p data-key="aboutP1">I'm <strong>Mohammed Jameel Fouad</strong>, a Full Stack Developer based in Cairo, Egypt, and a graduate of the <strong>Digilians AI-Based Software Development Specialized Diploma</strong>. I hold a Bachelor's degree in Computer Science from Thebes Academy with a GPA of 3.04.</p>
+          <p data-key="aboutP2">I build production-ready web applications with <strong>React.js, TypeScript, Node.js, FastAPI, and MongoDB</strong>, and deploy them on AWS with Docker. I'm an <strong>AWS Certified Developer – Associate</strong> and currently a Software Engineering Intern at the Ministry of Communications and Information Technology (MCIT). My IT infrastructure and support background gives me a solid understanding of networking, systems, and security.</p>
+          <p data-key="aboutP3">I led the <strong>GDG on Campus</strong> chapter at Thebes Academy, organizing events, workshops, and hackathons.</p>
+          <p data-key="aboutP4">I'm looking for <strong>Full Stack Software Engineering</strong> opportunities where I can build reliable products end to end and keep growing in cloud engineering.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section-wrapper" id="education" aria-labelledby="edu-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="eduTag">Education</span>
+        <h2 id="edu-title" data-key="eduTitle">Academic Background</h2>
+      </div>
+      <div class="edu-card fade-in">
+        <div class="edu-icon"><i class="bx bxs-graduation" aria-hidden="true"></i></div>
+        <div class="edu-info">
+          <h3 data-key="eduDigName">Digilians — Egyptian Military Academy</h3>
+          <div class="edu-degree" data-key="eduDigDegree">AI-Based Software Development Specialized Diploma</div>
+          <div class="edu-details">
+            <span><i class="bx bx-calendar" aria-hidden="true"></i> <span data-key="eduDigDate">Dec 2025 — Sep 2026</span></span>
+            <span><i class="bx bx-map" aria-hidden="true"></i> <span data-key="eduDigLocation">Egypt</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-card fade-in">
+        <div class="edu-icon"><i class="bx bxs-graduation" aria-hidden="true"></i></div>
+        <div class="edu-info">
+          <h3 data-key="eduName">Thebes Academy</h3>
+          <div class="edu-degree" data-key="eduDegree">Bachelor's Degree in Computer Science</div>
+          <div class="edu-details">
+            <span><i class="bx bx-calendar" aria-hidden="true"></i> <span data-key="eduDate">Sep 2019 — May 2023</span></span>
+            <span><i class="bx bx-map" aria-hidden="true"></i> <span data-key="eduLocation">Maadi, Cairo, Egypt</span></span>
+            <span><i class="bx bx-star" aria-hidden="true"></i> GPA: 3.04</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section-wrapper" id="experience" aria-labelledby="exp-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="expTag">Experience</span>
+        <h2 id="exp-title" data-key="expTitle">My Professional Journey</h2>
+      </div>
+      <div class="exp-list">
+        <div class="exp-card fade-in">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-title" data-key="expMTitle">Software Engineering Intern</h3>
+              <div class="exp-company">Ministry of Communications and Information Technology (MCIT)</div>
+            </div>
+            <div class="exp-date" data-key="expMDate">Sep 2026 — Present</div>
+          </div>
+          <ul>
+            <li data-key="expMLi1">Built the DEPI-Staff-Management System end to end: attendance, tasks, leaves, projects, Gantt, and reports</li>
+            <li data-key="expMLi2">Developed a React + TypeScript frontend and a FastAPI + MongoDB backend with 150+ REST endpoints</li>
+            <li data-key="expMLi3">Implemented JWT authentication, role-based access control, audit logs, and Arabic (RTL) PDF/Excel export</li>
+            <li data-key="expMLi4">Wrote 500+ automated tests (pytest) and Playwright end-to-end tests; containerized with Docker Compose</li>
+          </ul>
+        </div>
+        <div class="exp-card fade-in">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-title" data-key="exp1Title">Software Engineering Trainee</h3>
+              <div class="exp-company">Digilians — Egyptian Military Academy</div>
+            </div>
+            <div class="exp-date" data-key="exp1Date">Dec 2025 — Sep 2026</div>
+          </div>
+          <ul>
+            <li data-key="exp1Li1">Built full-stack web applications using React.js and Node.js/Express</li>
+            <li data-key="exp1Li2">Designed and deployed cloud-native solutions on AWS</li>
+            <li data-key="exp1Li3">Integrated AI models into application workflows</li>
+            <li data-key="exp1Li4">Applied Agile methodologies and Git-based version control in team projects</li>
+            <li data-key="exp1Li5">Used AI tools (Claude, GLM, ChatGPT, Amazon Q, Gemini) to speed up development and improve code quality</li>
+            <li data-key="exp1Li6">Trained in CI/CD with GitHub Actions, Infrastructure as Code with Terraform, and Kubernetes with Helm</li>
+          </ul>
+        </div>
+        <div class="exp-card fade-in">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-title" data-key="exp2Title">IT Specialist</h3>
+              <div class="exp-company">Linah Group</div>
+            </div>
+            <div class="exp-date" data-key="exp2Date">Sep 2025 — Nov 2025</div>
+          </div>
+          <ul>
+            <li data-key="exp2Li1">Installed, troubleshot, and configured computers, printers, and network equipment</li>
+            <li data-key="exp2Li2">Managed and maintained LAN and Wi-Fi networks</li>
+            <li data-key="exp2Li3">Provided technical support and resolved daily IT issues for staff</li>
+            <li data-key="exp2Li4">Applied security updates and ensured system protection</li>
+          </ul>
+        </div>
+        <div class="exp-card fade-in">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-title" data-key="exp3Title">Technical Support Specialist</h3>
+              <div class="exp-company">Fujitsu — FSIT Services</div>
+            </div>
+            <div class="exp-date" data-key="exp3Date">Jan 2025 — Sep 2025</div>
+          </div>
+          <ul>
+            <li data-key="exp3Li1">Provided technical support for desktops, laptops, printers, and Qmatic systems</li>
+            <li data-key="exp3Li2">Managed virtual machines using VMware and VirtualBox</li>
+            <li data-key="exp3Li3">Handled Active Directory user management and access control</li>
+            <li data-key="exp3Li4">Performed system backups and recovery using AOMEI and Hiren&#39;s Boot</li>
+            <li data-key="exp3Li5">Delivered remote support via AnyDesk and TeamViewer</li>
+          </ul>
+        </div>
+        <div class="exp-card fade-in">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-title" data-key="expMilTitle">Mandatory Military Service</h3>
+              <div class="exp-company">Egypt</div>
+            </div>
+            <div class="exp-date" data-key="expMilDate">Oct 2023 — Dec 2024</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section-wrapper" id="projects" aria-labelledby="proj-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="projTag">Projects</span>
+        <h2 id="proj-title" data-key="projTitle">Featured Work</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card featured fade-in">
+          <div class="project-img"><img src="assets/depi-staff-management.webp" alt="DEPI Staff Management System login page screenshot" loading="lazy" width="1400" height="788" /></div>
+          <div class="project-icon"><i class="bx bx-buildings" aria-hidden="true"></i></div>
+          <div class="project-head">
+            <h3 class="project-title" data-key="projDepiTitle">DEPI-Staff-Management System</h3>
+          </div>
+          <p class="project-desc" data-key="projDepiDesc">A staff management platform built end to end during my internship at MCIT: attendance, tasks, leaves, projects, Gantt charts, meetings, and reports.</p>
+          <div class="project-meta">
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="projDepiProblem">Staff attendance, tasks, leaves, and project tracking need one structured, role-aware system</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="projDepiSolution">Built a React + TypeScript frontend and a FastAPI + MongoDB backend with 150+ REST endpoints, JWT authentication, role-based access control, audit logs, and Arabic (RTL) PDF/Excel export</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="projDepiOutcome">Backed by 500+ automated tests (pytest) and Playwright end-to-end tests, an AI assistant (Gemini, Ollama), and a Docker Compose deployment with MongoDB replica set and Nginx</span></div>
+          </div>
+          <div class="project-tech"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>MongoDB</span><span>Docker</span></div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-img" data-modal-src="assets/medimind-poster.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open MediMind poster"><img src="assets/medimind-card.webp" alt="MediMind poster showing the web dashboard and mobile app" loading="lazy" width="1024" height="576" /></div>
+          <div class="project-icon"><i class="bx bx-plus-medical" aria-hidden="true"></i></div>
+          <div class="project-head">
+            <h3 class="project-title" data-key="projMediTitle">MediMind</h3>
+            <a href="https://github.com/Abdelrahman-Mahmoud-Elsaeed/MediMind" target="_blank" rel="noopener" aria-label="View MediMind source code on GitHub"><i class="bx bxl-github" aria-hidden="true"></i> <span data-key="viewCode">View Code</span></a>
+          </div>
+          <p class="project-desc" data-key="projMediDesc">A medication management platform that connects chronic patients with family, pharmacy, and doctor for reminders and adherence tracking.</p>
+          <div class="project-meta">
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="projMediProblem">Chronic patients struggle to stay consistent with their medication, and caregivers lack visibility</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="projMediSolution">I built the Flutter mobile app (BLoC/Cubit) solo, and the conditions, doses, and medications backend modules (Node.js/Express, MongoDB) within a team</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="projMediOutcome">Includes AI-powered OCR for prescriptions, real-time caregiver dose alerts with SMS/push escalation, and containerized deployment on AWS ECS Fargate</span></div>
+          </div>
+          <div class="project-tech"><span>Flutter</span><span>BLoC</span><span>Node.js</span><span>MongoDB</span><span>AWS</span></div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-img"><img src="assets/helpdesk-system.webp" alt="IT Ticketing System screenshot" loading="lazy" width="1280" height="720" /></div>
+          <div class="project-icon"><i class="bx bx-support" aria-hidden="true"></i></div>
+          <div class="project-head">
+            <h3 class="project-title" data-key="proj1Title">IT Ticketing System</h3>
+            <a href="https://github.com/iMohammedJameel/IT-Ticketing-System" target="_blank" rel="noopener" aria-label="View IT Ticketing System source code on GitHub"><i class="bx bxl-github" aria-hidden="true"></i> <span data-key="viewCode">View Code</span></a>
+          </div>
+          <p class="project-desc" data-key="proj1Desc">A full-stack ticketing platform that replaces informal WhatsApp-based IT requests with a structured support workflow.</p>
+          <div class="project-meta">
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="proj1Problem">IT support requests were handled informally over WhatsApp, with no tracking or ownership</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="proj1Solution">Built a dual-role platform (employee/admin) with an open → in-progress → resolved → closed workflow, internal notes, and a Joi-validated REST API with JWT authentication</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="proj1Outcome">Admin dashboard with monthly ticket trends and top-performing employees using MongoDB aggregation pipelines and Recharts</span></div>
+          </div>
+          <div class="project-tech"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-img"><img src="assets/ecocycle.webp" alt="EcoCycle recycling ecosystem screenshot" loading="lazy" width="1400" height="787" /></div>
+          <div class="project-icon"><i class="bx bx-recycle" aria-hidden="true"></i></div>
+          <div class="project-head">
+            <h3 class="project-title" data-key="proj3Title">EcoCycle</h3>
+            <a href="https://github.com/iMohammedJameel/eco-system" target="_blank" rel="noopener" aria-label="View EcoCycle source code on GitHub"><i class="bx bxl-github" aria-hidden="true"></i> <span data-key="viewCode">View Code</span></a>
+          </div>
+          <p class="project-desc" data-key="proj3Desc">A citizen-driven recycling ecosystem that turns everyday waste into real financial rewards across Egypt.</p>
+          <div class="project-meta">
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="proj3Problem">90% of Egypt's solid waste is unrecycled, costing billions in street cleaning and $3B/year in raw material imports with no scalable citizen incentive</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="proj3Solution">Smart kiosks with QR-based mobile app, EcoPoints rewards via Fawry/Vodafone Cash, and a self-sustaining revenue model from selling waste to factories</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="proj3Outcome">Circular recycling ecosystem that cuts municipal costs, reduces raw material imports, and turns everyday waste into real financial rewards for Egyptian citizens</span></div>
+          </div>
+          <div class="project-tech"><span>React</span><span>Node.js</span><span>Express</span><span>Flutter</span></div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-img" data-modal-src="assets/aws-scalable-architecture.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open AWS architecture diagram"><img src="assets/aws-scalable-architecture.webp" alt="3-tier AWS architecture diagram: CloudFront with WAF, Application Load Balancer, EC2 Auto Scaling across two availability zones, and RDS Multi-AZ" loading="lazy" width="1400" height="788" /></div>
+          <div class="project-icon"><i class="bx bx-cloud" aria-hidden="true"></i></div>
+          <div class="project-head">
+            <h3 class="project-title" data-key="projAwsTitle">AWS Scalable Web App</h3>
+            <a href="https://github.com/iMohammedJameel/aws-scalable-web-app" target="_blank" rel="noopener" aria-label="View AWS Scalable Web App source code on GitHub"><i class="bx bxl-github" aria-hidden="true"></i> <span data-key="viewCode">View Code</span></a>
+          </div>
+          <p class="project-desc" data-key="projAwsDesc">A scalable, highly available 3-tier web application on AWS, built as my SAA-C03 graduation project.</p>
+          <div class="project-meta">
+            <div class="project-meta-item"><span class="project-meta-label" data-key="problem">Problem:</span><span class="project-meta-value" data-key="projAwsProblem">Web applications must stay available and scale under changing load</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="solution">Solution:</span><span class="project-meta-value" data-key="projAwsSolution">Designed a 3-tier architecture with CloudFront + WAF, an Application Load Balancer, EC2 Auto Scaling, and RDS Multi-AZ</span></div>
+            <div class="project-meta-item"><span class="project-meta-label" data-key="outcome">Outcome:</span><span class="project-meta-value" data-key="projAwsOutcome">Deployed as infrastructure as code with CloudFormation</span></div>
+          </div>
+          <div class="project-tech"><span>AWS</span><span>CloudFront</span><span>EC2 Auto Scaling</span><span>RDS Multi-AZ</span><span>CloudFormation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-wrapper" id="skills" aria-labelledby="skills-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="skillsTag">Skills</span>
+        <h2 id="skills-title" data-key="skillsTitle">Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <h3><i class="bx bx-layout" aria-hidden="true"></i> <span data-key="skillFront">Frontend</span></h3>
+          <div class="skill-list">
+            <div class="skill-item"><img src="assets/icons/react.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />React.js</div>
+            <div class="skill-item"><img src="assets/icons/typescript.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />TypeScript</div>
+            <div class="skill-item"><img src="assets/icons/javascript.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />JavaScript</div>
+            <div class="skill-item"><img src="assets/icons/html5.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />HTML5</div>
+            <div class="skill-item"><img src="assets/icons/css3.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />CSS3</div>
+            <div class="skill-item"><img src="assets/icons/tailwindcss.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Tailwind CSS</div>
+            <div class="skill-item"><img src="assets/icons/bootstrap.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Bootstrap</div>
+            <div class="skill-item"><img src="assets/icons/vite.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Vite</div>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="bx bx-server" aria-hidden="true"></i> <span data-key="skillBack">Backend &amp; Database</span></h3>
+          <div class="skill-list">
+            <div class="skill-item"><img src="assets/icons/nodejs.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Node.js</div>
+            <div class="skill-item"><img src="assets/icons/express.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Express</div>
+            <div class="skill-item"><img src="assets/icons/python.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Python</div>
+            <div class="skill-item"><img src="assets/icons/fastapi.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />FastAPI</div>
+            <div class="skill-item"><img src="assets/icons/mongodb.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />MongoDB</div>
+            <div class="skill-item"><i class="bx bx-transfer-alt skill-bullet" aria-hidden="true"></i>REST APIs &amp; JWT</div>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="bx bx-cloud" aria-hidden="true"></i> <span data-key="skillCloud">Cloud &amp; DevOps</span></h3>
+          <div class="skill-list">
+            <div class="skill-item"><img src="assets/icons/aws.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />AWS</div>
+            <div class="skill-item"><img src="assets/icons/docker.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Docker</div>
+            <div class="skill-item"><img src="assets/icons/terraform.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Terraform</div>
+            <div class="skill-item"><img src="assets/icons/kubernetes.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Kubernetes</div>
+            <div class="skill-item"><img src="assets/icons/helm.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Helm</div>
+            <div class="skill-item"><img src="assets/icons/githubactions.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />GitHub Actions</div>
+            <div class="skill-item"><img src="assets/icons/git.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Git / GitHub</div>
+            <div class="skill-item"><img src="assets/icons/linux.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Linux Administration</div>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="bx bx-code-alt" aria-hidden="true"></i> <span data-key="skillProg">Mobile &amp; Programming</span></h3>
+          <div class="skill-list">
+            <div class="skill-item"><img src="assets/icons/flutter.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Dart &amp; Flutter</div>
+            <div class="skill-item"><img src="assets/icons/cplusplus.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />C++</div>
+            <div class="skill-item"><img src="assets/icons/java.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Java</div>
+            <div class="skill-item"><i class="bx bx-cube skill-bullet" aria-hidden="true"></i>Object-Oriented Programming (OOP)</div>
+            <div class="skill-item"><i class="bx bx-sitemap skill-bullet" aria-hidden="true"></i>Data Structures</div>
+            <div class="skill-item"><img src="assets/icons/bash.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Bash Scripting</div>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="bx bx-shield-quarter" aria-hidden="true"></i> <span data-key="skillSec">Security &amp; Automation</span></h3>
+          <div class="skill-list">
+            <div class="skill-item"><i class="bx bx-lock-alt skill-bullet" aria-hidden="true"></i>OWASP Top 10</div>
+            <div class="skill-item"><i class="bx bx-bot skill-bullet" aria-hidden="true"></i>n8n Workflow Automation</div>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="bx bx-server" aria-hidden="true"></i> <span data-key="skillSys">Systems &amp; Networking</span></h3>
+          <div class="skill-list">
+            <div class="skill-item"><img src="assets/icons/activedirectory.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Active Directory</div>
+            <div class="skill-item"><img src="assets/icons/windowsserver.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />MCSA: Windows Server</div>
+            <div class="skill-item"><i class="bx bx-transfer-alt skill-bullet" aria-hidden="true"></i>TCP/IP &amp; DNS</div>
+            <div class="skill-item"><i class="bx bx-shield-quarter skill-bullet" aria-hidden="true"></i>Firewalls &amp; VLANs</div>
+            <div class="skill-item"><i class="bx bx-network-chart skill-bullet" aria-hidden="true"></i>CCNA Networking</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section-wrapper" id="certificates" aria-labelledby="certs-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="certsTag">Certificates</span>
+        <h2 id="certs-title" data-key="certsTitle">Certifications</h2>
+      </div>
+      <div class="cert-list">
+        <div class="cert-item fade-in" data-modal-src="assets/aws-developer-associate.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open AWS Certified Developer - Associate certificate">
+          <div class="cert-img"><img src="assets/aws-developer-associate.webp" alt="AWS Certified Developer - Associate certificate" loading="lazy" width="900" height="695" /></div>
+          <div class="cert-icon"><i class="bx bxl-aws" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert11Title">AWS Certified Developer – Associate</h3>
+            <p data-key="cert11Org">Amazon Web Services — Oct 2026</p>
+            <p class="cert-desc" data-key="cert11Desc">Associate-level certification validating the ability to develop, deploy, and debug cloud-based applications on AWS, including core services, serverless, security, CI/CD, and monitoring.</p>
+            <p class="cert-validation"><i class="bx bx-badge-check" aria-hidden="true"></i> <span data-key="validationLabel">Validation:</span> <code>901c902258254398b2a7af228c168812</code></p>
+            <a class="cert-link" href="https://www.credly.com/badges/d9181a17-c9f7-47de-9d0f-feba859c1673" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View AWS Certified Developer Associate badge on Credly"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+            <a class="cert-link" href="https://aws.amazon.com/verification" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="Verify AWS Certified Developer Associate certificate on AWS"><i class="bx bx-shield-quarter" aria-hidden="true"></i> <span data-key="verifyCert">Verify on AWS</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/aws-cloud-practitioner.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open AWS Certified Cloud Practitioner certificate">
+          <div class="cert-img"><img src="assets/aws-cloud-practitioner.webp" alt="AWS Certified Cloud Practitioner certificate" loading="lazy" width="700" height="541" /></div>
+          <div class="cert-icon"><i class="bx bxl-aws" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert10Title">AWS Certified Cloud Practitioner</h3>
+            <p data-key="cert10Org">Amazon Web Services — 2026</p>
+            <p class="cert-desc" data-key="cert10Desc">Foundational-level certification validating overall understanding of AWS Cloud, core services, security, architecture, pricing, and support. Demonstrates ability to identify AWS services and make informed decisions about IT solutions based on business requirements.</p>
+            <p class="cert-validation"><i class="bx bx-badge-check" aria-hidden="true"></i> <span data-key="validationLabel">Validation:</span> <code>b428b880b4204521a8eed4b50184fc61</code></p>
+            <a class="cert-link" href="https://www.credly.com/badges/1b1dca11-a4d7-40ca-8a35-309b90e6fed6/public_url" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View AWS Cloud Practitioner badge on Credly"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+            <a class="cert-link" href="https://aws.amazon.com/verification" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="Verify AWS Cloud Practitioner certificate on AWS"><i class="bx bx-shield-quarter" aria-hidden="true"></i> <span data-key="verifyCert">Verify on AWS</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/devops-complete-course.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open DevOps Complete Course Specialization certificate">
+          <div class="cert-img"><img src="assets/devops-complete-course.webp" alt="DevOps Complete Course Specialization certificate" loading="lazy" width="544" height="385" /></div>
+          <div class="cert-icon"><i class="bx bx-code-block" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert9Title">DevOps Complete Course Specialization</h3>
+            <p data-key="cert9Org">Coursera — 2026</p>
+            <p class="cert-desc" data-key="cert9Desc">Comprehensive specialization covering the complete DevOps lifecycle including version control, continuous integration, continuous delivery, infrastructure automation, monitoring, and collaboration practices.</p>
+            <a class="cert-link" href="https://coursera.org/share/df534370f6ac14f6230cfdce7c4a18ea" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View DevOps Complete Course certificate on Coursera"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/advanced-devops-tools.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open Advanced DevOps Tools certificate">
+          <div class="cert-img"><img src="assets/advanced-devops-tools.webp" alt="Advanced DevOps Tools and Practices certificate" loading="lazy" width="900" height="695" /></div>
+          <div class="cert-icon"><i class="bx bx-code-block" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert8Title">Advanced DevOps Tools and Practices</h3>
+            <p data-key="cert8Org">Coursera — 2026</p>
+            <p class="cert-desc" data-key="cert8Desc">Advanced course covering modern DevOps tools and practices including CI/CD pipelines, infrastructure as code, containerization, orchestration, and monitoring solutions for production environments.</p>
+            <a class="cert-link" href="https://coursera.org/share/f722e5a5e476e3983fdf8354df3b4c46" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View Advanced DevOps certificate on Coursera"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/aws-cloud-operations.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open AWS Cloud Operations certificate">
+          <div class="cert-img"><img src="assets/aws-cloud-operations.webp" alt="AWS Academy Graduate Cloud Operations certificate" loading="lazy" width="900" height="696" /></div>
+          <div class="cert-icon"><i class="bx bxl-aws" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert1Title">AWS Academy Graduate — Cloud Operations</h3>
+            <p data-key="cert1Org">Amazon Web Services — 2026</p>
+            <p class="cert-desc" data-key="cert1Desc">Focused on monitoring, managing, and automating AWS workloads using CloudWatch, CloudTrail, Systems Manager, and Auto Scaling. Learned how to ensure high availability, cost optimization, and operational excellence.</p>
+            <a class="cert-link" href="https://www.credly.com/badges/5983989b-407d-4850-9d09-1e5910f1ed1d/public_url" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View AWS Cloud Operations certificate on Credly"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/aws-cloud-developing.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open AWS Cloud Developing certificate">
+          <div class="cert-img"><img src="assets/aws-cloud-developing.webp" alt="AWS Academy Graduate Cloud Developing certificate" loading="lazy" width="900" height="702" /></div>
+          <div class="cert-icon"><i class="bx bxl-aws" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert2Title">AWS Academy Graduate — Cloud Developing</h3>
+            <p data-key="cert2Org">Amazon Web Services — 2026</p>
+            <p class="cert-desc" data-key="cert2Desc">Learned how to build cloud-native applications using AWS services like Lambda, API Gateway, DynamoDB, S3, and Cognito. Covered serverless architecture, event-driven design, and deploying scalable apps on AWS.</p>
+            <a class="cert-link" href="https://www.credly.com/badges/fbfdf6e2-2669-46ef-9a2a-3ee6c3b57e03/public_url" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View AWS Cloud Developing certificate on Credly"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/aws-cloud-foundations.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open AWS Cloud Foundations certificate">
+          <div class="cert-img"><img src="assets/aws-cloud-foundations.webp" alt="AWS Academy Graduate Cloud Foundations certificate" loading="lazy" width="900" height="698" /></div>
+          <div class="cert-icon"><i class="bx bxl-aws" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert3Title">AWS Academy Graduate — Cloud Foundations</h3>
+            <p data-key="cert3Org">Amazon Web Services — 2026</p>
+            <p class="cert-desc" data-key="cert3Desc">Covered the fundamentals of cloud computing and core AWS services including EC2, S3, VPC, IAM, and RDS. Gained understanding of AWS global infrastructure, pricing models, and security best practices.</p>
+            <a class="cert-link" href="https://www.credly.com/badges/156217da-9b3e-4acd-9880-fcb120684592/public_url" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View AWS Cloud Foundations certificate on Credly"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/meta-front-end-developer.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open Meta Front-End Developer certificate">
+          <div class="cert-img"><img src="assets/meta-front-end-developer.webp" alt="Meta Front-End Developer Professional certificate" loading="lazy" width="900" height="693" /></div>
+          <div class="cert-icon"><i class="bx bxl-meta" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert4Title">Meta Front-End Developer Professional</h3>
+            <p data-key="cert4Org">Meta — 2026</p>
+            <p class="cert-desc" data-key="cert4Desc">A 9-course professional certificate covering HTML, CSS, JavaScript, React, UI/UX design principles, version control with Git, and building accessible, responsive web applications ready for production.</p>
+            <a class="cert-link" href="https://coursera.org/share/2512d2cddc91bf0b3189c9e0c8b8ba36" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View Meta Front-End Developer certificate on Coursera"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/ibm-agility.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open IBM Agility certificate">
+          <div class="cert-img"><img src="assets/ibm-agility.webp" alt="Delivering Quality Work with Agility certificate" loading="lazy" width="900" height="690" /></div>
+          <div class="cert-icon"><i class="bx bx-award" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert5Title">Delivering Quality Work with Agility</h3>
+            <p data-key="cert5Org">IBM — 2026</p>
+            <p class="cert-desc" data-key="cert5Desc">Learned Agile and Scrum methodologies for delivering high-quality software iteratively. Covered sprint planning, retrospectives, continuous improvement, and how to collaborate effectively in fast-paced development teams.</p>
+            <a class="cert-link" href="https://coursera.org/share/6fb6e2e7d41a4707a01132a7b4a1f8fa" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View IBM Agility certificate on Coursera"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/flutter-dart.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open Flutter & Dart certificate">
+          <div class="cert-img"><img src="assets/flutter-dart.webp" alt="Flutter & Dart Development Course certificate" loading="lazy" width="900" height="675" /></div>
+          <div class="cert-icon"><i class="bx bx-mobile-alt" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert6Title">Flutter &amp; Dart Development</h3>
+            <p data-key="cert6Org">Udemy — Cross-platform Mobile</p>
+            <p class="cert-desc" data-key="cert6Desc">Built cross-platform mobile applications for iOS and Android using Flutter and Dart. Covered widgets, state management, navigation, REST API integration, and publishing apps to app stores.</p>
+            <a class="cert-link" href="https://www.udemy.com/certificate/UC-c28ec3ca-541e-4b54-940d-9b137d4892dd/" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="View Flutter & Dart certificate on Udemy"><i class="bx bx-link-external" aria-hidden="true"></i> <span data-key="viewCert">View Certificate</span></a>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/ecpc-contest.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open ECPC contest certificate">
+          <div class="cert-img"><img src="assets/ecpc-contest.webp" alt="Egyptian Collegiate Programming Contest participation certificate" loading="lazy" width="900" height="635" /></div>
+          <div class="cert-icon"><i class="bx bx-trophy" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="cert7Title">ECPC — Egyptian Collegiate Programming Contest</h3>
+            <p data-key="cert7Org">Contestant — Aug 2021</p>
+            <p class="cert-desc" data-key="cert7Desc">Competed as a contestant in Egypt's top collegiate programming contest. Solved algorithmic and data structure problems under time pressure using C++, competing against teams from universities across Egypt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section class="section-wrapper" id="volunteering" aria-labelledby="vol-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="volTag">Volunteering</span>
+        <h2 id="vol-title" data-key="volTitle">Community &amp; Leadership</h2>
+      </div>
+      <div class="cert-list">
+        <div class="cert-item fade-in" data-modal-src="assets/chapter-leader.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open Chapter Leader certificate">
+          <div class="cert-img cert-img-wide"><img src="assets/chapter-leader.webp" alt="GDG Chapter Leader certificate" loading="lazy" width="796" height="446" /></div>
+          <div class="cert-icon"><i class="bx bx-group" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="vol1Title">Chapter Leader</h3>
+            <p data-key="vol1Org">GDG on Campus (formerly GDSC) — Thebes Academy</p>
+            <ul class="cert-list-bullets">
+              <li data-key="vol1Li1">Led the chapter as Chapter Leader and expanded its network of industry sponsors</li>
+              <li data-key="vol1Li2">Organized workshops, hackathons, and tech events</li>
+              <li data-key="vol1Li3">Built partnerships with tech industry companies</li>
+              <li data-key="vol1Li4">Promoted knowledge sharing through technical workshops</li>
+            </ul>
+            <span class="cert-date" data-key="vol1Date">Jul 2022 — Jul 2023</span>
+          </div>
+        </div>
+        <div class="cert-item fade-in" data-modal-src="assets/core-team-member.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open Core Team Member certificate">
+          <div class="cert-img cert-img-wide"><img src="assets/core-team-member.webp" alt="GDG Core Team Member certificate" loading="lazy" width="1200" height="675" /></div>
+          <div class="cert-icon"><i class="bx bx-user-check" aria-hidden="true"></i></div>
+          <div>
+            <h3 data-key="vol2Title">Core Team Member</h3>
+            <p data-key="vol2Org">GDG on Campus (formerly GDSC) — Thebes Academy</p>
+            <ul class="cert-list-bullets">
+              <li data-key="vol2Li1">Managed all technical aspects of online and offline events as a Core Team Member</li>
+              <li data-key="vol2Li2">Handled live broadcasting using StreamYard</li>
+              <li data-key="vol2Li3">Developed strategic plans to boost chapter presence</li>
+            </ul>
+            <span class="cert-date" data-key="vol2Date">Jul 2021 — Jul 2022</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-wrapper contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-header">
+        <span class="section-tag" data-key="contactTag">Contact</span>
+        <h2 id="contact-title" data-key="contactTitle">Let's Build Something Amazing</h2>
+        <p class="section-desc" data-key="contactDesc">Want to discuss a project? I'm always excited to hear new ideas!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <ul class="contact-methods">
+            <li class="contact-method">
+              <span class="method-icon"><i class="bx bx-envelope" aria-hidden="true"></i></span>
+              <span class="method-body">
+                <span class="method-label" data-key="emailLabel">Email</span>
+                <a href="mailto:mo.jameel.official@gmail.com" class="method-value">mo.jameel.official@gmail.com</a>
+              </span>
+              <button type="button" class="copy-btn" data-copy="mo.jameel.official@gmail.com" data-key-aria="copyAria" aria-label="Copy email address"><i class="bx bx-copy" aria-hidden="true"></i></button>
+            </li>
+            <li class="contact-method">
+              <span class="method-icon"><i class="bx bx-phone" aria-hidden="true"></i></span>
+              <span class="method-body">
+                <span class="method-label" data-key="phoneLabel">Phone</span>
+                <a href="tel:+201146863395" class="method-value" dir="ltr">+20 114 686 3395</a>
+              </span>
+              <button type="button" class="copy-btn" data-copy="+201146863395" data-key-aria="copyAria" aria-label="Copy phone number"><i class="bx bx-copy" aria-hidden="true"></i></button>
+            </li>
+            <li class="contact-method">
+              <span class="method-icon"><i class="bx bx-map" aria-hidden="true"></i></span>
+              <span class="method-body">
+                <span class="method-label" data-key="locationLabel">Location</span>
+                <span class="method-value" data-key="contactLocation">Cairo, Egypt</span>
+              </span>
+            </li>
+          </ul>
+          <div class="contact-social" aria-label="Contact via social media">
+            <a href="https://linkedin.com/in/imohammedjameel" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.credly.com/users/imohammedjameel/" target="_blank" rel="noopener" aria-label="Credly badges"><i class="bx bx-badge-check" aria-hidden="true"></i></a>
+            <a href="https://github.com/iMohammedJameel" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github" aria-hidden="true"></i></a>
+            <a href="https://x.com/iMohammedJameel" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bx bxl-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cfName" data-key="formName">Name</label>
+              <input type="text" id="cfName" name="name" required autocomplete="name" data-key-placeholder="formNamePh" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="cfEmail" data-key="formEmail">Email</label>
+              <input type="email" id="cfEmail" name="email" required autocomplete="email" inputmode="email" data-key-placeholder="formEmailPh" placeholder="Your email" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cfMessage" data-key="formMessage">Message</label>
+            <textarea id="cfMessage" name="message" rows="5" required data-key-placeholder="formMessagePh" placeholder="Tell me about your project or opportunity..."></textarea>
+          </div>
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn-orange form-submit" id="contactSubmit">
+            <span data-key="formSend">Send Message</span> <i class="bx bx-send" aria-hidden="true"></i>
+          </button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    </main>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+      <div class="cert-modal-overlay" id="certModalOverlay"></div>
+      <div class="cert-modal-content">
+        <button class="cert-modal-close" id="certModalCloseBtn" aria-label="Close certificate preview"><i class="bx bx-x" aria-hidden="true"></i></button>
+        <img id="certModalImg" src="" alt="Certificate preview" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with <i class="bx bxs-heart" style="color:#e74c3c" aria-hidden="true"></i> by Mohammed Jameel &copy; 2026</p>
+    </footer>
+
+    <!-- Scroll progress + Back to top -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <button id="backToTop" class="back-to-top" data-key-aria="backToTopAria" aria-label="Back to top">
+      <i class="bx bx-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Chatbot -->
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI assistant chat">
+      <i class="bx bx-bot" aria-hidden="true"></i>
+    </button>
+
+    <div id="chatbotWindow" class="chatbot-window" role="dialog" aria-modal="false" aria-label="AI Assistant chat">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <img src="assets/avatar.webp" alt="Mohammed Jameel avatar" width="45" height="45" />
+          <div>
+            <h4 data-key="chatbotTitle">Ask About Me</h4>
+            <p class="chatbot-status"><span class="status-dot" aria-hidden="true"></span><span data-key="chatbotStatus">AI &bull; Online</span></p>
+          </div>
+        </div>
+        <div class="chatbot-header-actions">
+          <button id="chatbotClear" class="chatbot-close" aria-label="Start a new conversation" title="New chat">
+            <i class="bx bx-revision" aria-hidden="true"></i>
+          </button>
+          <button id="chatbotClose" class="chatbot-close" aria-label="Close chat">
+            <i class="bx bx-x" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div id="chatbotMessages" class="chatbot-messages" aria-live="polite" aria-atomic="false">
+        <div class="chatbot-message bot">
+          <div class="message-content">
+            <p data-key="chatbotWelcome">Hi! I'm Mohammed's AI assistant. Ask me anything about his experience, skills, projects, or certifications!</p>
+          </div>
+        </div>
+      </div>
+      <div id="chatbotChips" class="chatbot-chips" aria-label="Suggested questions">
+        <button class="chatbot-chip" data-key="chipSkills">What are his skills?</button>
+        <button class="chatbot-chip" data-key="chipProjects">Tell me about his projects</button>
+        <button class="chatbot-chip" data-key="chipExperience">What's his experience?</button>
+        <button class="chatbot-chip" data-key="chipContact">How can I contact him?</button>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Ask me anything..." data-key-placeholder="chatbotPlaceholder" aria-label="Type your message" autocomplete="off" maxlength="500" />
+        <button id="chatbotSend" aria-label="Send message">
+          <i class="bx bx-send" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="chatbot-disclaimer" data-key="chatbotDisclaimer">AI-powered assistant &mdash; for important details, email Mohammed directly</div>
+    </div>
+
+    <script>
+      "use strict";
+
+      // ============== Mobile Sidebar ==============
+      const overlay = document.getElementById("overlay");
+      const sidebar = document.getElementById("sidebar");
+      const openBtn = document.getElementById("openSidebar");
+      const closeBtn = document.getElementById("closeBtn");
+
+      function openSidebar() {
+        overlay.classList.add("active");
+        sidebar.classList.add("active");
+        // focus after the slide-in transition
+        setTimeout(() => {
+          if (sidebar.classList.contains("active")) closeBtn.focus();
+        }, 350);
+      }
+      function closeSidebar() {
+        overlay.classList.remove("active");
+        sidebar.classList.remove("active");
+        openBtn.focus();
+      }
+      openBtn.addEventListener("click", openSidebar);
+      closeBtn.addEventListener("click", closeSidebar);
+      overlay.addEventListener("click", (e) => { if (e.target === overlay) closeSidebar(); });
+
+      // ============== Fade-in on scroll ==============
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+      // ============== Smooth scroll ==============
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // close mobile sidebar if open
+            if (overlay.classList.contains('active')) closeSidebar();
+          }
+        });
+      });
+
+      // ============== Active nav link on scroll ==============
+      const navLinks = document.querySelectorAll('.nav-links a');
+      const sections = ['home','about','education','experience','projects','skills','certificates','volunteering','contact']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sections.forEach(s => navObserver.observe(s));
+
+      // ============== Certificate Modal (with focus management) ==============
+      const certModal = document.getElementById('certModal');
+      const certModalOverlay = document.getElementById('certModalOverlay');
+      const certModalCloseBtn = document.getElementById('certModalCloseBtn');
+      let lastFocusedElement = null;
+
+      function openModal(src) {
+        lastFocusedElement = document.activeElement;
+        document.getElementById('certModalImg').src = src;
+        certModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        // focus after the visibility transition (focus on a hidden element is silently ignored)
+        setTimeout(() => {
+          if (certModal.classList.contains('active')) certModalCloseBtn.focus();
+        }, 350);
+      }
+      function closeModal() {
+        certModal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+          lastFocusedElement.focus();
+        }
+      }
+      certModalOverlay.addEventListener('click', closeModal);
+      certModalCloseBtn.addEventListener('click', closeModal);
+
+      // Modal triggers (certificates + posters) — click + keyboard, no inline handlers
+      document.querySelectorAll('[data-modal-src]').forEach(item => {
+        item.addEventListener('click', () => openModal(item.getAttribute('data-modal-src')));
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(item.getAttribute('data-modal-src'));
+          }
+        });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+          if (overlay.classList.contains('active')) closeSidebar();
+          const cbWin = document.getElementById('chatbotWindow');
+          if (cbWin.classList.contains('active')) {
+            cbWin.classList.remove('active');
+            // Return focus to the chatbot trigger so keyboard users are not
+            // dropped (QA-10)
+            document.getElementById('chatbotToggle').focus();
+          }
+        }
+      });
+
+      // ============== Focus trap (mobile sidebar + certificate modal) ==============
+      const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), input:not([disabled]):not(.hp-field), select, textarea, [tabindex]:not([tabindex="-1"])';
+      function trapTabKey(e, container) {
+        const focusables = container.querySelectorAll(FOCUSABLE_SELECTOR);
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        if (overlay.classList.contains('active')) trapTabKey(e, sidebar);
+        else if (certModal.classList.contains('active')) trapTabKey(e, certModal);
+      });
+
+      // ============== Count-up animation (respects prefers-reduced-motion) ==============
+      const counters = document.querySelectorAll('.count');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const counter = entry.target;
+          const target = +counter.getAttribute('data-target');
+          countObserver.unobserve(counter);
+          // Exact counts (e.g. certifications) opt out of the "+" suffix via data-plus="no"
+          const suffix = counter.getAttribute('data-plus') === 'no' ? '' : '+';
+          // Small numbers (e.g. "1 year") and reduced-motion users get the final value instantly
+          if (prefersReducedMotion || target <= 2) {
+            counter.textContent = target.toLocaleString() + suffix;
+            return;
+          }
+          const duration = Math.min(2000, 350 * target);
+          const step = target / (duration / 16);
+          let current = 0;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              counter.textContent = target.toLocaleString() + suffix;
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current).toLocaleString() + suffix;
+            }
+          }, 16);
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(c => countObserver.observe(c));
+
+      // ============== Language Toggle ==============
+      const translations = {
+        en: {
+          skillSec: "Security & Automation",
+          exp1Li6: "Trained in CI/CD with GitHub Actions, Infrastructure as Code with Terraform, and Kubernetes with Helm",
+          statGdg: "Years in GDG on Campus",
+          eduDigName: "Digilians — Egyptian Military Academy",
+          eduDigDegree: "AI-Based Software Development Specialized Diploma",
+          eduDigDate: "Dec 2025 — Sep 2026",
+          eduDigLocation: "Egypt",
+          skillFront: "Frontend",
+          skillBack: "Backend & Database",
+          cert11Title: "AWS Certified Developer – Associate",
+          cert11Org: "Amazon Web Services — Oct 2026",
+          cert11Desc: "Associate-level certification validating the ability to develop, deploy, and debug cloud-based applications on AWS, including core services, serverless, security, CI/CD, and monitoring.",
+          expMTitle: "Software Engineering Intern",
+          expMDate: "Sep 2026 — Present",
+          expMLi1: "Built the DEPI-Staff-Management System end to end: attendance, tasks, leaves, projects, Gantt, and reports",
+          expMLi2: "Developed a React + TypeScript frontend and a FastAPI + MongoDB backend with 150+ REST endpoints",
+          expMLi3: "Implemented JWT authentication, role-based access control, audit logs, and Arabic (RTL) PDF/Excel export",
+          expMLi4: "Wrote 500+ automated tests (pytest) and Playwright end-to-end tests; containerized with Docker Compose",
+          exp1Li5: "Used AI tools (Claude, GLM, ChatGPT, Amazon Q, Gemini) to speed up development and improve code quality",
+          expMilTitle: "Mandatory Military Service",
+          expMilDate: "Oct 2023 — Dec 2024",
+          projDepiTitle: "DEPI-Staff-Management System",
+          projDepiDesc: "A staff management platform built end to end during my internship at MCIT: attendance, tasks, leaves, projects, Gantt charts, meetings, and reports.",
+          projDepiProblem: "Staff attendance, tasks, leaves, and project tracking need one structured, role-aware system",
+          projDepiSolution: "Built a React + TypeScript frontend and a FastAPI + MongoDB backend with 150+ REST endpoints, JWT authentication, role-based access control, audit logs, and Arabic (RTL) PDF/Excel export",
+          projDepiOutcome: "Backed by 500+ automated tests (pytest) and Playwright end-to-end tests, an AI assistant (Gemini, Ollama), and a Docker Compose deployment with MongoDB replica set and Nginx",
+          projMediTitle: "MediMind",
+          projMediDesc: "A medication management platform that connects chronic patients with family, pharmacy, and doctor for reminders and adherence tracking.",
+          projMediProblem: "Chronic patients struggle to stay consistent with their medication, and caregivers lack visibility",
+          projMediSolution: "I built the Flutter mobile app (BLoC/Cubit) solo, and the conditions, doses, and medications backend modules (Node.js/Express, MongoDB) within a team",
+          projMediOutcome: "Includes AI-powered OCR for prescriptions, real-time caregiver dose alerts with SMS/push escalation, and containerized deployment on AWS ECS Fargate",
+          projAwsTitle: "AWS Scalable Web App",
+          projAwsDesc: "A scalable, highly available 3-tier web application on AWS, built as my SAA-C03 graduation project.",
+          projAwsProblem: "Web applications must stay available and scale under changing load",
+          projAwsSolution: "Designed a 3-tier architecture with CloudFront + WAF, an Application Load Balancer, EC2 Auto Scaling, and RDS Multi-AZ",
+          projAwsOutcome: "Deployed as infrastructure as code with CloudFormation",
+          navHome: 'Home', navAbout: 'About me', navEducation: 'Education',
+          navExperience: 'Experience', navProjects: 'Projects', navSkills: 'Skills',
+          navContact: 'Contact', hireMe: 'Hire Me', viewCV: 'View My CV',
+          heroGreeting: 'Hi, I am', heroName: 'Mohammed Jameel', heroRole1: 'Full Stack Developer', heroRole2: "AWS Certified Developer",
+          heroRolesAria: 'Full Stack Developer and AWS Certified Developer',
+          statYears: 'Years Experience', statProjects: 'Finished Projects',
+          statEndpoints: 'REST Endpoints Built', statTests: 'Automated Tests', statCerts: 'Certifications',
+          aboutTag: 'About Me', aboutTitle: 'Building the future with code & cloud',
+          aboutP1: "I'm Mohammed Jameel Fouad, a Full Stack Developer based in Cairo, Egypt, and a graduate of the Digilians AI-Based Software Development Specialized Diploma. I hold a Bachelor's degree in Computer Science from Thebes Academy with a GPA of 3.04.",
+          aboutP2: "I build production-ready web applications with React.js, TypeScript, Node.js, FastAPI, and MongoDB, and deploy them on AWS with Docker. I'm an AWS Certified Developer – Associate and currently a Software Engineering Intern at the Ministry of Communications and Information Technology (MCIT). My IT infrastructure and support background gives me a solid understanding of networking, systems, and security.",
+          aboutP3: "I led the GDG on Campus chapter at Thebes Academy, organizing events, workshops, and hackathons.",
+          aboutP4: "I'm looking for Full Stack Software Engineering opportunities where I can build reliable products end to end and keep growing in cloud engineering.",
+          eduTag: 'Education', eduTitle: 'Academic Background',
+          eduName: 'Thebes Academy', eduDegree: "Bachelor's Degree in Computer Science",
+          eduDate: 'Sep 2019 — May 2023', eduLocation: 'Maadi, Cairo, Egypt',
+          expTag: 'Experience', expTitle: 'My Professional Journey',
+          exp1Title: "Software Engineering Trainee", exp1Date: "Dec 2025 — Sep 2026",
+          exp1Li1: "Built full-stack web applications using React.js and Node.js/Express",
+          exp1Li2: "Designed and deployed cloud-native solutions on AWS",
+          exp1Li3: "Integrated AI models into application workflows",
+          exp1Li4: "Applied Agile methodologies and Git-based version control in team projects",
+          exp2Title: 'IT Specialist', exp2Date: 'Sep 2025 — Nov 2025',
+          exp2Li1: 'Installed, troubleshot, and configured computers, printers, and network equipment',
+          exp2Li2: 'Managed and maintained LAN and Wi-Fi networks',
+          exp2Li3: 'Provided technical support and resolved daily IT issues for staff',
+          exp2Li4: 'Applied security updates and ensured system protection',
+          exp3Title: 'Technical Support Specialist', exp3Date: 'Jan 2025 — Sep 2025',
+          exp3Li1: 'Provided technical support for desktops, laptops, printers, and Qmatic systems',
+          exp3Li2: "Managed virtual machines using VMware and VirtualBox",
+          exp3Li3: "Handled Active Directory user management and access control",
+          exp3Li4: "Performed system backups and recovery using AOMEI and Hiren's Boot",
+          exp3Li5: "Delivered remote support via AnyDesk and TeamViewer",
+          projTag: 'Projects', projTitle: 'Featured Work',
+          viewCode: 'View Code',
+          problem: 'Problem:', solution: 'Solution:', outcome: 'Outcome:',
+          proj1Title: "IT Ticketing System",
+          proj1Desc: "A full-stack ticketing platform that replaces informal WhatsApp-based IT requests with a structured support workflow.",
+          proj1Problem: "IT support requests were handled informally over WhatsApp, with no tracking or ownership",
+          proj1Solution: "Built a dual-role platform (employee/admin) with an open → in-progress → resolved → closed workflow, internal notes, and a Joi-validated REST API with JWT authentication",
+          proj1Outcome: "Admin dashboard with monthly ticket trends and top-performing employees using MongoDB aggregation pipelines and Recharts",
+          proj3Title: 'EcoCycle',
+          proj3Desc: 'A citizen-driven recycling ecosystem that turns everyday waste into real financial rewards across Egypt.',
+          proj3Problem: "90% of Egypt's solid waste is unrecycled, costing billions in street cleaning and $3B/year in raw material imports with no scalable citizen incentive",
+          proj3Solution: 'Smart kiosks with QR-based mobile app, EcoPoints rewards via Fawry/Vodafone Cash, and a self-sustaining revenue model from selling waste to factories',
+          proj3Outcome: 'Circular recycling ecosystem that cuts municipal costs, reduces raw material imports, and turns everyday waste into real financial rewards for Egyptian citizens',
+          skillsTag: 'Skills', skillsTitle: 'Tech Stack',
+          skillCloud: 'Cloud & DevOps', skillProg: "Mobile & Programming", skillSys: 'Systems & Networking',
+          certsTag: 'Certificates', certsTitle: 'Certifications',
+          viewCert: 'View Certificate',
+          cert1Title: 'AWS Academy Graduate — Cloud Operations',
+          cert1Org: 'Amazon Web Services — 2026',
+          cert1Desc: 'Focused on monitoring, managing, and automating AWS workloads using CloudWatch, CloudTrail, Systems Manager, and Auto Scaling. Learned how to ensure high availability, cost optimization, and operational excellence.',
+          cert2Title: 'AWS Academy Graduate — Cloud Developing',
+          cert2Org: 'Amazon Web Services — 2026',
+          cert2Desc: 'Learned how to build cloud-native applications using AWS services like Lambda, API Gateway, DynamoDB, S3, and Cognito. Covered serverless architecture, event-driven design, and deploying scalable apps on AWS.',
+          cert3Title: 'AWS Academy Graduate — Cloud Foundations',
+          cert3Org: 'Amazon Web Services — 2026',
+          cert3Desc: 'Covered the fundamentals of cloud computing and core AWS services including EC2, S3, VPC, IAM, and RDS. Gained understanding of AWS global infrastructure, pricing models, and security best practices.',
+          cert4Title: 'Meta Front-End Developer Professional',
+          cert4Org: 'Meta — 2026',
+          cert4Desc: 'A 9-course professional certificate covering HTML, CSS, JavaScript, React, UI/UX design principles, version control with Git, and building accessible, responsive web applications ready for production.',
+          cert5Title: 'Delivering Quality Work with Agility',
+          cert5Org: 'IBM — 2026',
+          cert5Desc: 'Learned Agile and Scrum methodologies for delivering high-quality software iteratively. Covered sprint planning, retrospectives, continuous improvement, and how to collaborate effectively in fast-paced development teams.',
+          cert6Title: 'Flutter & Dart Development',
+          cert6Org: 'Udemy — Cross-platform Mobile',
+          cert6Desc: 'Built cross-platform mobile applications for iOS and Android using Flutter and Dart. Covered widgets, state management, navigation, REST API integration, and publishing apps to app stores.',
+          cert7Title: 'ECPC — Egyptian Collegiate Programming Contest',
+          cert7Org: 'Contestant — Aug 2021',
+          cert7Desc: "Competed as a contestant in Egypt's top collegiate programming contest. Solved algorithmic and data structure problems under time pressure using C++, competing against teams from universities across Egypt.",
+          cert8Title: 'Advanced DevOps Tools and Practices',
+          cert8Org: 'Coursera — 2026',
+          cert8Desc: 'Advanced course covering modern DevOps tools and practices including CI/CD pipelines, infrastructure as code, containerization, orchestration, and monitoring solutions for production environments.',
+          cert9Title: 'DevOps Complete Course Specialization',
+          cert9Org: 'Coursera — 2026',
+          cert9Desc: 'Comprehensive specialization covering the complete DevOps lifecycle including version control, continuous integration, continuous delivery, infrastructure automation, monitoring, and collaboration practices.',
+          cert10Title: 'AWS Certified Cloud Practitioner',
+          cert10Org: 'Amazon Web Services — 2026',
+          cert10Desc: 'Foundational-level certification validating overall understanding of AWS Cloud, core services, security, architecture, pricing, and support. Demonstrates ability to identify AWS services and make informed decisions about IT solutions based on business requirements.',
+          validationLabel: 'Validation:',
+          verifyCert: 'Verify on AWS',
+          volTag: 'Volunteering', volTitle: 'Community & Leadership',
+          vol1Title: 'Chapter Leader', vol1Org: 'GDG on Campus (formerly GDSC) — Thebes Academy', vol1Date: 'Jul 2022 — Jul 2023',
+          vol1Li1: "Led the chapter as Chapter Leader and expanded its network of industry sponsors",
+          vol1Li2: 'Organized workshops, hackathons, and tech events',
+          vol1Li3: 'Built partnerships with tech industry companies',
+          vol1Li4: 'Promoted knowledge sharing through technical workshops',
+          vol2Title: 'Core Team Member', vol2Org: 'GDG on Campus (formerly GDSC) — Thebes Academy', vol2Date: 'Jul 2021 — Jul 2022',
+          vol2Li1: 'Managed all technical aspects of online and offline events as a Core Team Member',
+          vol2Li2: 'Handled live broadcasting using StreamYard',
+          vol2Li3: 'Developed strategic plans to boost chapter presence',
+          contactTag: 'Contact', contactTitle: "Let's Build Something Amazing",
+          contactDesc: "Want to discuss a project? I'm always excited to hear new ideas!",
+          chatbotTitle: 'Ask About Me',
+          chatbotStatus: 'AI \u2022 Online',
+          chatbotWelcome: "Hi! I'm Mohammed's AI assistant. Ask me anything about his experience, skills, projects, or certifications!",
+          chatbotPlaceholder: 'Ask me anything...',
+          chatbotNewChat: 'New conversation started. Ask me anything!',
+          chatbotOffline: "AI service is unreachable right now \u2014 answering from my built-in knowledge.",
+          chatbotDisclaimer: 'AI-powered assistant \u2014 for important details, email Mohammed directly',
+          chipSkills: 'What are his skills?',
+          chipProjects: 'Tell me about his projects',
+          chipExperience: "What's his experience?",
+          chipContact: 'How can I contact him?',
+          openToWork: 'Open to Opportunities',
+          emailLabel: 'Email',
+          phoneLabel: 'Phone',
+          locationLabel: 'Location',
+          contactLocation: 'Cairo, Egypt',
+          copyAria: 'Copy to clipboard',
+          copiedAria: 'Copied!',
+          backToTopAria: 'Back to top',
+          formName: 'Name',
+          formEmail: 'Email',
+          formMessage: 'Message',
+          formNamePh: 'Your name',
+          formEmailPh: 'Your email',
+          formMessagePh: 'Tell me about your project or opportunity...',
+          formSend: 'Send Message',
+          formSending: 'Sending...',
+          formInvalid: 'Please fill in all fields with a valid email address.',
+          formSuccess: "Your message has been sent successfully! I'll get back to you soon.",
+          formError: 'Something went wrong —',
+          formEmailDirect: 'email me directly instead.'
+        },
+        ar: {
+          skillSec: "الأمان والأتمتة",
+          exp1Li6: "تدريب على CI/CD باستخدام GitHub Actions، والبنية التحتية ككود باستخدام Terraform، وKubernetes مع Helm",
+          statGdg: "سنوات في GDG on Campus",
+          eduDigName: "Digilians — الأكاديمية العسكرية المصرية",
+          eduDigDegree: "دبلومة متخصصة في تطوير البرمجيات المعتمدة على الذكاء الاصطناعي",
+          eduDigDate: "ديسمبر 2025 — سبتمبر 2026",
+          eduDigLocation: "مصر",
+          skillFront: "الواجهات الأمامية",
+          skillBack: "الخلفية وقواعد البيانات",
+          cert11Title: "AWS Certified Developer – Associate",
+          cert11Org: "Amazon Web Services — أكتوبر 2026",
+          cert11Desc: "شهادة مستوى Associate تثبت القدرة على تطوير ونشر وتصحيح التطبيقات السحابية على AWS، بما يشمل الخدمات الأساسية وServerless والأمان وCI/CD والمراقبة.",
+          expMTitle: "متدرب هندسة برمجيات",
+          expMDate: "سبتمبر 2026 — حتى الآن",
+          expMLi1: "بناء نظام DEPI-Staff-Management من الصفر للنهاية: الحضور والمهام والإجازات والمشاريع وGantt والتقارير",
+          expMLi2: "تطوير واجهة React + TypeScript وخلفية FastAPI + MongoDB بأكثر من 150 REST endpoint",
+          expMLi3: "تنفيذ مصادقة JWT وصلاحيات حسب الأدوار وسجلات تدقيق وتصدير PDF/Excel بدعم العربية (RTL)",
+          expMLi4: "كتابة أكثر من 500 اختبار آلي (pytest) واختبارات Playwright الشاملة، وتهيئة النظام بـ Docker Compose",
+          exp1Li5: "استخدام أدوات الذكاء الاصطناعي (Claude وGLM وChatGPT وAmazon Q وGemini) لتسريع التطوير وتحسين جودة الكود",
+          expMilTitle: "الخدمة العسكرية الإلزامية",
+          expMilDate: "أكتوبر 2023 — ديسمبر 2024",
+          projDepiTitle: "نظام DEPI-Staff-Management",
+          projDepiDesc: "منصة لإدارة الموظفين بنيتها من الصفر للنهاية أثناء تدريبي في MCIT: الحضور والمهام والإجازات والمشاريع ومخططات Gantt والاجتماعات والتقارير.",
+          projDepiProblem: "تتبع حضور الموظفين ومهامهم وإجازاتهم ومشاريعهم يحتاج نظاماً واحداً منظماً يراعي الأدوار",
+          projDepiSolution: "بناء واجهة React + TypeScript وخلفية FastAPI + MongoDB بأكثر من 150 REST endpoint ومصادقة JWT وصلاحيات حسب الأدوار وسجلات تدقيق وتصدير PDF/Excel بدعم العربية (RTL)",
+          projDepiOutcome: "مدعوم بأكثر من 500 اختبار آلي (pytest) واختبارات Playwright الشاملة، ومساعد ذكاء اصطناعي (Gemini وOllama)، ونشر عبر Docker Compose مع MongoDB replica set وNginx",
+          projMediTitle: "MediMind",
+          projMediDesc: "منصة لإدارة الأدوية تربط مرضى الأمراض المزمنة بالأسرة والصيدلية والطبيب للتذكير وتتبع الالتزام بالدواء.",
+          projMediProblem: "يصعب على مرضى الأمراض المزمنة الالتزام بأدويتهم، ولا يملك مقدمو الرعاية رؤية واضحة",
+          projMediSolution: "بنيت تطبيق Flutter (BLoC/Cubit) بمفردي، ومديولات الحالات والجرعات والأدوية في الـ backend (Node.js/Express وMongoDB) ضمن فريق",
+          projMediOutcome: "يتضمن OCR بالذكاء الاصطناعي للروشتات، وتنبيهات فورية لمقدم الرعاية مع تصعيد عبر SMS/Push، ونشراً بحاويات على AWS ECS Fargate",
+          projAwsTitle: "تطبيق ويب قابل للتوسع على AWS",
+          projAwsDesc: "تطبيق ويب من 3 طبقات، قابل للتوسع وعالي التوافر على AWS، بنيته كمشروع تخرج لشهادة SAA-C03.",
+          projAwsProblem: "يجب أن تظل تطبيقات الويب متاحة وأن تتوسع مع تغير الحمل",
+          projAwsSolution: "تصميم بنية من 3 طبقات باستخدام CloudFront + WAF وApplication Load Balancer وEC2 Auto Scaling وRDS Multi-AZ",
+          projAwsOutcome: "تم النشر كبنية تحتية ككود باستخدام CloudFormation",
+          navHome: 'الرئيسية', navAbout: 'عني', navEducation: 'التعليم',
+          navExperience: 'الخبرة', navProjects: 'المشاريع', navSkills: 'المهارات',
+          navContact: 'تواصل', hireMe: 'وظفني', viewCV: 'عرض السيرة الذاتية',
+          heroGreeting: 'مرحباً، أنا', heroName: 'محمد جميل', heroRole1: 'مطور Full Stack', heroRole2: "مطور معتمد من AWS",
+          heroRolesAria: 'مطور Full Stack ومطور معتمد من AWS',
+          statYears: 'سنوات خبرة', statProjects: 'مشاريع منجزة',
+          statEndpoints: 'خدمات REST مبنية', statTests: 'اختبارات آلية', statCerts: 'شهادات',
+          aboutTag: 'عني', aboutTitle: 'أبني المستقبل بالكود والسحابة',
+          aboutP1: "أنا محمد جميل فؤاد، مطور Full Stack مقيم في القاهرة، مصر، وخريج دبلومة تطوير البرمجيات المعتمدة على الذكاء الاصطناعي من Digilians. حاصل على بكالوريوس في علوم الحاسب من أكاديمية طيبة بمعدل 3.04.",
+          aboutP2: "أبني تطبيقات ويب جاهزة للإنتاج باستخدام React.js وTypeScript وNode.js وFastAPI وMongoDB، وأنشرها على AWS باستخدام Docker. حاصل على شهادة AWS Certified Developer – Associate، وأعمل حالياً متدرب هندسة برمجيات في وزارة الاتصالات وتكنولوجيا المعلومات (MCIT). خلفيتي في البنية التحتية والدعم الفني تمنحني فهماً قوياً للشبكات والأنظمة والأمان.",
+          aboutP3: "قدت فرع GDG on Campus في أكاديمية طيبة، ونظمت فعاليات وورش عمل وهاكاثونات.",
+          aboutP4: "أبحث عن فرص في هندسة البرمجيات Full Stack أبني فيها منتجات متكاملة وأواصل التطور في الهندسة السحابية.",
+          eduTag: 'التعليم', eduTitle: 'الخلفية الأكاديمية',
+          eduName: 'أكاديمية طيبة', eduDegree: 'بكالوريوس في علوم الحاسب',
+          eduDate: 'سبتمبر 2019 — مايو 2023', eduLocation: 'المعادي، القاهرة، مصر',
+          expTag: 'الخبرة', expTitle: 'مسيرتي المهنية',
+          exp1Title: "متدرب هندسة برمجيات", exp1Date: "ديسمبر 2025 — سبتمبر 2026",
+          exp1Li1: "بناء تطبيقات ويب Full Stack باستخدام React.js وNode.js/Express",
+          exp1Li2: "تصميم ونشر حلول سحابية على AWS",
+          exp1Li3: "دمج نماذج الذكاء الاصطناعي في مسارات عمل التطبيقات",
+          exp1Li4: "تطبيق منهجيات Agile والتحكم في الإصدارات بـ Git في مشاريع الفريق",
+          exp2Title: 'أخصائي تكنولوجيا معلومات', exp2Date: 'سبتمبر 2025 — نوفمبر 2025',
+          exp2Li1: 'تثبيت وإصلاح وتكوين أجهزة الكمبيوتر والطابعات ومعدات الشبكة',
+          exp2Li2: 'إدارة وصيانة شبكات LAN و Wi-Fi',
+          exp2Li3: 'تقديم الدعم الفني وحل مشاكل تكنولوجيا المعلومات اليومية للموظفين',
+          exp2Li4: 'تطبيق تحديثات الأمان وضمان حماية النظام',
+          exp3Title: 'أخصائي دعم فني', exp3Date: 'يناير 2025 — سبتمبر 2025',
+          exp3Li1: 'تقديم الدعم الفني لأجهزة سطح المكتب واللابتوب والطابعات وأنظمة Qmatic',
+          exp3Li2: "إدارة الأجهزة الافتراضية باستخدام VMware وVirtualBox",
+          exp3Li3: "إدارة المستخدمين والصلاحيات في Active Directory",
+          exp3Li4: "تنفيذ النسخ الاحتياطي والاسترجاع باستخدام AOMEI وHiren's Boot",
+          exp3Li5: "تقديم الدعم عن بعد عبر AnyDesk وTeamViewer",
+          projTag: 'المشاريع', projTitle: 'أبرز الأعمال',
+          viewCode: 'عرض الكود',
+          problem: 'المشكلة:', solution: 'الحل:', outcome: 'النتيجة:',
+          proj1Title: "نظام تذاكر الدعم الفني",
+          proj1Desc: "منصة Full Stack للتذاكر تحل محل طلبات الدعم غير الرسمية عبر واتساب بسير عمل منظم.",
+          proj1Problem: "كانت طلبات الدعم الفني تُدار بشكل غير رسمي عبر واتساب بدون تتبع أو مسؤولية واضحة",
+          proj1Solution: "بناء منصة بدورين (موظف/مسؤول) بسير عمل مفتوح ← قيد التنفيذ ← تم الحل ← مغلق، مع ملاحظات داخلية وREST API بتحقق Joi ومصادقة JWT",
+          proj1Outcome: "لوحة تحكم للمسؤول تعرض اتجاهات التذاكر الشهرية وأفضل الموظفين باستخدام MongoDB aggregation وRecharts",
+          proj3Title: 'EcoCycle',
+          proj3Desc: 'نظام إعادة تدوير يحفّز المواطنين على تحويل المخلفات اليومية إلى مكافآت مالية حقيقية في جميع أنحاء مصر.',
+          proj3Problem: '90% من المخلفات الصلبة في مصر غير مُعاد تدويرها، مما يكلف مليارات في تنظيف الشوارع و3 مليارات دولار سنوياً في استيراد المواد الخام دون وجود حافز مواطنين قابل للتوسع',
+          proj3Solution: 'أكشاك ذكية مع تطبيق موبايل يعتمد على QR، ومكافآت EcoPoints عبر Fawry/Vodafone Cash، ونموذج إيرادات ذاتي الاستدامة من بيع المخلفات للمصانع',
+          proj3Outcome: 'نظام إعادة تدوير دائري يقلل التكاليف البلدية ويخفض استيراد المواد الخام ويحوّل المخلفات اليومية إلى مكافآت مالية حقيقية للمواطنين المصريين',
+          skillsTag: 'المهارات', skillsTitle: 'التقنيات المستخدمة',
+          skillCloud: 'السحابة و DevOps', skillProg: "الموبايل والبرمجة", skillSys: 'الأنظمة والشبكات',
+          certsTag: 'الشهادات', certsTitle: 'الشهادات والاعتمادات',
+          viewCert: 'عرض الشهادة',
+          cert1Title: 'خريج AWS Academy — عمليات السحابة',
+          cert1Org: 'Amazon Web Services — 2026',
+          cert1Desc: 'التركيز على مراقبة وإدارة وأتمتة أحمال عمل AWS باستخدام CloudWatch و CloudTrail و Systems Manager و Auto Scaling. تعلمت ضمان التوفر العالي وتحسين التكلفة والتميز التشغيلي.',
+          cert2Title: 'خريج AWS Academy — تطوير السحابة',
+          cert2Org: 'Amazon Web Services — 2026',
+          cert2Desc: 'تعلمت بناء تطبيقات سحابية أصلية باستخدام خدمات AWS مثل Lambda و API Gateway و DynamoDB و S3 و Cognito. تغطية البنية بدون خادم والتصميم الموجه بالأحداث ونشر التطبيقات القابلة للتوسع.',
+          cert3Title: 'خريج AWS Academy — أساسيات السحابة',
+          cert3Org: 'Amazon Web Services — 2026',
+          cert3Desc: 'تغطية أساسيات الحوسبة السحابية وخدمات AWS الأساسية بما في ذلك EC2 و S3 و VPC و IAM و RDS. اكتساب فهم للبنية التحتية العالمية لـ AWS ونماذج التسعير وأفضل ممارسات الأمان.',
+          cert4Title: 'محترف تطوير واجهات أمامية من Meta',
+          cert4Org: 'Meta — 2026',
+          cert4Desc: 'شهادة مهنية من 9 دورات تغطي HTML و CSS و JavaScript و React ومبادئ تصميم UI/UX والتحكم في الإصدار بـ Git وبناء تطبيقات ويب متجاوبة وسهلة الوصول جاهزة للإنتاج.',
+          cert5Title: 'تقديم عمل عالي الجودة بمرونة',
+          cert5Org: 'IBM — 2026',
+          cert5Desc: 'تعلمت منهجيات Agile و Scrum لتقديم برمجيات عالية الجودة بشكل تكراري. تغطية تخطيط السبرنت والمراجعات والتحسين المستمر وكيفية التعاون بفعالية في فرق التطوير السريعة.',
+          cert6Title: 'تطوير Flutter و Dart',
+          cert6Org: 'Udemy — تطبيقات متعددة المنصات',
+          cert6Desc: 'بناء تطبيقات محمولة متعددة المنصات لـ iOS و Android باستخدام Flutter و Dart. تغطية الويدجتات وإدارة الحالة والتنقل وتكامل REST API ونشر التطبيقات في متاجر التطبيقات.',
+          cert7Title: 'ECPC — مسابقة البرمجة الجامعية المصرية',
+          cert7Org: 'متسابق — أغسطس 2021',
+          cert7Desc: 'تنافست كمتسابق في أهم مسابقة برمجة جامعية في مصر. حل مشاكل الخوارزميات وهياكل البيانات تحت ضغط الوقت باستخدام C++، متنافساً مع فرق من جامعات في جميع أنحاء مصر.',
+          cert8Title: 'أدوات وممارسات DevOps متقدمة',
+          cert8Org: 'Coursera — 2026',
+          cert8Desc: 'دورة متقدمة تغطي أدوات وممارسات DevOps الحديثة بما في ذلك خطوط CI/CD والبنية التحتية ككود والحاويات والتنسيق وحلول المراقبة لبيئات الإنتاج.',
+          cert9Title: 'تخصص دورة DevOps الكاملة',
+          cert9Org: 'Coursera — 2026',
+          cert9Desc: 'تخصص شامل يغطي دورة حياة DevOps الكاملة بما في ذلك التحكم في الإصدار والتكامل المستمر والتسليم المستمر وأتمتة البنية التحتية والمراقبة وممارسات التعاون.',
+          cert10Title: 'AWS Certified Cloud Practitioner',
+          cert10Org: 'Amazon Web Services — 2026',
+          cert10Desc: 'شهادة مستوى أساسي تعكس الفهم الشامل لـ AWS Cloud والخدمات الأساسية والأمان والمعمارية والتسعير والدعم. توضح القدرة على تحديد خدمات AWS واتخاذ قرارات مدروسة بشأن حلول تكنولوجيا المعلومات بناءً على متطلبات الأعمال.',
+          validationLabel: 'التحقق:',
+          verifyCert: 'تحقق من AWS',
+          volTag: 'التطوع', volTitle: 'المجتمع والقيادة',
+          vol1Title: 'قائد الفرع', vol1Org: 'GDG on Campus (سابقاً GDSC) — أكاديمية طيبة', vol1Date: 'يوليو 2022 — يوليو 2023',
+          vol1Li1: "قيادة الفرع بصفة Chapter Leader وتوسيع شبكة علاقاته مع الرعاة من شركات الصناعة التقنية",
+          vol1Li2: 'تنظيم ورش عمل وهاكاثونات وفعاليات تقنية',
+          vol1Li3: 'بناء شراكات مع شركات صناعة التكنولوجيا',
+          vol1Li4: 'تعزيز تبادل المعرفة من خلال ورش عمل تقنية',
+          vol2Title: 'عضو فريق أساسي', vol2Org: 'GDG on Campus (سابقاً GDSC) — أكاديمية طيبة', vol2Date: 'يوليو 2021 — يوليو 2022',
+          vol2Li1: 'إدارة جميع الجوانب التقنية للفعاليات عبر الإنترنت والحضورية كعضو فريق أساسي',
+          vol2Li2: 'إدارة البث المباشر باستخدام StreamYard',
+          vol2Li3: 'تطوير خطط استراتيجية لتعزيز حضور الفرع',
+          contactTag: 'تواصل', contactTitle: 'لنبني شيئاً رائعاً معاً',
+          contactDesc: 'هل تريد مناقشة مشروع؟ يسعدني دائماً سماع أفكار جديدة!',
+          chatbotTitle: 'اسألني عني',
+          chatbotStatus: 'ذكاء اصطناعي \u2022 متصل',
+          chatbotWelcome: 'مرحباً! أنا المساعد الذكي لمحمد. اسألني أي شيء عن خبرته أو مهاراته أو مشاريعه أو شهاداته!',
+          chatbotPlaceholder: 'اسألني أي شيء...',
+          chatbotNewChat: 'بدأنا محادثة جديدة. اسألني أي شيء!',
+          chatbotOffline: 'خدمة الذكاء الاصطناعي غير متاحة حالياً \u2014 سأجيب من معرفتي المخزنة.',
+          chatbotDisclaimer: 'مساعد مدعوم بالذكاء الاصطناعي \u2014 للتفاصيل المهمة راسل محمد مباشرة',
+          chipSkills: 'ما هي مهاراته؟',
+          chipProjects: 'حدثني عن مشاريعه',
+          chipExperience: 'ما هي خبرته؟',
+          chipContact: 'كيف أتواصل معه؟',
+          openToWork: 'متاح لفرص عمل',
+          emailLabel: 'البريد الإلكتروني',
+          phoneLabel: 'الهاتف',
+          locationLabel: 'الموقع',
+          contactLocation: 'القاهرة، مصر',
+          copyAria: 'نسخ إلى الحافظة',
+          copiedAria: 'تم النسخ!',
+          backToTopAria: 'العودة إلى الأعلى',
+          formName: 'الاسم',
+          formEmail: 'البريد الإلكتروني',
+          formMessage: 'الرسالة',
+          formNamePh: 'اسمك',
+          formEmailPh: 'بريدك الإلكتروني',
+          formMessagePh: 'اكتب لي عن مشروعك أو الفرصة...',
+          formSend: 'إرسال الرسالة',
+          formSending: 'جارٍ الإرسال...',
+          formInvalid: 'من فضلك املأ جميع الحقول ببريد إلكتروني صحيح.',
+          formSuccess: 'تم إرسال رسالتك بنجاح! سأرد عليك قريباً.',
+          formError: 'حدث خطأ ما —',
+          formEmailDirect: 'راسلني مباشرة على البريد.'
+        }
+      };
+
+      let currentLang = localStorage.getItem('lang') || 'en';
+
+      function applyLang(lang) {
+        const t = translations[lang];
+        const isAr = lang === 'ar';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+        document.getElementById('langToggle').textContent = isAr ? 'EN' : 'AR';
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (t[key]) el.textContent = t[key];
+          else console.warn('[i18n] Missing translation key:', key);
+        });
+        document.querySelectorAll('[data-key-text]').forEach(el => {
+          const key = el.getAttribute('data-key-text');
+          if (t[key]) {
+            el.textContent = t[key];
+            el.setAttribute('data-text', t[key]);
+          } else console.warn('[i18n] Missing translation key:', key);
+        });
+        document.querySelectorAll('[data-key-placeholder]').forEach(el => {
+          const phKey = el.getAttribute('data-key-placeholder');
+          if (t[phKey]) el.placeholder = t[phKey];
+          else console.warn('[i18n] Missing translation key:', phKey);
+        });
+        document.querySelectorAll('[data-key-aria]').forEach(el => {
+          const ariaKey = el.getAttribute('data-key-aria');
+          if (t[ariaKey]) el.setAttribute('aria-label', t[ariaKey]);
+          else console.warn('[i18n] Missing translation key:', ariaKey);
+        });
+      }
+      applyLang(currentLang);
+
+      document.getElementById('langToggle').addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        localStorage.setItem('lang', currentLang);
+        applyLang(currentLang);
+      });
+
+      // ============== Theme Toggle ==============
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = themeToggle.querySelector('i');
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      // Keep the browser UI bar color in sync with the active theme (QA-22)
+      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      const syncThemeColor = () => themeColorMeta.setAttribute(
+        'content',
+        document.body.classList.contains('light-theme') ? '#f8f9fa' : '#121212'
+      );
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+      }
+      syncThemeColor();
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        syncThemeColor();
+        if (isLight) {
+          themeIcon.classList.remove('bx-sun');
+          themeIcon.classList.add('bx-moon');
+          localStorage.setItem('theme', 'light');
+        } else {
+          themeIcon.classList.remove('bx-moon');
+          themeIcon.classList.add('bx-sun');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      // ============== Contact Form (FormSubmit — no signup needed) ==============
+      // First submission triggers a one-time activation email to mo.jameel.official@gmail.com — confirm it once and the form goes live.
+      const contactForm = document.getElementById('contactForm');
+      const formStatus = document.getElementById('formStatus');
+      const contactSubmit = document.getElementById('contactSubmit');
+      let formBusy = false;
+
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (formBusy) return;
+        const fields = contactForm.elements;
+        const name = fields.name.value.trim();
+        const email = fields.email.value.trim();
+        const message = fields.message.value.trim();
+        const valid = name && message && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        contactForm.querySelectorAll('input, textarea').forEach(el => {
+          let bad = el.required && !el.value.trim();
+          // Empty check + email format check — malformed email gets the red
+          // border too (QA-20)
+          if (!bad && el.type === 'email' && el.value.trim()) {
+            bad = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+          }
+          el.classList.toggle('invalid', bad);
+        });
+        if (!valid) {
+          formStatus.textContent = t('formInvalid');
+          formStatus.className = 'form-status error';
+          return;
+        }
+        formBusy = true;
+        const submitLabel = contactSubmit.querySelector('span');
+        const originalLabel = submitLabel.textContent;
+        contactSubmit.disabled = true;
+        contactSubmit.classList.add('loading');
+        submitLabel.textContent = t('formSending');
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/mo.jameel.official@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              message: message,
+              _subject: 'Portfolio contact — ' + name,
+              _template: 'table',
+              _captcha: 'false'
+            })
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && (data.success === 'true' || data.success === true)) {
+            formStatus.textContent = t('formSuccess');
+            formStatus.className = 'form-status success';
+            contactForm.reset();
+          } else {
+            throw new Error('Form service rejected the submission');
+          }
+        } catch (err) {
+          // Never lose a lead: fall back to a prefilled direct email
+          formStatus.textContent = '';
+          formStatus.appendChild(document.createTextNode(t('formError') + ' '));
+          const mailto = document.createElement('a');
+          mailto.href = 'mailto:mo.jameel.official@gmail.com?subject='
+            + encodeURIComponent('Portfolio contact — ' + name)
+            + '&body=' + encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+          mailto.textContent = t('formEmailDirect');
+          mailto.className = 'form-mailto';
+          formStatus.appendChild(mailto);
+          formStatus.className = 'form-status error';
+        } finally {
+          formBusy = false;
+          contactSubmit.disabled = false;
+          contactSubmit.classList.remove('loading');
+          submitLabel.textContent = originalLabel;
+        }
+      });
+      contactForm.addEventListener('input', (e) => {
+        if (e.target.classList.contains('invalid')) e.target.classList.remove('invalid');
+      });
+
+      // ============== Copy to clipboard ==============
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const value = btn.getAttribute('data-copy');
+          try {
+            await navigator.clipboard.writeText(value);
+          } catch (err) {
+            const tmp = document.createElement('textarea');
+            tmp.value = value;
+            tmp.style.position = 'fixed';
+            tmp.style.opacity = '0';
+            document.body.appendChild(tmp);
+            tmp.select();
+          document.execCommand('copy');
+            tmp.remove();
+          }
+          btn.classList.add('copied');
+          btn.setAttribute('aria-label', t('copiedAria'));
+          const icon = btn.querySelector('i');
+          if (icon) { icon.classList.remove('bx-copy'); icon.classList.add('bx-check'); }
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.setAttribute('aria-label', t('copyAria'));
+            if (icon) { icon.classList.remove('bx-check'); icon.classList.add('bx-copy'); }
+          }, 2000);
+        });
+      });
+
+      // ============== Back to top + scroll progress ==============
+      const backToTop = document.getElementById('backToTop');
+      const scrollProgress = document.getElementById('scrollProgress');
+      let scrollTicking = false;
+      window.addEventListener('scroll', () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        requestAnimationFrame(() => {
+          const doc = document.documentElement;
+          const max = doc.scrollHeight - window.innerHeight;
+          const ratio = max > 0 ? window.scrollY / max : 0;
+          scrollProgress.style.width = (ratio * 100).toFixed(2) + '%';
+          backToTop.classList.toggle('visible', window.scrollY > 600);
+          scrollTicking = false;
+        });
+      }, { passive: true });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      });
+
+      // ============== Service Worker (PWA offline support) ==============
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').catch(() => {});
+        });
+      }
+
+      // ============== Chatbot (AI-powered) ==============
+      const chatbotToggle = document.getElementById('chatbotToggle');
+      const chatbotWindow = document.getElementById('chatbotWindow');
+      const chatbotClose = document.getElementById('chatbotClose');
+      const chatbotClear = document.getElementById('chatbotClear');
+      const chatbotInput = document.getElementById('chatbotInput');
+      const chatbotSend = document.getElementById('chatbotSend');
+      const chatbotMessages = document.getElementById('chatbotMessages');
+      const chatbotChips = document.getElementById('chatbotChips');
+
+      // ---- AI Engine Configuration ----
+      const AI_CONFIG = {
+        endpoint: 'https://text.pollinations.ai/openai',
+        model: 'openai',
+        referrer: 'imohammedjameel.github.io',
+        maxHistoryMessages: 16,
+        timeoutMs: 45000
+      };
+
+      const SYSTEM_PROMPT = `You are "MJ Assistant" — the AI chatbot inside Mohammed Jameel Fouad's portfolio website. Visitors are recruiters, clients, and tech people who want to learn about Mohammed.
+
+STRICT RULES:
+1. TOPICS: Only discuss Mohammed's professional profile: experience, projects, skills, education, certifications, volunteering, goals, and contact info. If asked about anything else (general coding help, other people, unrelated chat), politely decline in one short sentence and offer to answer questions about Mohammed instead.
+2. LANGUAGE: Reply in the exact language of the visitor's latest message — English or Arabic (Modern Standard or Egyptian dialect). If they switch languages, switch with them. When replying in Arabic, ALWAYS keep technical terms, tool names, and product names in their original English form (React, FastAPI, JWT, Nginx, Docker, MongoDB, Gantt, etc.) — never translate or transliterate them.
+3. STYLE: Warm, confident, concise. Short paragraphs and "•" bullet points. Maximum ~120 words unless the visitor asks for more detail. No markdown headers, no tables, no code blocks.
+4. FACTS: Use ONLY the knowledge base below. Never invent numbers, dates, tools, or achievements. If you don't know something, say so honestly and suggest emailing mo.jameel.official@gmail.com.
+5. Guide visitors to action: his GitHub for code, the "View My CV" button for his resume, LinkedIn for connecting, or email for serious inquiries.
+
+KNOWLEDGE BASE — Mohammed Jameel Fouad:
+- Identity: Full Stack Developer based in Cairo, Egypt (Maadi). AWS Certified Developer – Associate. Phone: +20 114 686 3395. Email: mo.jameel.official@gmail.com. GitHub: github.com/iMohammedJameel. LinkedIn: linkedin.com/in/imohammedjameel. X: x.com/iMohammedJameel. Badges: credly.com/users/imohammedjameel.
+- Current role: Software Engineering Intern at the Ministry of Communications and Information Technology (MCIT), since Sep 2026.
+- Education: BSc Computer Science, Thebes Academy, Maadi (Sep 2019 – May 2023), GPA 3.04. Digilians AI-Based Software Development Specialized Diploma, Egyptian Military Academy (Dec 2025 – Sep 2026).
+- Experience: (1) MCIT Software Engineering Intern — built the DEPI-Staff-Management System end to end: attendance, tasks, leaves, projects, Gantt charts, meetings, reports; React + TypeScript frontend; FastAPI + MongoDB backend with 150+ REST endpoints; JWT auth, role-based access control, audit logs, Arabic RTL PDF/Excel export; 500+ pytest automated tests + Playwright E2E; Docker Compose deployment with MongoDB replica set and Nginx; integrated an AI assistant (Gemini + Ollama). (2) Software Engineering Trainee, Digilians, Egyptian Military Academy (Dec 2025 – Sep 2026) — full-stack apps with React and Node.js/Express; cloud-native deployments on AWS; AI model integration; Agile and Git workflows; AI-assisted development (Claude, GLM, ChatGPT, Amazon Q, Gemini); CI/CD with GitHub Actions; Infrastructure as Code with Terraform; Kubernetes with Helm. (3) IT Specialist, Linah Group (Sep 2025 – Nov 2025) — installed and troubleshot computers, printers, and network equipment; managed LAN and Wi-Fi; applied security updates. (4) Technical Support Specialist, Fujitsu FSIT Services (Jan 2025 – Sep 2025) — desktop/laptop/printer/Qmatic support; VMware and VirtualBox VMs; Active Directory user management; backups with AOMEI and Hiren's Boot; remote support via AnyDesk and TeamViewer. (5) Mandatory military service, Egypt (Oct 2023 – Dec 2024).
+- Projects: (1) DEPI-Staff-Management System (featured) — staff management platform built during his MCIT internship; details above. (2) MediMind — medication management platform connecting chronic patients with family, pharmacy, and doctor for reminders and adherence tracking; he built the Flutter mobile app (BLoC/Cubit) solo and the conditions/doses/medications backend modules (Node.js/Express, MongoDB) within a team; AI-powered OCR for prescriptions; real-time caregiver dose alerts with SMS/push escalation; containerized deployment on AWS ECS Fargate. (3) IT Ticketing System — replaces informal WhatsApp IT requests with a structured employee/admin workflow (open → in-progress → resolved → closed); internal notes; Joi-validated REST API with JWT; admin dashboard with monthly ticket trends and top employees using MongoDB aggregation pipelines and Recharts. (4) EcoCycle — citizen-driven recycling ecosystem for Egypt: smart kiosks, QR-based mobile app, EcoPoints rewards via Fawry/Vodafone Cash; tackles 90% unrecycled solid waste and $3B/year raw material imports. (5) AWS Scalable Web App — highly available 3-tier architecture: CloudFront + WAF, Application Load Balancer, EC2 Auto Scaling, RDS Multi-AZ; deployed as infrastructure as code with CloudFormation; SAA-C03 graduation project.
+- Skills: Frontend — React.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap, Vite. Backend & DB — Node.js, Express, Python, FastAPI, MongoDB, REST APIs, JWT. Cloud & DevOps — AWS, Docker, Terraform, Kubernetes, Helm, GitHub Actions, Git/GitHub, Linux. Mobile & Programming — Flutter, Dart, C++, Java, OOP, Data Structures, Bash. Security & Automation — OWASP Top 10, n8n. Systems & Networking — Active Directory, Windows Server (MCSA), TCP/IP, DNS, Firewalls, VLANs, CCNA.
+- Certifications (11): AWS Certified Developer – Associate (Oct 2026; validation code 901c902258254398b2a7af228c168812); AWS Certified Cloud Practitioner (validation b428b880b4204521a8eed4b50184fc61); AWS Academy Graduate — Cloud Operations, Cloud Developing, Cloud Foundations; Meta Front-End Developer Professional; IBM Delivering Quality Work with Agility; Advanced DevOps Tools and Practices (Coursera); DevOps Complete Course Specialization (Coursera); Flutter & Dart Development (Udemy); ECPC Egyptian Collegiate Programming Contest contestant (Aug 2021, C++).
+- Volunteering: GDG on Campus (formerly GDSC) — Thebes Academy. Chapter Leader (Jul 2022 – Jul 2023): led the chapter, organized workshops, hackathons, and tech events, expanded industry sponsor partnerships. Core Team Member (Jul 2021 – Jul 2022): managed all technical aspects of events, live broadcasting with StreamYard, strategic planning.
+- Career goal: Full Stack Software Engineering opportunities; growing toward cloud engineering.
+- Background strength: his IT infrastructure and support experience gives him solid networking, systems, and security fundamentals.`;
+
+      let conversationHistory = [];
+      let chatbotBusy = false;
+
+      const chatbotKnowledge = {
+        en: {
+          greeting: ['hi', 'hello', 'hey', 'good morning', 'good evening', 'greetings', 'howdy'],
+          name: ['name', 'who are you', 'your name', 'who is mohammed', 'tell me about yourself'],
+          experience: ['experience', 'work', 'job', 'career', 'worked', 'working', 'employment'],
+          skills: ['skills', 'technologies', 'tech stack', 'programming', 'languages', 'tools', 'what can you do'],
+          education: ['education', 'degree', 'university', 'study', 'studied', 'college', 'school'],
+          projects: ['projects', 'portfolio', 'built', 'created', 'developed', 'mcit', 'depi', 'medimind'],
+          contact: ['contact', 'email', 'phone', 'reach', 'call', 'message', 'linkedin', 'github'],
+          location: ['location', 'where', 'live', 'based', 'from', 'city'],
+          devops: ['devops', 'ci/cd', 'docker', 'kubernetes', 'terraform', 'helm', 'pipeline'],
+          aws: ['aws', 'cloud', 'amazon', 'ec2', 's3', 'lambda'],
+          responses: {
+            greeting: "Hello! I'm Mohammed Jameel's AI assistant. How can I help you learn more about him?",
+            name: "I'm Mohammed Jameel Fouad, a Full Stack Developer based in Cairo, Egypt, and an AWS Certified Developer – Associate. I build web applications with React, TypeScript, Node.js, FastAPI, and MongoDB, and deploy them on AWS.",
+            experience: "Mohammed has 1+ years of hands-on professional experience:\n\n• Software Engineering Intern at MCIT (Sep 2026 - Present)\n• Software Engineering Trainee at Digilians (Dec 2025 - Sep 2026)\n• IT Specialist at Linah Group (Sep 2025 - Nov 2025)\n• Technical Support Specialist at Fujitsu (Jan 2025 - Sep 2025)\n\nHe builds full-stack applications with React, Node.js, and FastAPI, and deploys cloud-native solutions on AWS.",
+            skills: "Mohammed's tech stack includes:\n\n💻 Frontend: React.js, TypeScript, JavaScript, Tailwind CSS, Vite, Bootstrap\n⚙️ Backend & Database: Node.js, Express, Python, FastAPI, MongoDB\n☁️ Cloud & DevOps: AWS (Developer Associate, Cloud Practitioner), Docker, Terraform, Kubernetes & Helm (trained), GitHub Actions (trained), Git/GitHub, Linux\n📱 Mobile & Programming: Flutter & Dart, Java, C++, OOP, Data Structures\n🔐 Security & Automation: OWASP Top 10, n8n\n🖥️ Systems: Active Directory, MCSA, CCNA",
+            education: "Mohammed holds a Bachelor's Degree in Computer Science from Thebes Academy (Sep 2019 - May 2023) with a GPA of 3.04, and graduated from the Digilians AI-Based Software Development Specialized Diploma (2026).",
+            projects: "Key projects include:\n\n1. DEPI-Staff-Management System - staff management platform built at MCIT (React, TypeScript, FastAPI, MongoDB)\n2. MediMind - medication management platform; Mohammed built the Flutter app and the doses/medications backend modules\n3. IT Ticketing System - ticket workflow platform (React, Node.js, Express, MongoDB)\n4. EcoCycle - smart recycling platform for Egypt (React, Node.js, Express)\n5. AWS Scalable Web App - highly available 3-tier architecture (CloudFormation)",
+            contact: "You can reach Mohammed at:\n\n📧 Email: mo.jameel.official@gmail.com\n💼 LinkedIn: linkedin.com/in/imohammedjameel\n🐙 GitHub: github.com/iMohammedJameel\n🏅 Credly: credly.com/users/imohammedjameel\n📱 Phone: +20 114 686 3395",
+            location: "Mohammed is based in Cairo, Egypt (Maadi area).",
+            devops: "Mohammed's cloud and DevOps experience includes:\n\n• AWS Certified Developer – Associate and Cloud Practitioner\n• Deploying applications with Docker and Docker Compose\n• Infrastructure as code with Terraform and CloudFormation\n• Designing a 3-tier highly available architecture on AWS\n• Trained in CI/CD with GitHub Actions and in Kubernetes with Helm\n• Git/GitHub workflows and Linux administration",
+            aws: "Mohammed is an AWS Certified Developer – Associate and AWS Certified Cloud Practitioner, and also holds AWS Academy certificates in:\n\n• Cloud Operations\n• Cloud Developing\n• Cloud Foundations\n\nHe designed a scalable 3-tier architecture on AWS using CloudFront, WAF, ALB, EC2 Auto Scaling, and RDS Multi-AZ.",
+            default: "I'm not sure about that. You can ask me about Mohammed's:\n\n• Experience & Career\n• Skills & Technologies\n• Education\n• Projects\n• Contact Information\n• DevOps & Cloud Expertise"
+          }
+        },
+        ar: {
+          greeting: ['مرحبا', 'السلام عليكم', 'أهلا', 'هاي', 'صباح الخير', 'مساء الخير', 'اهلين', 'هلا'],
+          name: ['اسم', 'من أنت', 'اسمك', 'مين', 'عرفني', 'قول لي عنك'],
+          experience: ['خبرة', 'شغل', 'وظيفة', 'عمل', 'شغلت', 'اشتغل', 'وظائف'],
+          skills: ['مهارات', 'تقنيات', 'برمجة', 'لغات', 'ادوات', 'تعرف', 'بتعرف ايه'],
+          education: ['تعليم', 'دراسة', 'جامعة', 'شهادة', 'درس', 'كلية', 'مدرسة'],
+          projects: ['مشاريع', 'أعمال', 'بورتفوليو', 'بنى', 'طور'],
+          contact: ['تواصل', 'ايميل', 'تليفون', 'رقم', 'اتصل', 'رسالة', 'لينكد ان', 'جيت هاب'],
+          location: ['مكان', 'فين', 'موقع', 'عنوان', 'ساكن', 'مدينة'],
+          devops: ['ديف اوبس', 'devops', 'دوكر', 'كوبرنيتس'],
+          aws: ['aws', 'سحابة', 'كلاود', 'امازون'],
+          responses: {
+            greeting: "مرحباً! أنا المساعد الذكي لمحمد جميل. كيف يمكنني مساعدتك لمعرفة المزيد عنه؟",
+            name: "أنا محمد جميل فؤاد، مطور Full Stack مقيم في القاهرة، مصر، وحاصل على AWS Certified Developer – Associate. أبني تطبيقات ويب باستخدام React وTypeScript وNode.js وFastAPI وMongoDB وأنشرها على AWS.",
+            experience: "لدى محمد أكثر من سنة من الخبرة المهنية العملية:\n\n• متدرب هندسة برمجيات في MCIT (سبتمبر 2026 - حتى الآن)\n• متدرب هندسة برمجيات في Digilians (ديسمبر 2025 - سبتمبر 2026)\n• أخصائي تكنولوجيا معلومات في Linah Group (سبتمبر 2025 - نوفمبر 2025)\n• أخصائي دعم فني في Fujitsu (يناير 2025 - سبتمبر 2025)\n\nيبني تطبيقات Full Stack باستخدام React وNode.js وFastAPI، وينشر حلولاً سحابية على AWS.",
+            skills: "التقنيات التي يتقنها محمد:\n\n💻 الواجهات الأمامية: React.js, TypeScript, JavaScript, Tailwind CSS, Vite, Bootstrap\n⚙️ الخلفية وقواعد البيانات: Node.js, Express, Python, FastAPI, MongoDB\n☁️ السحابة و DevOps: AWS (Developer Associate, Cloud Practitioner), Docker, Terraform, Kubernetes & Helm (تدريب), GitHub Actions (تدريب), Git/GitHub, Linux\n📱 الموبايل والبرمجة: Flutter & Dart, Java, C++, OOP, Data Structures\n🔐 الأمان والأتمتة: OWASP Top 10, n8n\n🖥️ الأنظمة: Active Directory, MCSA, CCNA",
+            education: "محمد حاصل على بكالوريوس في علوم الحاسب من أكاديمية طيبة (سبتمبر 2019 - مايو 2023) بمعدل 3.04، وخريج دبلومة Digilians المتخصصة في تطوير البرمجيات المعتمدة على الذكاء الاصطناعي (2026).",
+            projects: "المشاريع الرئيسية تشمل:\n\n1. DEPI-Staff-Management System - منصة لإدارة الموظفين بُنيت في MCIT (React, TypeScript, FastAPI, MongoDB)\n2. MediMind - منصة لإدارة الأدوية؛ بنى محمد تطبيق Flutter ومديولات الجرعات والأدوية في الـ backend\n3. IT Ticketing System - منصة لسير عمل التذاكر (React, Node.js, Express, MongoDB)\n4. EcoCycle - منصة تدوير ذكية لمصر (React, Node.js, Express)\n5. AWS Scalable Web App - بنية من 3 طبقات عالية التوافر (CloudFormation)",
+            contact: "يمكنك التواصل مع محمد عبر:\n\n📧 البريد: mo.jameel.official@gmail.com\n💼 LinkedIn: linkedin.com/in/imohammedjameel\n🐙 GitHub: github.com/iMohammedJameel\n🏅 Credly: credly.com/users/imohammedjameel\n📱 الهاتف: +20 114 686 3395",
+            location: "محمد مقيم في القاهرة، مصر (منطقة المعادي).",
+            devops: "خبرة محمد في السحابة و DevOps تشمل:\n\n• AWS Certified Developer – Associate و Cloud Practitioner\n• نشر التطبيقات بـ Docker و Docker Compose\n• البنية التحتية ككود بـ Terraform و CloudFormation\n• تصميم بنية من 3 طبقات عالية التوافر على AWS\n• تدريب على CI/CD باستخدام GitHub Actions وعلى Kubernetes مع Helm\n• Git/GitHub وإدارة Linux",
+            aws: "محمد حاصل على AWS Certified Developer – Associate و AWS Certified Cloud Practitioner، وشهادات AWS Academy في:\n\n• عمليات السحابة\n• تطوير السحابة\n• أساسيات السحابة\n\nصمم بنية قابلة للتوسع من 3 طبقات على AWS باستخدام CloudFront و WAF و ALB و EC2 Auto Scaling و RDS Multi-AZ.",
+            default: "لست متأكداً من ذلك. يمكنك سؤالي عن:\n\n• الخبرة والمسيرة المهنية\n• المهارات والتقنيات\n• التعليم\n• المشاريع\n• معلومات التواصل\n• خبرة DevOps والسحابة"
+          }
+        }
+      };
+
+      function findBestMatch(message, lang) {
+        // Word-boundary matching: "hi" must NOT match inside "his" (classic substring bug)
+        const msg = ' ' + message.toLowerCase() + ' ';
+        const knowledge = chatbotKnowledge[lang];
+        for (let category in knowledge) {
+          if (category === 'responses') continue;
+          const keywords = knowledge[category];
+          for (let keyword of keywords) {
+            const escaped = keyword.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const re = new RegExp('(^|[^\\p{L}\\p{N}])' + escaped + '([^\\p{L}\\p{N}]|$)', 'u');
+            if (re.test(msg)) {
+              return knowledge.responses[category];
+            }
+          }
+        }
+        return knowledge.responses.default;
+      }
+
+      function escapeHtml(s) {
+        return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      }
+
+      function addMessage(text, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${isUser ? 'user' : 'bot'}`;
+        const safe = formatMessage(text);
+        messageDiv.innerHTML = `<div class="message-content"><p>${safe}</p></div>`;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+
+      function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chatbot-message bot';
+        typingDiv.id = 'typing-indicator';
+        typingDiv.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+        chatbotMessages.appendChild(typingDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const typing = document.getElementById('typing-indicator');
+        if (typing) typing.remove();
+      }
+
+      // ---- AI helpers ----
+      function t(key) {
+        return (translations[currentLang] && translations[currentLang][key]) || translations.en[key] || '';
+      }
+
+      function formatMessage(text) {
+        let safe = escapeHtml(text);
+        safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        safe = safe.replace(/^#{1,6}\s+/gm, '');
+        safe = safe.replace(/\n/g, '<br>');
+        return safe;
+      }
+
+      function buildMessages() {
+        const history = conversationHistory.slice(-AI_CONFIG.maxHistoryMessages);
+        return [{ role: 'system', content: SYSTEM_PROMPT }, ...history];
+      }
+
+      async function aiStream(messages, onChunk) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), AI_CONFIG.timeoutMs);
+        try {
+          const res = await fetch(AI_CONFIG.endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              model: AI_CONFIG.model,
+              referrer: AI_CONFIG.referrer,
+              stream: true,
+              messages: messages
+            }),
+            signal: controller.signal
+          });
+          if (!res.ok) throw new Error('AI HTTP ' + res.status);
+          const reader = res.body.getReader();
+          const decoder = new TextDecoder();
+          let buffer = '';
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split('\n');
+            buffer = lines.pop() || '';
+            for (const line of lines) {
+              const trimmed = line.trim();
+              if (!trimmed.startsWith('data:')) continue;
+              const payload = trimmed.slice(5).trim();
+              if (payload === '[DONE]') return;
+              try {
+                const chunk = JSON.parse(payload);
+                const piece = chunk.choices && chunk.choices[0] && chunk.choices[0].delta && chunk.choices[0].delta.content;
+                if (piece) onChunk(piece);
+              } catch (err) { /* skip malformed chunk */ }
+            }
+          }
+        } finally {
+          clearTimeout(timer);
+        }
+      }
+
+      async function aiComplete(messages) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), AI_CONFIG.timeoutMs);
+        try {
+          const res = await fetch(AI_CONFIG.endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              model: AI_CONFIG.model,
+              referrer: AI_CONFIG.referrer,
+              messages: messages
+            }),
+            signal: controller.signal
+          });
+          if (!res.ok) throw new Error('AI HTTP ' + res.status);
+          const data = await res.json();
+          return (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || '';
+        } finally {
+          clearTimeout(timer);
+        }
+      }
+
+      function startStreamingMessage() {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chatbot-message bot streaming';
+        messageDiv.innerHTML = '<div class="message-content"><p></p><span class="stream-cursor" aria-hidden="true"></span></div>';
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        return messageDiv;
+      }
+
+      function updateStreamingMessage(el, fullText) {
+        const p = el.querySelector('p');
+        p.innerHTML = formatMessage(fullText);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+
+      function finalizeStreamingMessage(el) {
+        el.classList.remove('streaming');
+        const cursor = el.querySelector('.stream-cursor');
+        if (cursor) cursor.remove();
+      }
+
+      function addSystemNote(text) {
+        const note = document.createElement('div');
+        note.className = 'chatbot-note';
+        note.textContent = text;
+        chatbotMessages.appendChild(note);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+
+      function setSendingState(busy) {
+        chatbotSend.classList.toggle('sending', busy);
+        chatbotSend.disabled = busy;
+        chatbotInput.setAttribute('aria-busy', busy ? 'true' : 'false');
+      }
+
+      function updateChips() {
+        chatbotChips.classList.toggle('visible', conversationHistory.length === 0);
+      }
+
+      function resetChat() {
+        conversationHistory = [];
+        chatbotMessages.innerHTML = '';
+        const welcome = document.createElement('div');
+        welcome.className = 'chatbot-message bot';
+        welcome.innerHTML = '<div class="message-content"><p>' + escapeHtml(t('chatbotWelcome')) + '</p></div>';
+        chatbotMessages.appendChild(welcome);
+        addSystemNote(t('chatbotNewChat'));
+        updateChips();
+      }
+
+      function isRateLimited(err) {
+        return err && typeof err.message === 'string' && (err.message.includes('429') || err.message.includes('402'));
+      }
+
+      async function handleChatbotMessage() {
+        const message = chatbotInput.value.trim();
+        if (!message || chatbotBusy) return;
+        addMessage(message, true);
+        chatbotInput.value = '';
+        conversationHistory.push({ role: 'user', content: message });
+        updateChips();
+        chatbotBusy = true;
+        setSendingState(true);
+        showTypingIndicator();
+
+        let reply = '';
+        let streamEl = null;
+        const onChunk = (piece) => {
+          if (!streamEl) {
+            removeTypingIndicator();
+            streamEl = startStreamingMessage();
+          }
+          reply += piece;
+          updateStreamingMessage(streamEl, reply);
+        };
+
+        // Attempt 1: streaming AI response
+        try {
+          await aiStream(buildMessages(), onChunk);
+        } catch (err) {
+          console.warn('Chatbot AI streaming failed:', err);
+          // Rate-limited? wait briefly and retry once
+          if (!reply && isRateLimited(err)) {
+            await new Promise(r => setTimeout(r, 4000));
+            try {
+              await aiStream(buildMessages(), onChunk);
+            } catch (err2) {
+              console.warn('Chatbot AI rate-limit retry failed:', err2);
+            }
+          }
+        }
+
+        // Attempt 2: non-streaming retry (if streaming produced nothing)
+        if (!reply) {
+          try {
+            removeTypingIndicator();
+            showTypingIndicator();
+            reply = await aiComplete(buildMessages());
+          } catch (err) {
+            console.warn('Chatbot AI request failed:', err);
+          }
+        }
+
+        removeTypingIndicator();
+
+        if (reply) {
+          if (streamEl) {
+            updateStreamingMessage(streamEl, reply);
+            finalizeStreamingMessage(streamEl);
+          } else {
+            addMessage(reply);
+          }
+        } else {
+          // Offline fallback: built-in rule-based knowledge
+          reply = findBestMatch(message, currentLang);
+          addMessage(reply);
+          addSystemNote(t('chatbotOffline'));
+        }
+
+        conversationHistory.push({ role: 'assistant', content: reply });
+        chatbotBusy = false;
+        setSendingState(false);
+        chatbotInput.focus();
+      }
+
+      chatbotToggle.addEventListener('click', () => {
+        chatbotWindow.classList.add('active');
+        chatbotToggle.classList.add('chatbot-seen');
+        updateChips();
+        // Focus after the visibility transition completes — focusing a
+        // visibility:hidden element is silently ignored by browsers
+        // (same pattern as the cert modal). (QA-04)
+        setTimeout(() => {
+          if (chatbotWindow.classList.contains('active')) chatbotInput.focus();
+        }, 350);
+      });
+      chatbotClose.addEventListener('click', () => {
+        chatbotWindow.classList.remove('active');
+        chatbotToggle.focus();
+      });
+      chatbotClear.addEventListener('click', () => {
+        if (chatbotBusy) return;
+        resetChat();
+        chatbotInput.focus();
+      });
+      chatbotChips.querySelectorAll('.chatbot-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          if (chatbotBusy) return;
+          chatbotInput.value = chip.textContent.trim();
+          handleChatbotMessage();
+        });
+      });
+      chatbotSend.addEventListener('click', handleChatbotMessage);
+      chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleChatbotMessage();
+      });
+    </script>
+  </body>
+</html>

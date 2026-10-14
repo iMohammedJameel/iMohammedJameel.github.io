@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imohammedjameel.github.io/sitemap.xml
