@@ -87,9 +87,34 @@ body.light-theme .section-tag,
 body.light-theme .project-meta-label,
 body.light-theme .cert-link,
 body.light-theme .stats .count,
-body.light-theme .btn-lang { color: #c2410c; }
+body.light-theme .btn-lang,
+/* QA-24 (visual audit): edu degree line + company lines are 14px accent
+   text — same 3.32:1 AA failure class as QA-23; align with darker orange */
+body.light-theme .edu-degree,
+body.light-theme .exp-company { color: #c2410c; }
+/* QA-24: orange hover text on light backgrounds (sidebar links, skill
+   chips, contact values) — darkened to keep AA on hover states too */
+body.light-theme .sidebar .sidebar-links a:hover,
+body.light-theme .skill-item:hover,
+body.light-theme .method-value:hover { color: #c2410c; }
 /* Cert link hover keeps the brand secondary but darkened for light bg */
 body.light-theme .cert-link:hover { color: #9a3412; }
+
+/* QA-24: primary buttons + skip link keep white text on the light-theme
+   brand orange (#e86600 = 3.32:1 vs white). Use the already-established
+   darker pair (#c2410c = 4.91:1, #9a3412 = 7.4:1) so 14px white labels
+   clear AA in light mode. Dark theme keeps the original gradient. */
+body.light-theme .btn-orange,
+body.light-theme .skip-link {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+}
+body.light-theme .btn-orange::before {
+  background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%);
+}
+body.light-theme .contact-social a:hover,
+body.light-theme .social-icons span:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+}
 
 body.light-theme .overlay { background-color: rgba(0, 0, 0, 0.4); }
 
