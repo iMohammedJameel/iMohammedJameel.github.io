@@ -8,7 +8,7 @@
    Bump CACHE_NAME when shipping new asset versions.
    ============================================================ */
 
-const CACHE_NAME = 'mj-portfolio-v5';
+const CACHE_NAME = 'mj-portfolio-v6';
 
 const CORE_ASSETS = [
   './',
