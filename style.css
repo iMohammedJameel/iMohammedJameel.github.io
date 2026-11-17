@@ -993,8 +993,10 @@ ul { list-style: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px 20px 10px;
-  padding: 0;
+  /* Horizontal inset comes from ".project-card .project-head { padding: 0 20px }"
+     above — no side margin here, otherwise the title gets pushed 40px in
+     while the description starts at 20px (misaligned left edges). */
+  margin: 15px 0 10px;
 }
 .project-title {
   font-size: 17px;
