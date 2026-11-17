@@ -1,6 +1,6 @@
 # Mohammed Jameel — Portfolio
 
-Personal portfolio website for **Mohammed Jameel Fouad**, a Full Stack Developer (AWS Certified Developer – Associate) based in Cairo, Egypt.
+Personal portfolio website for **Mohammed Jameel Fouad**, a Software Engineer with a backend and cloud focus (AWS Certified Developer – Associate) based in Cairo, Egypt.
 
 ## Tech Stack
 - **HTML5** semantic markup
