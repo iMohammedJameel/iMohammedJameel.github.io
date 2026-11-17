@@ -121,3 +121,56 @@ body.light-theme .overlay { background-color: rgba(0, 0, 0, 0.4); }
 /* Make sure modal close button stays visible */
 body.light-theme .cert-modal-close { background: var(--accent-color); }
 body.light-theme .cert-modal-close:hover { background: var(--accent-secondary); }
+
+/* ---- Light-theme typewriter (QA fix) ----
+   The hero roles use transparent text + 0.7px orange outline. On the light
+   background the pale outline was nearly invisible (~3:1 perceived).
+   Use the darker light-mode orange pair and a thicker stroke so both the
+   outline state and the typed text pass contrast on light backgrounds. */
+body.light-theme .hero-text .typewriter .role {
+  -webkit-text-stroke: 1.1px #c2410c;
+}
+body.light-theme .hero-text .typewriter .role::before {
+  color: #c2410c;
+  border-right-color: #c2410c;
+}
+[dir="rtl"] body.light-theme .hero-text .typewriter .role::before {
+  border-right-color: transparent;
+  border-left-color: #c2410c;
+}
+
+/* ---- Light-theme availability badge (QA fix) ----
+   The dark-theme mint #2effa8 text is only 1.27:1 on the light background
+   (WCAG AA needs 4.5:1 for 13.5px text). Switch to emerald-700 #047857:
+   5.48:1 on white and 4.90:1 on the 8% tinted chip — AA pass. The dot uses
+   emerald-600 #059669 (3.77:1 >= 3:1 required for graphics). */
+body.light-theme .availability-badge,
+body.light-theme .hero-text p.availability-badge {
+  color: #047857;
+  background: rgba(5, 150, 105, 0.08);
+  border-color: rgba(5, 150, 105, 0.35);
+}
+body.light-theme .availability-badge .availability-dot {
+  background: #059669;
+  animation-name: availabilityPulseLight;
+}
+@keyframes availabilityPulseLight {
+  0%   { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5); }
+  70%  { box-shadow: 0 0 0 7px rgba(5, 150, 105, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+}
+
+/* ---- Light-theme header toggle buttons (QA fix) ----
+   .btn-theme/.btn-lang use --accent-color (#e86600 = 3.32:1 on white) — the
+   small moon/EN glyphs read as washed out. Use the darker light-mode orange
+   #c2410c (4.91:1) that the other light-mode accents already use. */
+body.light-theme .btn-theme,
+body.light-theme .btn-lang {
+  color: #c2410c;
+  border-color: #c2410c;
+}
+body.light-theme .btn-theme:hover,
+body.light-theme .btn-lang:hover {
+  background: #c2410c;
+  border-color: #c2410c;
+}

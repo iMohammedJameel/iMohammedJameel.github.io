@@ -277,7 +277,7 @@
           <div class="edu-details">
             <span><i class="bx bx-calendar" aria-hidden="true"></i> <span data-key="eduDate">Sep 2019 — May 2023</span></span>
             <span><i class="bx bx-map" aria-hidden="true"></i> <span data-key="eduLocation">Maadi, Cairo, Egypt</span></span>
-            <span><i class="bx bx-star" aria-hidden="true"></i> GPA: 3.04</span>
+            <span><i class="bx bx-star" aria-hidden="true"></i> <span data-key="eduGpa">GPA: 3.04</span></span>
           </div>
         </div>
       </div>
@@ -294,7 +294,7 @@
           <div class="exp-head">
             <div>
               <h3 class="exp-title" data-key="expMTitle">Software Engineering Intern</h3>
-              <div class="exp-company">Ministry of Communications and Information Technology (MCIT)</div>
+              <div class="exp-company" data-key="expMCompany">Ministry of Communications and Information Technology (MCIT)</div>
             </div>
             <div class="exp-date" data-key="expMDate">Sep 2026 — Oct 2026</div>
           </div>
@@ -309,7 +309,7 @@
           <div class="exp-head">
             <div>
               <h3 class="exp-title" data-key="exp1Title">Software Engineering Trainee</h3>
-              <div class="exp-company">Digilians (MCIT Initiative) — Egyptian Military Academy</div>
+              <div class="exp-company" data-key="exp1Company">Digilians (MCIT Initiative) — Egyptian Military Academy</div>
             </div>
             <div class="exp-date" data-key="exp1Date">Dec 2025 — Sep 2026</div>
           </div>
@@ -327,7 +327,7 @@
           <div class="exp-head">
             <div>
               <h3 class="exp-title" data-key="exp2Title">IT Specialist</h3>
-              <div class="exp-company">Linah Group</div>
+              <div class="exp-company" data-key="exp2Company">Linah Group</div>
             </div>
             <div class="exp-date" data-key="exp2Date">Sep 2025 — Nov 2025</div>
           </div>
@@ -342,7 +342,7 @@
           <div class="exp-head">
             <div>
               <h3 class="exp-title" data-key="exp3Title">Technical Support Specialist</h3>
-              <div class="exp-company">Fujitsu — FSIT Services</div>
+              <div class="exp-company" data-key="exp3Company">Fujitsu — FSIT Services</div>
             </div>
             <div class="exp-date" data-key="exp3Date">Jan 2025 — Sep 2025</div>
           </div>
@@ -358,7 +358,7 @@
           <div class="exp-head">
             <div>
               <h3 class="exp-title" data-key="expMilTitle">Mandatory Military Service</h3>
-              <div class="exp-company">Egypt</div>
+              <div class="exp-company" data-key="expMilCompany">Egypt</div>
             </div>
             <div class="exp-date" data-key="expMilDate">Oct 2023 — Dec 2024</div>
           </div>
@@ -375,6 +375,7 @@
       </div>
       <div class="projects-grid">
         <div class="project-card featured fade-in">
+          <span class="featured-badge" data-key="featuredBadge">Major Project</span>
           <div class="project-img" data-modal-src="assets/depi-staff-poster.webp" style="cursor:pointer" role="button" tabindex="0" aria-label="Open DEPI Staff Management System poster"><img src="assets/depi-staff-management.webp" alt="DEPI Staff Management System login page showing the sign-in form and HR Management System feature panel with an Egyptian flag" loading="lazy" width="1400" height="788" /></div>
           <div class="project-icon"><i class="bx bx-buildings" aria-hidden="true"></i></div>
           <div class="project-head">
@@ -499,7 +500,7 @@
           <h3><i class="bx bx-code-alt" aria-hidden="true"></i> <span data-key="skillProg">Mobile &amp; Programming</span></h3>
           <div class="skill-list">
             <div class="skill-item"><img src="assets/icons/flutter.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Dart &amp; Flutter</div>
-            <div class="skill-item"><img src="assets/icons/cplusplus.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />C++</div>
+            <div class="skill-item"><img src="assets/icons/cplusplus.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" /><bdi>C++</bdi></div>
             <div class="skill-item"><img src="assets/icons/java.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy" />Java</div>
             <div class="skill-item"><i class="bx bx-cube skill-bullet" aria-hidden="true"></i>Object-Oriented Programming (OOP)</div>
             <div class="skill-item"><i class="bx bx-sitemap skill-bullet" aria-hidden="true"></i>Data Structures</div>
@@ -702,7 +703,7 @@
               <span class="method-icon"><i class="bx bx-envelope" aria-hidden="true"></i></span>
               <span class="method-body">
                 <span class="method-label" data-key="emailLabel">Email</span>
-                <a href="mailto:mo.jameel.official@gmail.com" class="method-value">mo.jameel.official@gmail.com</a>
+                <a href="mailto:mo.jameel.official@gmail.com" class="method-value">mo.jameel.official<wbr>@gmail.com</a>
               </span>
               <button type="button" class="copy-btn" data-copy="mo.jameel.official@gmail.com" data-key-aria="copyAria" aria-label="Copy email address"><i class="bx bx-copy" aria-hidden="true"></i></button>
             </li>
@@ -755,10 +756,10 @@
     </main>
 
     <!-- Certificate Modal -->
-    <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate preview" data-key-aria="certModalAria">
       <div class="cert-modal-overlay" id="certModalOverlay"></div>
       <div class="cert-modal-content">
-        <button class="cert-modal-close" id="certModalCloseBtn" aria-label="Close certificate preview"><i class="bx bx-x" aria-hidden="true"></i></button>
+        <button class="cert-modal-close" id="certModalCloseBtn" aria-label="Close certificate preview" data-key-aria="certModalCloseAria"><i class="bx bx-x" aria-hidden="true"></i></button>
         <img id="certModalImg" src="" alt="Certificate preview" />
       </div>
     </div>
@@ -775,24 +776,24 @@
     </button>
 
     <!-- Chatbot -->
-    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI assistant chat">
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI assistant chat" data-key-aria="chatbotToggleAria">
       <i class="bx bx-bot" aria-hidden="true"></i>
     </button>
 
-    <div id="chatbotWindow" class="chatbot-window" role="dialog" aria-modal="false" aria-label="AI Assistant chat">
+    <div id="chatbotWindow" class="chatbot-window" role="dialog" aria-modal="false" aria-label="AI Assistant chat" data-key-aria="chatbotWindowAria">
       <div class="chatbot-header">
         <div class="chatbot-header-info">
           <img src="assets/avatar.webp" alt="Mohammed Jameel avatar" width="45" height="45" />
           <div>
-            <h4 data-key="chatbotTitle">Ask About Me</h4>
+            <h3 data-key="chatbotTitle">Ask About Me</h3>
             <p class="chatbot-status"><span class="status-dot" aria-hidden="true"></span><span data-key="chatbotStatus">AI &bull; Online</span></p>
           </div>
         </div>
         <div class="chatbot-header-actions">
-          <button id="chatbotClear" class="chatbot-close" aria-label="Start a new conversation" title="New chat">
+          <button id="chatbotClear" class="chatbot-close" aria-label="Start a new conversation" title="New chat" data-key-aria="chatbotClearAria">
             <i class="bx bx-revision" aria-hidden="true"></i>
           </button>
-          <button id="chatbotClose" class="chatbot-close" aria-label="Close chat">
+          <button id="chatbotClose" class="chatbot-close" aria-label="Close chat" data-key-aria="chatbotCloseAria">
             <i class="bx bx-x" aria-hidden="true"></i>
           </button>
         </div>
@@ -804,14 +805,14 @@
           </div>
         </div>
       </div>
-      <div id="chatbotChips" class="chatbot-chips" aria-label="Suggested questions">
+      <div id="chatbotChips" class="chatbot-chips" aria-label="Suggested questions" data-key-aria="chatbotChipsAria">
         <button class="chatbot-chip" data-key="chipSkills">What are his skills?</button>
         <button class="chatbot-chip" data-key="chipProjects">Tell me about his projects</button>
         <button class="chatbot-chip" data-key="chipExperience">What's his experience?</button>
         <button class="chatbot-chip" data-key="chipContact">How can I contact him?</button>
       </div>
       <div class="chatbot-input">
-        <input type="text" id="chatbotInput" placeholder="Ask me anything..." data-key-placeholder="chatbotPlaceholder" aria-label="Type your message" autocomplete="off" maxlength="500" />
+        <input type="text" id="chatbotInput" placeholder="Ask me anything..." data-key-placeholder="chatbotPlaceholder" data-key-aria="chatbotInputAria" aria-label="Type your message" autocomplete="off" maxlength="500" />
         <button id="chatbotSend" aria-label="Send message">
           <i class="bx bx-send" aria-hidden="true"></i>
         </button>
@@ -1029,6 +1030,14 @@
           navExperience: 'Experience', navProjects: 'Projects', navSkills: 'Skills',
           navContact: 'Contact', hireMe: 'Hire Me', viewCV: 'View My CV',
           heroGreeting: 'Hi, I am', heroName: 'Mohammed Jameel', heroRole1: 'Software Engineer', heroRole2: "AWS Certified Developer",
+          chatbotInputAria: 'Type your message',
+          chatbotToggleAria: 'Open AI assistant chat',
+          chatbotWindowAria: 'AI Assistant chat',
+          chatbotClearAria: 'Start a new conversation',
+          chatbotCloseAria: 'Close chat',
+          chatbotChipsAria: 'Suggested questions',
+          certModalAria: 'Certificate preview',
+          certModalCloseAria: 'Close certificate preview',
           heroRolesAria: 'Software Engineer and AWS Certified Developer',
           statYears: 'Years Experience', statProjects: 'Finished Projects',
           statEndpoints: 'REST Endpoints Built', statTests: 'Automated Tests', statCerts: 'Certifications',
@@ -1038,7 +1047,7 @@
           aboutP3: "I led the GDG on Campus chapter at Thebes Academy, organizing events, workshops, and hackathons.",
           aboutP4: "I'm looking for Software Engineering opportunities with a backend and cloud focus, where I can build reliable, scalable systems and keep growing in cloud engineering.",
           eduTag: 'Education', eduTitle: 'Academic Background',
-          eduName: 'Thebes Academy', eduDegree: "Bachelor's Degree in Computer Science",
+          eduName: 'Thebes Academy', eduDegree: "Bachelor's Degree in Computer Science", eduGpa: 'GPA: 3.04',
           eduDate: 'Sep 2019 — May 2023', eduLocation: 'Maadi, Cairo, Egypt',
           expTag: 'Experience', expTitle: 'My Professional Journey',
           exp1Title: "Software Engineering Trainee", exp1Date: "Dec 2025 — Sep 2026",
@@ -1058,6 +1067,12 @@
           exp3Li4: "Performed system backups and recovery using AOMEI and Hiren's Boot",
           exp3Li5: "Delivered remote support via AnyDesk and TeamViewer",
           projTag: 'Projects', projTitle: 'Featured Work',
+          featuredBadge: 'Major Project',
+          expMCompany: 'Ministry of Communications and Information Technology (MCIT)',
+          exp1Company: 'Digilians (MCIT Initiative) — Egyptian Military Academy',
+          exp2Company: 'Linah Group',
+          exp3Company: 'Fujitsu — FSIT Services',
+          expMilCompany: 'Egypt',
           viewCode: 'View Code',
           problem: 'Problem:', solution: 'Solution:', outcome: 'Outcome:',
           proj1Title: "IT Ticketing System",
@@ -1152,7 +1167,7 @@
         },
         ar: {
           skillSec: "الأمان والأتمتة",
-          exp1Li6: "تدريب على CI/CD باستخدام GitHub Actions، والبنية التحتية ككود باستخدام Terraform، وKubernetes مع Helm",
+          exp1Li6: "تدريب على CI/CD باستخدام GitHub Actions، والبنية التحتية ككود باستخدام Terraform، و Kubernetes مع Helm",
           exp1Li7: "دراسة ممارسات البرمجة الآمنة وفق OWASP Top 10 والمهارات المهنية (soft skills)",
           statGdg: "سنوات في GDG on Campus",
           eduDigName: "Digilians (مبادرة وزارة الاتصالات) — الأكاديمية العسكرية المصرية",
@@ -1163,52 +1178,60 @@
           skillBack: "الخلفية وقواعد البيانات",
           cert11Title: "AWS Certified Developer – Associate",
           cert11Org: "Amazon Web Services — أكتوبر 2026",
-          cert11Desc: "شهادة مستوى Associate تثبت القدرة على تطوير ونشر وتصحيح التطبيقات السحابية على AWS، بما يشمل الخدمات الأساسية وServerless والأمان وCI/CD والمراقبة.",
+          cert11Desc: "شهادة مستوى Associate تثبت القدرة على تطوير ونشر وتصحيح التطبيقات السحابية على AWS، بما يشمل الخدمات الأساسية و Serverless والأمان و CI/CD والمراقبة.",
           expMTitle: "متدرب هندسة برمجيات",
           expMDate: "سبتمبر 2026 — أكتوبر 2026",
-          expMLi1: "بناء نظام DEPI-Staff-Management من الصفر للنهاية: الحضور والمهام والإجازات والمشاريع وGantt والتقارير",
+          expMLi1: "بناء نظام DEPI-Staff-Management من الصفر للنهاية: الحضور والمهام والإجازات والمشاريع و Gantt والتقارير",
           expMLi2: "تطوير واجهة React + TypeScript وخلفية FastAPI + MongoDB بأكثر من 150 REST endpoint",
           expMLi3: "تنفيذ مصادقة JWT وصلاحيات حسب الأدوار وسجلات تدقيق وتصدير PDF/Excel بدعم العربية (RTL)",
           expMLi4: "كتابة أكثر من 500 اختبار آلي (pytest) واختبارات Playwright الشاملة، وتهيئة النظام بـ Docker Compose",
-          exp1Li5: "استخدام أدوات الذكاء الاصطناعي (Claude وGLM وChatGPT وAmazon Q وGemini) لتسريع التطوير وتحسين جودة الكود",
+          exp1Li5: "استخدام أدوات الذكاء الاصطناعي (Claude و GLM و ChatGPT و Amazon Q و Gemini) لتسريع التطوير وتحسين جودة الكود",
           expMilTitle: "الخدمة العسكرية الإلزامية",
           expMilDate: "أكتوبر 2023 — ديسمبر 2024",
           projDepiTitle: "نظام DEPI-Staff-Management",
           projDepiDesc: "منصة لإدارة الموظفين بنيتها من الصفر للنهاية أثناء تدريبي في MCIT: الحضور والمهام والإجازات والمشاريع ومخططات Gantt والاجتماعات والتقارير.",
           projDepiProblem: "تتبع حضور الموظفين ومهامهم وإجازاتهم ومشاريعهم يحتاج نظاماً واحداً منظماً يراعي الأدوار",
           projDepiSolution: "بناء واجهة React + TypeScript وخلفية FastAPI + MongoDB بأكثر من 150 REST endpoint ومصادقة JWT وصلاحيات حسب الأدوار وسجلات تدقيق وتصدير PDF/Excel بدعم العربية (RTL)",
-          projDepiOutcome: "مدعوم بأكثر من 500 اختبار آلي (pytest) واختبارات Playwright الشاملة، ومساعد ذكاء اصطناعي (Gemini وOllama)، ونشر عبر Docker Compose مع MongoDB replica set وNginx",
+          projDepiOutcome: "مدعوم بأكثر من 500 اختبار آلي (pytest) واختبارات Playwright الشاملة، ومساعد ذكاء اصطناعي (Gemini و Ollama)، ونشر عبر Docker Compose مع MongoDB replica set و Nginx",
           projMediTitle: "MediMind",
           projMediDesc: "منصة لإدارة الأدوية تربط مرضى الأمراض المزمنة بالأسرة والصيدلية والطبيب للتذكير وتتبع الالتزام بالدواء.",
           projMediProblem: "يصعب على مرضى الأمراض المزمنة الالتزام بأدويتهم، ولا يملك مقدمو الرعاية رؤية واضحة",
-          projMediSolution: "بنيت تطبيق Flutter (BLoC/Cubit) بمفردي، ومديولات الحالات والجرعات والأدوية في الـ backend (Node.js/Express وMongoDB) ضمن فريق",
+          projMediSolution: "بنيت تطبيق Flutter (BLoC/Cubit) بمفردي، ومديولات الحالات والجرعات والأدوية في الـ backend (Node.js/Express و MongoDB) ضمن فريق",
           projMediOutcome: "يتضمن OCR بالذكاء الاصطناعي للروشتات، وتنبيهات فورية لمقدم الرعاية مع تصعيد عبر SMS/Push، ونشراً بحاويات على AWS ECS Fargate",
           projAwsTitle: "تطبيق ويب قابل للتوسع على AWS",
           projAwsDesc: "تطبيق ويب من 3 طبقات، قابل للتوسع وعالي التوافر على AWS، بنيته كمشروع تخرج لشهادة SAA-C03.",
           projAwsProblem: "يجب أن تظل تطبيقات الويب متاحة وأن تتوسع مع تغير الحمل",
-          projAwsSolution: "تصميم بنية من 3 طبقات باستخدام CloudFront + WAF وApplication Load Balancer وEC2 Auto Scaling وRDS Multi-AZ",
+          projAwsSolution: "تصميم بنية من 3 طبقات باستخدام CloudFront + WAF و Application Load Balancer و EC2 Auto Scaling و RDS Multi-AZ",
           projAwsOutcome: "تم النشر كبنية تحتية ككود باستخدام CloudFormation",
           navHome: 'الرئيسية', navAbout: 'عني', navEducation: 'التعليم',
           navExperience: 'الخبرة', navProjects: 'المشاريع', navSkills: 'المهارات',
           navContact: 'تواصل', hireMe: 'وظفني', viewCV: 'عرض السيرة الذاتية',
           heroGreeting: 'مرحباً، أنا', heroName: 'محمد جميل', heroRole1: 'مهندس برمجيات', heroRole2: "مطور معتمد من AWS",
+          chatbotInputAria: 'اكتب رسالتك',
+          chatbotToggleAria: 'افتح محادثة المساعد الذكي',
+          chatbotWindowAria: 'محادثة المساعد الذكي',
+          chatbotClearAria: 'ابدأ محادثة جديدة',
+          chatbotCloseAria: 'إغلاق المحادثة',
+          chatbotChipsAria: 'أسئلة مقترحة',
+          certModalAria: 'معاينة الشهادة',
+          certModalCloseAria: 'إغلاق معاينة الشهادة',
           heroRolesAria: 'مهندس برمجيات ومطور معتمد من AWS',
           statYears: 'سنوات خبرة', statProjects: 'مشاريع منجزة',
           statEndpoints: 'خدمات REST مبنية', statTests: 'اختبارات آلية', statCerts: 'شهادات',
           aboutTag: 'عني', aboutTitle: 'أبني المستقبل بالكود والسحابة',
           aboutP1: "أنا محمد جميل فؤاد، مهندس برمجيات متخصص في الـ Backend والـ Cloud ومقيم في القاهرة، مصر، وخريج دبلومة تطوير البرمجيات المعتمدة على الذكاء الاصطناعي من Digilians (مبادرة من وزارة الاتصالات بالتعاون مع الأكاديمية العسكرية المصرية). حاصل على بكالوريوس في علوم الحاسب من أكاديمية طيبة بمعدل 3.04.",
-          aboutP2: "أبني تطبيقات ويب جاهزة للإنتاج باستخدام Node.js وExpress وFastAPI وReact.js وTypeScript وMongoDB، وأنشرها على AWS باستخدام Docker. حاصل على شهادة AWS Certified Developer – Associate، وأنهيت تدريباً في هندسة البرمجيات بوزارة الاتصالات وتكنولوجيا المعلومات (MCIT) بنيت خلاله Backend بأكثر من 150 endpoint وأكثر من 500 اختبار آلي. خلفيتي في البنية التحتية والدعم الفني تمنحني فهماً قوياً للشبكات والأنظمة والأمان.",
+          aboutP2: "أبني تطبيقات ويب جاهزة للإنتاج باستخدام Node.js و Express و FastAPI و React.js و TypeScript و MongoDB، وأنشرها على AWS باستخدام Docker. حاصل على شهادة AWS Certified Developer – Associate، وأنهيت تدريباً في هندسة البرمجيات بوزارة الاتصالات وتكنولوجيا المعلومات (MCIT) بنيت خلاله Backend بأكثر من 150 endpoint وأكثر من 500 اختبار آلي. خلفيتي في البنية التحتية والدعم الفني تمنحني فهماً قوياً للشبكات والأنظمة والأمان.",
           aboutP3: "قدت فرع GDG on Campus في أكاديمية طيبة، ونظمت فعاليات وورش عمل وهاكاثونات.",
           aboutP4: "أبحث عن فرص في هندسة البرمجيات مع تركيز على الـ Backend والـ Cloud، أبني فيها أنظمة موثوقة وقابلة للتوسع وأواصل التطور في الهندسة السحابية.",
           eduTag: 'التعليم', eduTitle: 'الخلفية الأكاديمية',
-          eduName: 'أكاديمية طيبة', eduDegree: 'بكالوريوس في علوم الحاسب',
+          eduName: 'أكاديمية طيبة', eduDegree: 'بكالوريوس في علوم الحاسب', eduGpa: 'المعدل التراكمي: 3.04',
           eduDate: 'سبتمبر 2019 — مايو 2023', eduLocation: 'المعادي، القاهرة، مصر',
           expTag: 'الخبرة', expTitle: 'مسيرتي المهنية',
           exp1Title: "متدرب هندسة برمجيات", exp1Date: "ديسمبر 2025 — سبتمبر 2026",
-          exp1Li1: "بناء تطبيقات ويب Full Stack باستخدام MERN stack (MongoDB وExpress وReact.js وNode.js)",
+          exp1Li1: "بناء تطبيقات ويب Full Stack باستخدام MERN stack (MongoDB و Express و React.js و Node.js)",
           exp1Li2: "تصميم ونشر حلول سحابية على AWS باستخدام Docker",
           exp1Li3: "دمج نماذج الذكاء الاصطناعي في مسارات عمل التطبيقات",
-          exp1Li4: "تطبيق منهجيات Agile وأسلوب العمل بـ Git وGitHub في مشاريع الفريق",
+          exp1Li4: "تطبيق منهجيات Agile وأسلوب العمل بـ Git و GitHub في مشاريع الفريق",
           exp2Title: 'أخصائي تكنولوجيا معلومات', exp2Date: 'سبتمبر 2025 — نوفمبر 2025',
           exp2Li1: 'تثبيت وإصلاح وتكوين أجهزة الكمبيوتر والطابعات ومعدات الشبكة',
           exp2Li2: 'إدارة وصيانة شبكات LAN و Wi-Fi',
@@ -1216,18 +1239,24 @@
           exp2Li4: 'تطبيق تحديثات الأمان وضمان حماية النظام',
           exp3Title: 'أخصائي دعم فني', exp3Date: 'يناير 2025 — سبتمبر 2025',
           exp3Li1: 'تقديم الدعم الفني لعملاء من القطاع المصرفي لأجهزة سطح المكتب واللابتوب والطابعات وأنظمة Qmatic',
-          exp3Li2: "إدارة الأجهزة الافتراضية باستخدام VMware وVirtualBox",
+          exp3Li2: "إدارة الأجهزة الافتراضية باستخدام VMware و VirtualBox",
           exp3Li3: "إدارة المستخدمين والصلاحيات في Active Directory",
-          exp3Li4: "تنفيذ النسخ الاحتياطي والاسترجاع باستخدام AOMEI وHiren's Boot",
-          exp3Li5: "تقديم الدعم عن بعد عبر AnyDesk وTeamViewer",
+          exp3Li4: "تنفيذ النسخ الاحتياطي والاسترجاع باستخدام AOMEI و Hiren's Boot",
+          exp3Li5: "تقديم الدعم عن بعد عبر AnyDesk و TeamViewer",
           projTag: 'المشاريع', projTitle: 'أبرز الأعمال',
+          featuredBadge: 'مشروع رئيسي',
+          expMCompany: 'وزارة الاتصالات وتكنولوجيا المعلومات (MCIT)',
+          exp1Company: 'Digilians (مبادرة MCIT) — الأكاديمية العسكرية المصرية',
+          exp2Company: 'Linah Group',
+          exp3Company: 'Fujitsu — FSIT Services',
+          expMilCompany: 'مصر',
           viewCode: 'عرض الكود',
           problem: 'المشكلة:', solution: 'الحل:', outcome: 'النتيجة:',
           proj1Title: "نظام تذاكر الدعم الفني",
           proj1Desc: "منصة Full Stack للتذاكر تحل محل طلبات الدعم غير الرسمية عبر واتساب بسير عمل منظم.",
           proj1Problem: "كانت طلبات الدعم الفني تُدار بشكل غير رسمي عبر واتساب بدون تتبع أو مسؤولية واضحة",
-          proj1Solution: "بناء منصة بدورين (موظف/مسؤول) بسير عمل مفتوح ← قيد التنفيذ ← تم الحل ← مغلق، مع ملاحظات داخلية وREST API بتحقق Joi ومصادقة JWT",
-          proj1Outcome: "لوحة تحكم للمسؤول تعرض اتجاهات التذاكر الشهرية وأفضل الموظفين باستخدام MongoDB aggregation وRecharts",
+          proj1Solution: "بناء منصة بدورين (موظف/مسؤول) بسير عمل مفتوح ← قيد التنفيذ ← تم الحل ← مغلق، مع ملاحظات داخلية و REST API بتحقق Joi ومصادقة JWT",
+          proj1Outcome: "لوحة تحكم للمسؤول تعرض اتجاهات التذاكر الشهرية وأفضل الموظفين باستخدام MongoDB aggregation و Recharts",
           proj3Title: 'EcoCycle',
           proj3Desc: 'نظام إعادة تدوير يحفّز المواطنين على تحويل المخلفات اليومية إلى مكافآت مالية حقيقية في جميع أنحاء مصر.',
           proj3Problem: '90% من المخلفات الصلبة في مصر غير مُعاد تدويرها، مما يكلف مليارات في تنظيف الشوارع و3 مليارات دولار سنوياً في استيراد المواد الخام دون وجود حافز مواطنين قابل للتوسع',
@@ -1257,7 +1286,7 @@
           cert6Desc: 'بناء تطبيقات محمولة متعددة المنصات لـ iOS و Android باستخدام Flutter و Dart. تغطية الويدجتات وإدارة الحالة والتنقل وتكامل REST API ونشر التطبيقات في متاجر التطبيقات.',
           cert7Title: 'ECPC — مسابقة البرمجة الجامعية المصرية',
           cert7Org: 'متسابق — أغسطس 2021',
-          cert7Desc: 'تنافست كمتسابق في أهم مسابقة برمجة جامعية في مصر. حل مشاكل الخوارزميات وهياكل البيانات تحت ضغط الوقت باستخدام C++، متنافساً مع فرق من جامعات في جميع أنحاء مصر.',
+          cert7Desc: 'تنافست كمتسابق في أهم مسابقة برمجة جامعية في مصر. حل مشاكل الخوارزميات وهياكل البيانات تحت ضغط الوقت باستخدام C++\u200E، متنافساً مع فرق من جامعات في جميع أنحاء مصر.',
           cert8Title: 'أدوات وممارسات DevOps متقدمة',
           cert8Org: 'Coursera — 2026',
           cert8Desc: 'دورة متقدمة تغطي أدوات وممارسات DevOps الحديثة بما في ذلك خطوط CI/CD والبنية التحتية ككود والحاويات والتنسيق وحلول المراقبة لبيئات الإنتاج.',
@@ -1593,18 +1622,18 @@ KNOWLEDGE BASE — Mohammed Jameel Fouad:
         ar: {
           greeting: ['مرحبا', 'السلام عليكم', 'أهلا', 'هاي', 'صباح الخير', 'مساء الخير', 'اهلين', 'هلا'],
           name: ['اسم', 'من أنت', 'اسمك', 'مين', 'عرفني', 'قول لي عنك'],
-          experience: ['خبرة', 'شغل', 'وظيفة', 'عمل', 'شغلت', 'اشتغل', 'وظائف'],
-          skills: ['مهارات', 'تقنيات', 'برمجة', 'لغات', 'ادوات', 'تعرف', 'بتعرف ايه'],
+          experience: ['خبرة', 'خبرته', 'خبرتك', 'شغل', 'وظيفة', 'عمل', 'شغلت', 'اشتغل', 'وظائف'],
+          skills: ['مهارات', 'مهاراته', 'مهاراتك', 'تقنيات', 'برمجة', 'لغات', 'ادوات', 'تعرف', 'بتعرف ايه'],
           education: ['تعليم', 'دراسة', 'جامعة', 'شهادة', 'درس', 'كلية', 'مدرسة'],
-          projects: ['مشاريع', 'أعمال', 'بورتفوليو', 'بنى', 'طور'],
-          contact: ['تواصل', 'ايميل', 'تليفون', 'رقم', 'اتصل', 'رسالة', 'لينكد ان', 'جيت هاب'],
+          projects: ['مشاريع', 'مشاريعه', 'مشاريعك', 'أعمال', 'بورتفوليو', 'بنى', 'طور'],
+          contact: ['تواصل', 'أتواصل', 'اتواصل', 'ايميل', 'تليفون', 'رقم', 'اتصل', 'رسالة', 'لينكد ان', 'جيت هاب'],
           location: ['مكان', 'فين', 'موقع', 'عنوان', 'ساكن', 'مدينة'],
           devops: ['ديف اوبس', 'devops', 'دوكر', 'كوبرنيتس'],
           aws: ['aws', 'سحابة', 'كلاود', 'امازون'],
           responses: {
             greeting: "مرحباً! أنا المساعد الذكي لمحمد جميل. كيف يمكنني مساعدتك لمعرفة المزيد عنه؟",
-            name: "أنا محمد جميل فؤاد، مهندس برمجيات (تركيز على Backend وCloud) مقيم في القاهرة، مصر، وحاصل على AWS Certified Developer – Associate. أبني تطبيقات ويب باستخدام React وTypeScript وNode.js وFastAPI وMongoDB وأنشرها على AWS.",
-            experience: "لدى محمد أكثر من سنة من الخبرة المهنية العملية:\n\n• متدرب هندسة برمجيات في MCIT (سبتمبر 2026 - أكتوبر 2026)\n• متدرب هندسة برمجيات في Digilians (ديسمبر 2025 - سبتمبر 2026)\n• أخصائي تكنولوجيا معلومات في Linah Group (سبتمبر 2025 - نوفمبر 2025)\n• أخصائي دعم فني في Fujitsu (يناير 2025 - سبتمبر 2025)\n\nيبني تطبيقات Full Stack باستخدام React وNode.js وFastAPI، وينشر حلولاً سحابية على AWS.",
+            name: "أنا محمد جميل فؤاد، مهندس برمجيات (تركيز على Backend و Cloud) مقيم في القاهرة، مصر، وحاصل على AWS Certified Developer – Associate. أبني تطبيقات ويب باستخدام React و TypeScript و Node.js و FastAPI و MongoDB وأنشرها على AWS.",
+            experience: "لدى محمد أكثر من سنة من الخبرة المهنية العملية:\n\n• متدرب هندسة برمجيات في MCIT (سبتمبر 2026 - أكتوبر 2026)\n• متدرب هندسة برمجيات في Digilians (ديسمبر 2025 - سبتمبر 2026)\n• أخصائي تكنولوجيا معلومات في Linah Group (سبتمبر 2025 - نوفمبر 2025)\n• أخصائي دعم فني في Fujitsu (يناير 2025 - سبتمبر 2025)\n\nيبني تطبيقات Full Stack باستخدام React و Node.js و FastAPI، وينشر حلولاً سحابية على AWS.",
             skills: "التقنيات التي يتقنها محمد:\n\n💻 الواجهات الأمامية: React.js, TypeScript, JavaScript, Tailwind CSS, Vite, Bootstrap\n⚙️ الخلفية وقواعد البيانات: Node.js, Express, Python, FastAPI, MongoDB\n☁️ السحابة و DevOps: AWS (Developer Associate, Cloud Practitioner), Docker, Terraform, Kubernetes & Helm (تدريب), GitHub Actions (تدريب), Git/GitHub, Linux\n📱 الموبايل والبرمجة: Flutter & Dart, Java, C++, OOP, Data Structures\n🔐 الأمان والأتمتة: OWASP Top 10, n8n\n🖥️ الأنظمة: Active Directory, MCSA (دورة), CCNA (دورة)",
             education: "محمد حاصل على بكالوريوس في علوم الحاسب من أكاديمية طيبة (سبتمبر 2019 - مايو 2023) بمعدل 3.04، وخريج دبلومة Digilians المتخصصة في تطوير البرمجيات المعتمدة على الذكاء الاصطناعي (2026).",
             projects: "المشاريع الرئيسية تشمل:\n\n1. DEPI-Staff-Management System - منصة لإدارة الموظفين بُنيت في MCIT (React, TypeScript, FastAPI, MongoDB)\n2. MediMind - منصة لإدارة الأدوية؛ بنى محمد تطبيق Flutter ومديولات الجرعات والأدوية في الـ backend\n3. IT Ticketing System - منصة لسير عمل التذاكر (React, Node.js, Express, MongoDB)\n4. EcoCycle - منصة تدوير ذكية لمصر (React, Node.js, Express)\n5. AWS Scalable Web App - بنية من 3 طبقات عالية التوافر (CloudFormation)",
@@ -1671,6 +1700,17 @@ KNOWLEDGE BASE — Mohammed Jameel Fouad:
         let safe = escapeHtml(text);
         safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         safe = safe.replace(/^#{1,6}\s+/gm, '');
+        /* QA REC #3: consecutive "• " / "- " / "1. " lines become a real list
+           (ul.chat-list / ol.chat-list) instead of one wall of text */
+        safe = safe.replace(/((?:^[ \t]*(?:[•\-*]|\d+[.)])[ \t]+.+\n?)+)/gm, function (block) {
+          var lines = block.trim().split('\n');
+          var numbered = /^\s*\d+[.)]/.test(lines[0]);
+          var tag = numbered ? 'ol' : 'ul';
+          var items = lines.map(function (l) {
+            return '<li>' + l.replace(/^[ \t]*(?:[•\-*]|\d+[.)])[ \t]+/, '') + '</li>';
+          }).join('');
+          return '\n<' + tag + ' class="chat-list">' + items + '</' + tag + '>\n';
+        });
         safe = safe.replace(/\n/g, '<br>');
         return safe;
       }

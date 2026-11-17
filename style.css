@@ -281,6 +281,21 @@ ul { list-style: none; }
   margin: 20px 0;
   transition: color var(--transition-base);
 }
+/* Touch targets: keep every interactive element >= 44x44 px on touch/mobile
+   (Apple HIG minimum; WCAG 2.2 SC 2.5.8 needs 24x24). */
+@media (max-width: 768px) {
+  .sidebar .sidebar-links a { min-height: 44px; display: flex; align-items: center; margin: 6px 0; }
+  .close-btn { min-width: 44px; min-height: 44px; }
+  .btn-theme, .btn-lang { min-width: 44px; min-height: 44px; }
+  .copy-btn { min-width: 44px; min-height: 44px; }
+  .cert-link { min-height: 44px; display: inline-flex; align-items: center; }
+  .form-submit { min-height: 44px; }
+  /* QA: sidebar "Hire Me" CTA (a.btn-orange) measured 41px on 375px — bump to 44 */
+  .sidebar a.btn-orange, .sidebar-button a { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  .cert-modal-close { min-width: 44px; min-height: 44px; }
+  .chatbot-close { min-width: 44px; min-height: 44px; }
+  .method-value { display: inline-block; padding: 6px 0; }
+}
 .sidebar .sidebar-links a:hover { color: var(--accent-color); }
 
 .sidebar-button {
@@ -328,10 +343,14 @@ ul { list-style: none; }
   color: var(--text-secondary);
 }
 
+/* QA REC #1 (hero hierarchy): the name is the page's #1 element — bigger and
+   solid white; the typewriter role stays the orange accent line below it. */
 .hero-text h1 {
-  font-size: 24px;
-  color: var(--text-secondary);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-primary);
   margin: 10px 0 20px 0;
+  line-height: 1.15;
 }
 
 /* Typewriter roles - one role at a time, alternating with typewriter fill/erase */
@@ -342,6 +361,7 @@ ul { list-style: none; }
   position: relative;
   min-height: 1.2em;
   display: block;
+  margin-bottom: 10px; /* breathing room to the social icons row (glow ::after eats into it) */
 }
 
 .hero-text .typewriter .role {
@@ -560,7 +580,8 @@ ul { list-style: none; }
   border-radius: 50%;
   position: relative;
   transition: box-shadow var(--transition-base);
-  border: 4px solid rgba(var(--accent-rgb), 0.3);
+  border: 4px solid rgba(var(--accent-rgb), 0.55);
+  box-shadow: 0 24px 48px -14px rgba(0, 0, 0, 0.55);
 }
 .hero-image-box:hover {
   animation: pulse-glow 1.5s ease-in-out infinite;
@@ -797,6 +818,53 @@ ul { list-style: none; }
   right: 0;
 }
 
+/* QA REC #2 (experience timeline): a thin connecting rail + milestone dots on the
+   inline-start side turns the stacked cards into a readable "career journey". */
+.exp-list { position: relative; padding-left: 30px; }
+.exp-list::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 34px;
+  bottom: 40px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent-color) 0%, var(--border-color) 100%);
+}
+.exp-card { position: relative; }
+.exp-card::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 34px;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.12);
+  transition: left var(--transition-base), right var(--transition-base),
+              background var(--transition-base), box-shadow var(--transition-base);
+}
+.exp-card:hover::before {
+  left: -36px; /* counter-shifts the card's translateX(6px) hover — dot stays on the rail */
+  background: var(--accent-color);
+  box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.22);
+}
+[dir="rtl"] .exp-list { padding-left: 0; padding-right: 30px; }
+[dir="rtl"] .exp-list::before { left: auto; right: 5px; }
+[dir="rtl"] .exp-card::before { left: auto; right: -30px; }
+[dir="rtl"] .exp-card:hover::before { left: auto; right: -36px; }
+@media (max-width: 600px) {
+  .exp-list { padding-left: 24px; }
+  .exp-card::before { left: -24px; }
+  .exp-card:hover::before { left: -30px; }
+  [dir="rtl"] .exp-list { padding-right: 24px; }
+  [dir="rtl"] .exp-card::before { right: -24px; }
+  [dir="rtl"] .exp-card:hover::before { right: -30px; }
+}
+
 /* ------------------------- Projects ------------------------- */
 .projects-grid {
   display: grid;
@@ -836,8 +904,8 @@ ul { list-style: none; }
   grid-column: 1 / -1;
   border-color: var(--accent-color);
 }
-.project-card.featured::before {
-  content: '★ Major Project';
+/* Featured badge as a real DOM element (was CSS ::before content — untranslatable) */
+.featured-badge {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -849,6 +917,8 @@ ul { list-style: none; }
   font-weight: 600;
   z-index: 2;
 }
+.featured-badge::before { content: '★ '; }
+[dir="rtl"] .featured-badge { right: auto; left: 15px; }
 
 .project-img {
   width: 100%;
@@ -1494,7 +1564,7 @@ footer {
   border: 2px solid white;
   object-fit: cover;
 }
-.chatbot-header-info h4 {
+.chatbot-header-info h3 {
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -1575,6 +1645,18 @@ footer {
 }
 .message-content p { margin: 0; }
 .message-content p + p { margin-top: 8px; }
+/* QA REC #3: bot answers render bullet / numbered lines as real lists
+   (built by formatMessage in index.html) instead of one wall of text */
+.message-content .chat-list { margin: 8px 0 2px; padding-inline-start: 20px; list-style: none; }
+.message-content .chat-list li { position: relative; margin: 5px 0; }
+.message-content ul.chat-list li::before {
+  content: '•';
+  position: absolute;
+  inset-inline-start: -13px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+.message-content ol.chat-list { list-style: decimal; padding-inline-start: 24px; }
 
 .chatbot-input {
   padding: 15px 20px;
@@ -1596,7 +1678,11 @@ footer {
   transition: all var(--transition-base);
   min-width: 0;
 }
-.chatbot-input input:focus { border-color: var(--accent-color); }
+/* QA REC #4: neutral border at rest; orange border + soft glow only on focus */
+.chatbot-input input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
 .chatbot-input button {
   width: 45px;
   height: 45px;
@@ -1667,10 +1753,12 @@ footer {
 
   .about-grid,
   .projects-grid,
-  .skills-grid,
   .cert-list {
     grid-template-columns: 1fr;
   }
+  /* QA REC #6: skill cards are short lists — two columns fill the tablet width
+     instead of one stretched column with big empty gaps */
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .project-card.featured { grid-column: 1; }
 
   .hero-section {
@@ -1689,7 +1777,7 @@ footer {
 @media (max-width: 768px) {
   .navbar { padding: 0 20px; }
   .hero-text .typewriter { font-size: 28px; }
-  .hero-text h1 { font-size: 20px; }
+  .hero-text h1 { font-size: 30px; }
 
   .stats {
     flex-direction: column;
@@ -1743,7 +1831,7 @@ footer {
   }
   .chatbot-header { padding: 10px 15px; }
   .chatbot-header-info img { width: 32px; height: 32px; }
-  .chatbot-header-info h4 { font-size: 14px; }
+  .chatbot-header-info h3 { font-size: 14px; }
   .chatbot-header-info p { font-size: 11px; }
   .chatbot-input { padding: 10px 15px; }
   .chatbot-input input { padding: 9px 14px; }
@@ -1758,6 +1846,7 @@ footer {
   .container { padding: 0 20px; }
   .section-wrapper, .contact-section { padding: 50px 20px; }
   .about-stats { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; } /* phones back to one column (QA REC #6) */
   .section-wrapper h2 { font-size: 24px; }
 
   .hero-buttons {
@@ -1774,7 +1863,7 @@ footer {
     text-align: center;
   }
   .hero-text p { font-size: 16px; }
-  .hero-text h1 { font-size: 22px; font-weight: 700; }
+  .hero-text h1 { font-size: 26px; font-weight: 700; }
   .hero-text .typewriter { font-size: 24px; letter-spacing: 1px; }
   /* MOBILE FIX (P0): hero-text becomes flex-column + align-items:center here, so the
      h2.typewriter shrinks to width:0 (its .role children are position:absolute and
@@ -1889,7 +1978,14 @@ footer {
   font-weight: 700;
   letter-spacing: 0.3px;
 }
-html[lang="ar"] .availability-badge { font-size: 14px; letter-spacing: 0; }
+/* Higher specificity than `.hero-text p` (same 0-1-1 but later in cascade is not
+   enough because both set color/size) — keeps the badge text green & compact
+   instead of inheriting the muted 18px hero paragraph style. QA: contrast 2.11:1 -> 9.6:1 */
+.hero-text p.availability-badge {
+  color: #2effa8;
+  font-size: 13.5px;
+}
+html[lang="ar"] .availability-badge, html[lang="ar"] .hero-text p.availability-badge { font-size: 14px; letter-spacing: 0; }
 .availability-dot {
   width: 9px;
   height: 9px;
@@ -2018,7 +2114,12 @@ html[lang="ar"] .method-label { letter-spacing: 0; text-transform: none; }
   color: var(--text-primary);
   font-size: 15px;
   font-weight: 600;
-  word-break: break-all;
+  /* QA: `word-break: break-all` shattered the email mid-TLD on 375px
+     ("gmail.c / om"). The only break opportunity is now the explicit <wbr>
+     before "@" — both halves fit comfortably in the mobile card (~148px and
+     ~82px at 15px vs ~240px available), so no emergency wrapping is needed. */
+  word-break: normal;
+  overflow-wrap: normal;
   transition: color var(--transition-base);
 }
 a.method-value:hover { color: var(--accent-color); }
@@ -2155,8 +2256,11 @@ a.method-value:hover { color: var(--accent-color); }
 @media (max-width: 1000px) {
   .contact-grid { grid-template-columns: 1fr; gap: 32px; }
 }
-@media (max-width: 600px) {
+/* QA REC #6: name/email side-by-side is cramped from tablet width down — stack */
+@media (max-width: 768px) {
   .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
   .contact-form { padding: 20px; }
   .back-to-top { bottom: 20px; left: 20px; width: 40px; height: 40px; font-size: 21px; }
   [dir="rtl"] .back-to-top { right: 20px; left: auto; }

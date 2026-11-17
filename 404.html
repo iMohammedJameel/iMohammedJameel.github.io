@@ -15,6 +15,15 @@
       }
     } catch (e) { /* storage unavailable */ }
   </script>
+  <script>
+    /* Follow the site's saved language too, so bilingual visitors get the 404
+       in the language they already chose (mirrored layout for Arabic). */
+    try {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    } catch (e) { /* storage unavailable */ }
+  </script>
   <style>
     /* Self-contained brand styles — works from any URL path depth */
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,6 +39,7 @@
       padding: 24px;
       overflow-x: hidden;
     }
+    html[lang="ar"] body { font-family: 'Cairo', 'Lato', Tahoma, Arial, sans-serif; }
     .glow { position: fixed; border-radius: 50%; filter: blur(90px); pointer-events: none; }
     .g1 { width: 420px; height: 420px; background: rgba(232, 102, 0, 0.14); top: -130px; left: -110px; }
     .g2 { width: 360px; height: 360px; background: rgba(255, 61, 2, 0.10); bottom: -130px; right: -90px; }
@@ -59,7 +69,7 @@
     }
     a.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232, 102, 0, 0.4); }
     a.btn:focus-visible { outline: 3px solid #e86600; outline-offset: 3px; }
-    a.link { display: block; margin-top: 20px; color: #9c9b9b; font-size: 14px; text-decoration: none; }
+    a.link { display: inline-block; margin-top: 20px; color: #9c9b9b; font-size: 14px; text-decoration: none; padding: 12px 10px; min-height: 44px; }
     a.link:hover { color: #e86600; }
     @media (max-width: 600px) { .code { font-size: 92px; } h1 { font-size: 21px; } }
     html.light body { background: #f8f9fa; }
@@ -73,10 +83,24 @@
   <div class="glow g2" aria-hidden="true"></div>
   <div class="wrap">
     <div class="code">404</div>
-    <h1>Page Not Found</h1>
-    <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-    <a class="btn" href="/">Back to Home</a>
+    <h1 id="errTitle">Page Not Found</h1>
+    <p id="errText">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <a class="btn" id="errBtn" href="/">Back to Home</a>
+    <br />
     <a class="link" href="mailto:mo.jameel.official@gmail.com">mo.jameel.official@gmail.com</a>
   </div>
+  <script>
+    /* Localize the 404 copy based on the language applied above. */
+    (function () {
+      if (document.documentElement.lang !== 'ar') return;
+      document.title = '٤٠٤ — الصفحة غير موجودة | محمد جميل';
+      var t = document.getElementById('errTitle');
+      if (t) t.textContent = 'الصفحة غير موجودة';
+      var x = document.getElementById('errText');
+      if (x) x.textContent = 'الصفحة التي تبحث عنها غير موجودة أو تم نقلها. دعنا نعيدك إلى الطريق الصحيح.';
+      var b = document.getElementById('errBtn');
+      if (b) b.textContent = 'العودة إلى الرئيسية';
+    })();
+  </script>
 </body>
 </html>
